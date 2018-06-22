@@ -1,7 +1,13 @@
-@font-face {
+/*@font-face {
 	font-family: Jaapokki;
 	font-display: block;
   src: url('fonts/Jaapokki-Regular.otf'), url('/fonts/Jaapokki-Regular.otf');
+}*/
+
+@font-face {
+	font-family: Jaapokki_Subtract;
+	font-display: swap;
+  src: url('fonts/Jaapokkisubtract-Regular.otf'), url('/fonts/Jaapokkisubtract-Regular.otf');
 }
 
 @font-face {
@@ -138,7 +144,7 @@ body {
 
 .nav a {
   color: #fff;
-	font: 1.4rem Montserrat;
+	font: 1.7rem Montserrat, Arial;
 	font-display: swap;
   text-transform: uppercase;
 	padding-right: 2em;
@@ -161,7 +167,7 @@ body {
 }
 
 .overlay {
-	background-color: rgba(255, 179, 71, .3);
+	background-color: rgba(255, 179, 71, .1);
 	display: block;
 	position: absolute;
 	margin-top: -48px;
@@ -214,7 +220,7 @@ body {
 }
 
 .main .row, .info .row, .faq .row, .sponsors .row, .map .row {
-	font-family: Montserrat, Metrophobic;
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	font-display: swap;
 	padding: 20px;
 	margin-top: 20px;
@@ -250,13 +256,20 @@ body {
 	animation-delay: 0.6s;
 }
 
+#button-text a div {
+	background-color: rgba(180, 180, 180, .63);
+	font-size: 16pt;
+	border-width: 4px;
+	border-radius: 150px;
+}
+
 .main h1 {
 	color: #fbfbfb;
 	font-size: 20rem;
-	font-family: Jaapokki;
+	font-family: Jaapokki_Subtract, Arial, Helvetica, sans-serif;
 	font-display: swap;
 	display: inline;
-
+	
 	padding-bottom: -80px;
 	white-space: nowrap;
 	overflow: hidden;
@@ -391,7 +404,7 @@ body {
   transition: transform 0.5s;
 }
 
-#main-text {
+#main-text, #button-text {
 	background: rgba(0,0,0,0);
 	color: var(--main-color);
 	position: absolute;
@@ -409,7 +422,7 @@ body {
 /**********BOTTOM BAR**********/
 .learn-more {
 	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
-	font-family: Montserrat, Metrophobic;
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	font-display: swap;
   font-weight: bold;
 	text-align: center;
@@ -430,13 +443,18 @@ body {
   padding: 0;
 }
 
+#social {
+	font-size: 2rem;
+	padding: 15px;
+}
+
 #bottom-bar a {
 	color: var(--subtle-font-color);
 }
 
 .fa {
     padding: 0 20px 0 20px;
-    font-size: 30px;
+    font-size: 20px;
     width: 50px;
     text-align: center;
     text-decoration: none;
@@ -459,8 +477,41 @@ body {
 		font-size: 20px;
 	}
 
+	#schedule-text, #faq-text {
+		font-size: 3em;
+	}
+
+	#intro {
+		margin-top: -10px;
+		padding-top: -35px;
+	}
+
+	#date {
+		padding-top: 70px;
+	}
+
+	#drop {
+		margin: 600px 0 0 0;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	h4 {
+		font-size: 23px;
+	}
+
 	.nav {
 		display: none;
+	}
+
+	#button-text a div {
+		background-color: rgba(180, 180, 180, .2);
 	}
 
 	.row h1 {
@@ -476,7 +527,7 @@ body {
 		font-size: 10rem;
 	}
 
-	#main-text {
+	#main-text, #button-text {
 		top:-10%; /*-100*/
 	}
 
@@ -487,7 +538,7 @@ body {
   #desktopSchedule, #scheduleScroll {
     display: none;
 	}
-
+	
 	#video {
 		margin-top: -30px;
 	}
@@ -507,9 +558,10 @@ body {
 		max-height: 150px;
 	}
 
-	h2 {
-		font-size: 30px;
+	#button-text a div {
+		font-size: 14pt;
 	}
+
 }
 
 /*TABLETS*/
@@ -522,18 +574,30 @@ body {
 		display: none;
 	}
 
+	#intro {
+		margin-top: -10px;
+		padding-top: 0px;
+	}
+
+	#date {
+		padding-top: 50px;
+	}
+
+	#drop {
+		margin: 570px 0 0 0;
+	}
+
 	.main .row {
 		padding-bottom: 0em; /*10*/
 	}
 
-	#main-text {
-		top: -15%; /*-300*/
+	#main-text, #button-text {
+		top: -10%; /*-300*/
 	}
 
 	.main h1 {
 		font-size: 18rem;
 	}
-
 
   #mobileSchedule {
     display: inherit;
@@ -542,7 +606,7 @@ body {
   #desktopSchedule, #scheduleScroll {
     display: none;
 	}
-
+	
 	#video {
 		margin-top: -50px;
 	}
@@ -554,10 +618,28 @@ body {
 	.sponsors .logos img {
 		max-height: 150px;
 	}
+
+	h3, h4 {
+		font-size: 22px;
+	}
+
 }
 
 /*COMPUTERS*/
 @media screen and (min-width: 992px) {
+	.faq .qa h3:first-child {
+		font-size: 24px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	h4 {
+		font-size: 19px;
+		line-height: 1.25;
+	}
+	
 	body {
 		font-size: 12px;
 	}
@@ -566,14 +648,15 @@ body {
 		display: inherit;
 	}
 
+	#intro {
+		margin-top: -10px;
+		padding-top: 0px;
+		font-size: 22px;
+	}
+
 	.main .row {
 		padding-bottom: 0em; /*10*/
 	}
-
-	h3 {
-	font-size: 20px;
-	}
-
 
   #mobileSchedule {
     display: none;
@@ -581,9 +664,10 @@ body {
 
   #desktopSchedule, #scheduleScroll {
     display: inherit;
-  }
+	}
 
 	/*.map #map {
 		height: 60vmin;
 	}*/
+
 }

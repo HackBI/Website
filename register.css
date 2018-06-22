@@ -1,10 +1,11 @@
 body {
-	font-family: Montserrat, Metrophobic;
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	color: rgb(20, 20, 24);
 	background: #fff;
 }
 
-a, a h3 {
+a,
+a h3 {
 	color: inherit;
 }
 
@@ -13,6 +14,7 @@ a, a h3 {
 	margin: 10rem;
 	display: none;
 }
+
 #thankyou_message h1 {
 	margin-bottom: 4rem;
 }
@@ -24,24 +26,26 @@ a, a h3 {
 }
 
 .jumbotron h1 {
-	font: 6em Jaapokki;
+	font-family: Jaapokki_Subtract, Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+	margin-bottom: -20px
 	/*background: -webkit-linear-gradient(-45deg, #f06, #ffd700);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
 }
 
 .jumbotron a div {
-  /*color: rgb(20, 20, 20);*/
-  font-size: 2em;
-  /*background: white;*/
-  display: inline-block;
-  padding: 1em;
-  border-radius: 5px;
+	/*color: rgb(20, 20, 20);*/
+	font-size: 2em;
+	/*background: white;*/
+	display: inline-block;
+	padding: 1em;
+	border-radius: 5px;
 }
 
 .jumbotron a:hover {
-  text-decoration: none;
-  opacity: 0.8;
+	text-decoration: none;
+	opacity: 0.8;
 }
 
 #steps {
@@ -56,7 +60,8 @@ a, a h3 {
 	color: #999;
 }
 
-#steps a:hover, #steps a h3:hover {
+#steps a:hover,
+#steps a h3:hover {
 	color: #999;
 }
 
@@ -71,7 +76,9 @@ a:hover {
 .form-check {
 	text-align: left;
 }
-label, .form-check-label {
+
+label,
+.form-check-label {
 	font-weight: normal;
 }
 
@@ -80,7 +87,7 @@ label, .form-check-label {
 }
 
 .btn {
-	font-family: Montserrat;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	font-size: 2rem;
 	color: #fff;
 	/*background-color: #823994;
@@ -104,12 +111,15 @@ label, .form-check-label {
 	margin: 0;
 }
 
-.grade, .middle-school, .high-school {
+.grade,
+.middle-school,
+.high-school {
 	margin-bottom: 2rem;
 	display: none;
 }
 
-.programming-experience, .t-shirt-size {
+.programming-experience,
+.t-shirt-size {
 	margin-top: 2rem;
 }
 
@@ -145,4 +155,25 @@ label, .form-check-label {
 
 #bottom-bar {
 	font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+
+	.jumbotron h1 {
+		font-size: 95px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.jumbotron h1 {
+		font-size: 95px;
+	}
+}
+@media screen and (min-width: 768px) {
+
+	.jumbotron h1 {
+		font-size: 8rem;
+	}
+
 }
