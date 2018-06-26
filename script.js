@@ -31,14 +31,17 @@ function setJumbotronHeight() {
 	$scrHeight = $(window).innerHeight();
 	$scrWidth = $(window).innerWidth();
 	
+	$outerScrHeight = $(window).outerHeight();
+	$outerScrWidth = $(window).outerWidth();
+	
 	$mainHeight = $("#main-text").height() / 1.5;
 	$mainWidth = $("#main-text").width() / 2;
 
 	$buttonHeight = $("#button-container").height() / 2;
 	$buttonWidth = $("#button-container").width() / 2;
 
-	$("#button-container").css({'left': (($scrWidth / 2 - $buttonWidth) + "px"), 'top': (($scrHeight / 2 - $buttonHeight) + "px")});
-	$("#main-text").css({'left': (($scrWidth / 2 - $mainWidth) + "px"), 'top': (($scrHeight / 2 - $mainHeight) + "px")});
+	$("#button-container").css({'left': (($outerScrWidth / 2 - $buttonWidth) + "px"), 'top': (($outerScrHeight / 2 - $buttonHeight) + "px")});
+	$("#main-text").css({'left': (($outerScrWidth / 2 - $mainWidth) + "px"), 'top': (($outerScrHeight / 2 - $mainHeight) + "px")});
 }
 
 $(document).ready(function() {
