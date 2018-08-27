@@ -4,12 +4,24 @@
   <meta name="keywords" content="HackBI, Hack BI, Hack, Bishop Ireton, Ireton, BI">
   <meta name="description" content="Official Website of the 2018 Bishop Ireton HackBI Hackathon">
   <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
-  <link rel="icon" href="img/icon.jpg">
+  <link rel="icon" href="img/logos/icon.jpg">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
+  <script type="text/javascript">
+    var list = new Egg();
+    list.addCode("up,up,down,down,left,right,left,right,b,a", function() {
+        window.location.href = "img/logos/list-logo.png";
+    }, "konami-code");
+    list.addHook(function(){
+      console.log("Hook called for: " + this.activeEgg.keys);
+      console.log(this.activeEgg.metadata);
+    });
+    list.listen();
+  </script>
   <title>HackBI II</title>
   <style>
   .jumbotron {
@@ -85,7 +97,6 @@
 			</div>
 		</div>
 	</div>
-
   <div class="con" id="con4">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
 			<path id="path1" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
@@ -167,7 +178,7 @@
               </div>
               <div class="col-sm-7 col-xs-12 col">
                 <h3>William Mueller</h3>
-                <h3>Will helps run everything. Alas he will never be Jared.</h3>
+                <h3>Will helps run everything. Alas he will never be Jared. His easter egg isn't as good as Brady's either.</h3>
               </div>
             </div>
             <div class="row person">
