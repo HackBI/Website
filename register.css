@@ -9,6 +9,18 @@ a h3 {
 	color: inherit;
 }
 
+.eventbrite_embed iframe {
+	
+    width: 75%;
+    display: block;
+    margin: auto;
+    border-color: #dedede;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 4px;
+
+}
+
 #thankyou_message {
 	text-align: center;
 	margin: 10rem;
