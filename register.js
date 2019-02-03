@@ -34,6 +34,12 @@ $(document).ready(function() {
 
 		$('#evb').animate({'margin-bottom': '500px'}, 900, 'swing');
 		//$('.eventbrite_embed iframe').animate({'opacity': 1}, 500, 'swing');
+
+		var script = document.createElement('script');
+   		script.src = 'https://www.eventbrite.com/static/widgets/eb_widgets.js';
+   		var head = document.getElementsByTagName("head")[0];
+   		head.appendChild(script);
+
 		var exampleCallback = function () {
 			console.log('Order complete!');
 		};
