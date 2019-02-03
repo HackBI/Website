@@ -33,6 +33,6 @@ $(document).ready(function() {
 	    e.preventDefault();
 
 		$('#evb').animate({'margin-bottom': '500px'}, 900, 'swing');
-		$('.hide').animate({'opacity': '1'}, 500, 'swing');
+		$('.eventbrite iframe').animate({'opacity': '1'}, 500, 'swing');
 	});
 });
