@@ -33,6 +33,20 @@ $(document).ready(function() {
 	    e.preventDefault();
 
 		$('#evb').animate({'margin-bottom': '500px'}, 900, 'swing');
-		$('.eventbrite iframe').animate({'opacity': '1'}, 500, 'swing');
+		//$('.eventbrite_embed iframe').animate({'opacity': 1}, 500, 'swing');
+		var exampleCallback = function () {
+			console.log('Order complete!');
+		};
+
+		window.EBWidgets.createWidget({
+			// Required
+			widgetType: 'checkout',
+			eventId: '55495250789',
+			iframeContainerId: 'eventbrite-widget-container-55495250789',
+
+			// Optional
+			iframeContainerHeight: 125, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+			onOrderComplete: exampleCallback // Method called when an order has successfully completed
+		});
 	});
 });
