@@ -35,24 +35,39 @@ $(document).ready(function() {
 		$('#evb').animate({'margin-bottom': '15px'}, 900, 'swing');
 		//$('.eventbrite_embed iframe').animate({'opacity': 1}, 500, 'swing');
 
+		function next() {
+			var exampleCallback = function () {
+				console.log('Order complete!');
+			};
+	
+			window.EBWidgets.createWidget({
+				// Required
+				widgetType: 'checkout',
+				eventId: '55495250789',
+				iframeContainerId: 'eventbrite-widget-container-55495250789',
+	
+				// Optional
+				iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
+				onOrderComplete: exampleCallback // Method called when an order has successfully completed
+			});
+		}
+
 		var script = document.createElement('script');
-   		script.src = 'https://www.eventbrite.com/static/widgets/eb_widgets.js';
-   		var head = document.getElementsByTagName("head")[0];
-   		head.appendChild(script);
+		script.src = 'https://www.eventbrite.com/static/widgets/eb_widgets.js';
+		document.getElementsByTagName("head")[0].appendChild(script);
+		   
+		if(script.readyState) {  // only required for IE <9
+			script.onreadystatechange = function() {
+			  if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+				script.onreadystatechange = null;
+				next();
+			  }
+			};
+		  } else {  //Others
+			script.onload = function() {
+			  next();
+			};
+		  }
 
-		var exampleCallback = function () {
-			console.log('Order complete!');
-		};
-
-		window.EBWidgets.createWidget({
-			// Required
-			widgetType: 'checkout',
-			eventId: '55495250789',
-			iframeContainerId: 'eventbrite-widget-container-55495250789',
-
-			// Optional
-			iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
-			onOrderComplete: exampleCallback // Method called when an order has successfully completed
-		});
 	});
 });
