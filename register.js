@@ -32,7 +32,7 @@ $(document).ready(function() {
 	$('a[href^="#eventbrite"]').on('click',function (e) {
 	    e.preventDefault();
 
-		$('#evb').animate({'margin-bottom': '500px'}, 900, 'swing');
+		$('#evb').animate({'margin-bottom': '15px'}, 900, 'swing');
 		//$('.eventbrite_embed iframe').animate({'opacity': 1}, 500, 'swing');
 
 		var script = document.createElement('script');
