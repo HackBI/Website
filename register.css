@@ -9,18 +9,6 @@ a h3 {
 	color: inherit;
 }
 
-.eventbrite_embed iframe {
-	
-    width: 75%;
-    display: block;
-    margin: auto;
-    border-color: #dedede;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 4px;
-
-}
-
 #thankyou_message {
 	text-align: center;
 	margin: 10rem;
@@ -58,6 +46,17 @@ a h3 {
 .jumbotron a:hover {
 	text-decoration: none;
 	opacity: 0.8;
+}
+
+.card {
+	width: 37rem;
+	margin: 0 auto auto auto;
+	float: none;
+	border-color: silver;
+	border-width: 3px;
+	border-style: solid;
+	border-radius: 3px;
+
 }
 
 #steps {
@@ -166,7 +165,29 @@ label,
 }
 
 #bottom-bar {
-	font-size: 1rem;
+	font-size: 12pt;
+	background-color: #eee;
+	padding: 15px;
+	padding-top: 0;
+}
+
+.learn-more {
+	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
+	font-display: swap;
+  	font-weight: bold;
+	text-align: center;
+	margin-top: 100px;
+	/*transition: background-color 0.4s;*/
+}
+
+#social {
+	font-size: 2rem;
+	padding: 15px;
+}
+
+.hide {
+	opacity: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -174,18 +195,33 @@ label,
 	.jumbotron h1 {
 		font-size: 95px;
 	}
+
+	/* .card {
+		margin: 0 auto auto auto;
+	} */
+
 }
 
-@media screen and (max-width: 767px) {
-
-	.jumbotron h1 {
-		font-size: 95px;
-	}
-}
 @media screen and (min-width: 768px) {
 
 	.jumbotron h1 {
 		font-size: 8rem;
 	}
 
+	#c1 {
+		margin: 0 auto auto 0px;
+	}
+
+	#c2 {
+		margin: 0 0px auto auto;
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+
+	#c1, #c2 {
+		margin: 0 auto auto auto;
+	}
+	
 }

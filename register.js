@@ -19,4 +19,20 @@ $(document).ready(function() {
     $(window).scroll(function() {
 		updateBgs();
 	});
+
+	/* $('#wave1').wavify({
+		height: 230,
+		bones: 4,
+		amplitude: -30,
+		color: 'rgba(255, 255, 255, 1)',
+		speed: .15
+	  });
+	$(".wave-container").css({'opacity': '0'}).animate({'opacity': '.99'}, 5000); */
+
+	$('a[href^="eventbrite"]').on('click',function (e) {
+	    e.preventDefault();
+
+		$('#evb').animate({'margin-bottom': '500px'}, 900, 'swing');
+		$('.hide').animate({'opacity': '1'}, 500, 'swing');
+	});
 });
