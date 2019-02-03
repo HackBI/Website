@@ -22,7 +22,7 @@ a h3 {
 .jumbotron {
 	color: rgba(255, 255, 255, .98);
 	background-color: var(--main-color);
-	background-image: url('/Users/mdodson/Downloads/students.jpg');
+	background-image: url('students.jpg');
 	background-position: center;
 	background-position-y: 42%;
 	background-size: cover;
@@ -211,7 +211,8 @@ label,
 	width: 75%;
 	display: block;
 	margin: auto;
-	border-top: 3px solid silver
+	border-top: 3px solid silver;
+	border-radius: 3px;
  
  
  }
