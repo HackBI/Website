@@ -29,7 +29,7 @@ $(document).ready(function() {
 	  });
 	$(".wave-container").css({'opacity': '0'}).animate({'opacity': '.99'}, 5000); */
 
-	$('a[href^="eventbrite"]').on('click',function (e) {
+	$('a[href^="#eventbrite"]').on('click',function (e) {
 	    e.preventDefault();
 
 		$('#evb').animate({'margin-bottom': '500px'}, 900, 'swing');
