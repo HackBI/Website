@@ -28,8 +28,17 @@ $(document).ready(function() {
 		speed: .15
 	  });
 	$(".wave-container").css({'opacity': '0'}).animate({'opacity': '.99'}, 5000); */
+	
+	var clicked = 0;
 
 	$('a[href^="#eventbrite"]').on('click',function (e) {
+		
+	    if (clicked != 0) {
+		return;
+	    }
+		
+	    clicked++;
+		
 	    e.preventDefault();
 
 		$('#evb').animate({'margin-bottom': '15px'}, 900, 'swing');
