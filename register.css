@@ -22,6 +22,10 @@ a h3 {
 .jumbotron {
 	color: #fff;
 	background: var(--main-color);
+	background-image: url('register.jpg');
+	background-position: center;
+	background-position-y: 47%;
+	background-size: cover;
 	border-radius: 0;
 }
 
@@ -52,11 +56,7 @@ a h3 {
 	width: 37rem;
 	margin: 0 auto auto auto;
 	float: none;
-	border-color: silver;
-	border-width: 3px;
-	border-style: solid;
-	border-radius: 3px;
-
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #steps {
