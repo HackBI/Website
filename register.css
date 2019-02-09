@@ -1,7 +1,7 @@
 body {
 	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	color: rgb(20, 20, 24);
-	background: #fff;
+	background: #fbfbfb;
 }
 
 a,
@@ -56,7 +56,14 @@ a h3 {
 	width: 37rem;
 	margin: 0 auto auto auto;
 	float: none;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+	background: #fff;
+	border-radius: 10px;
+}
+
+.card img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 #steps {
