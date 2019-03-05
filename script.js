@@ -52,6 +52,19 @@ $(document).ready(function() {
 	if ($scrWidth > 767) {
 		$("#video").css({'min-width': '100%', 'min-height': '100%'})
 		$(".vid-container").css({'opacity': '0'}).animate({'opacity': '.99'}, 1500);
+
+		var i = 0;
+		var text = 'HACK BI';
+
+		function type() {
+			if (i < text.length) {
+				document.getElementById("hackbi").innerHTML += text.charAt(i);
+				i++;
+				setTimeout(type, 250);
+			}
+		}
+
+		type();
 	}
 	else {
 		var video = document.getElementById('video');
@@ -65,6 +78,8 @@ $(document).ready(function() {
 			speed: .15
 		  });
 		$(".wave-container").css({'opacity': '0'}).animate({'opacity': '.99'}, 7000);
+
+		document.getElementById("hackbi").innerHTML = "HACK BI"
 	}
 
 	updateHideShow();

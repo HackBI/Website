@@ -274,7 +274,9 @@ body {
 }
 
 #button-text a div {
-	background-color: rgba(180, 180, 180, .63);
+	/* background-color: rgba(180, 180, 180, .63); */
+	background-color: rgba(220, 220, 220, .53); /*-*/
+	border-color: rgba(220, 220, 220, .83); /*-*/
 	font-size: 16pt;
 	border-width: 4px;
 	border-radius: 150px;
