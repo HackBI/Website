@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link id="font" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" media="none">
 	<link rel="stylesheet" href="style.css">
+
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'>
+
+
 	<title>HackBI</title>
 </head>
 <body>
@@ -27,7 +32,8 @@
 			<!--
 			<li><a id="registerLink" href="register">Register</a></li>
 			-->
-			<li><a id="meetTeamLink" href="team.html">Meet the HackBI Team</a></li>
+			<li><a id="contactLink" href="#contactScroll">Contact</a></li>
+			<li><a id="meetTeamLink" href="team.html">Meet the Team</a></li>
 		</ul>
 	</div>
 
@@ -241,6 +247,201 @@
 						<h3>What's the difference bewteen the middle school and high school competitions?</h3>
 						<h3>Middle school </h3>
 					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 header" id="contactScroll">
+					<h1><b>Contact Us</b></h1>
+				</div>
+				<div class="col-sm-6">
+						<div id="map"></div>
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"
+    async defer></script>
+						<!--<script src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&center=38.81760103592193,282.870252156231&zoom=12&format=png&maptype=roadmap&style=element:geometry.fill%7Cvisibility:on&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.neighborhood%7Cvisibility:off&style=feature:landscape.man_made%7Celement:geometry.fill%7Ccolor:0xefe9e1%7Csaturation:-35&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Cvisibility:off&style=feature:poi.park%7Celement:labels.text%7Cvisibility:off&style=feature:road%7Celement:labels%7Cvisibility:off&style=feature:road.arterial%7Celement:geometry.stroke%7Cweight:2&style=feature:road.highway%7Cvisibility:simplified&style=feature:road.highway%7Celement:geometry.fill%7Ccolor:0xffa35c%7Csaturation:85%7Clightness:10%7Cvisibility:on&style=feature:road.highway%7Celement:geometry.stroke%7Ccolor:0xffd1ad%7Cvisibility:on%7Cweight:0.5&style=feature:road.highway.controlled_access%7Celement:geometry.fill%7Ccolor:0xffa35c%7Cweight:2&style=feature:road.local%7Celement:geometry.stroke%7Ccolor:0xd6d9e6&style=feature:water%7Celement:labels.text%7Cvisibility:off&size=480x360"></script>-->
+						<script>
+						  var map;
+						  function initMap() {
+							map = new google.maps.Map(document.getElementById('map'), {
+							  center: {lat: -34.397, lng: 150.644},
+							  zoom: 8,
+							  styles: [
+  {
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#efe9e1"
+      },
+      {
+        "saturation": -35
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffa35c"
+      },
+      {
+        "saturation": 85
+      },
+      {
+        "lightness": 10
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#ffd1ad"
+      },
+      {
+        "visibility": "on"
+      },
+      {
+        "weight": 0.5
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#ffa35c"
+      },
+      {
+        "weight": 2
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#d6d9e6"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]
+							});
+						  }
+						</script>
+						
+					<!-- <div id='map'>
+					<script>
+						mapboxgl.accessToken = 'pk.eyJ1IjoibWRvZHNvbiIsImEiOiJjanN5MGdtYmIwN3hnNDNyNW5jMGx3d2x4In0.ve1THmGdWQcv2I9UZMc7xw';
+						const map = new mapboxgl.Map({
+						container: 'map',
+						style: 'mapbox://styles/mapbox/streets-v9',
+						center: [-77.081, 38.809],
+						zoom: 15.5
+						});
+
+						map.addControl(new mapboxgl.NavigationControl());
+
+						var marker = new mapboxgl.Marker({anchor: 'top'})
+						.setLngLat([-77.0810068, 38.809126])
+  						.addTo(map);
+						</script>
+					</div> -->
 				</div>
 			</div>
 		</div>

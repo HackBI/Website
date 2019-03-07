@@ -86,6 +86,8 @@ $(document).ready(function() {
 	updateBgs();
 	$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
 
+	$(".mapboxgl-canvas").css({'position': 'relative', 'width': '100%', 'height': '100%'})
+
 	$(window).scroll(function() {
 		updateHideShow();
 		updateBgs();

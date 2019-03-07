@@ -115,7 +115,7 @@ path {
 
 :root {
 	--main-color: #fc4d45;
-  --secondary-color: #b1ccc8;
+  --secondary-color: #b2cdc6;
   --third-color: #fc4d45;
 	--complement-color: rgb(180, 180, 180);
 
@@ -212,7 +212,7 @@ body {
 	margin-right: 0;
 }
 
-.main, .info, .faq, .map, .sponsors {
+.main, .info, .faq, .map, .sponsors .contact {
   position: relative;
 }
 
@@ -228,7 +228,7 @@ body {
   z-index: 20;
 }
 
-.map {
+.contact {
   z-index: 30;
 }
 
@@ -236,7 +236,7 @@ body {
   z-index: 40;
 }
 
-.main .row, .info .row, .faq .row, .sponsors .row, .map .row {
+.main .row, .info .row, .faq .row, .sponsors .row, .map .row .contact {
 	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	font-display: swap;
 	padding: 20px;
@@ -350,6 +350,25 @@ body {
   font-size: 0.7rem;
   text-align: right;
 }
+
+.contact {
+	background-color: #cdb7b2;
+	color: white;
+	text-align: center;
+	margin-right: 0;
+	background-size: cover;
+}
+
+.mapboxgl-canvas {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/* #map {
+	margin: 15px 0 40px -125px;
+	height: 500px;
+} */
 
 /*FAQ*/
 .faq {
