@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta name="keywords" content="HackBI, Hack BI, Hack BI III, HackBI III, Hack BI 3, HackBI 3, HackBI 2, Hack BI 2, HackBI II, Hack BI II, Hack, Bishop Ireton, Ireton, BI">
 	<meta name="description" content="Official Website of the Bishop Ireton Hackathon">
 	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
-	<meta name="theme-color" content="#FC4D45"/>
+	<meta name="theme-color" content="#FC4D45" />
 	<link rel="icon" href="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="file:///Users/mdodson/Downloads/bootstrap/css/bootstrap.min.css">
 	<link id="font" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" media="none">
 	<link rel="stylesheet" href="style.css">
-
-	<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'>
-
-
 	<title>HackBI</title>
 </head>
+
 <body>
 	<div class="nav">
-		<br/>
+		<br />
 		<ul class="pull-left">
 			<li>
 				<a class='navbar-brand' href="#main">
@@ -37,7 +35,10 @@
 		</ul>
 	</div>
 
-	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=red" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-red.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
+	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
+	 href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=red"
+	 target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-red.svg" alt="Major League Hacking 2019 Hackathon Season"
+		 style="width:100%"></a>
 
 	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px'>
 		<div class="vid-container">
@@ -47,38 +48,43 @@
 			</video>
 		</div>
 		<div class="wave-container">
-			<svg width="100%" height="100%" class="wave"><path id="wave1"/></svg>
+			<svg width="100%" height="100%" class="wave">
+				<path id="wave1" /></svg>
 		</div>
 		<div class="row" style='margin-bottom: 0; padding-bottom: 0'>
-			<div class="col-sm-12 logo-text pop-in" style="position: absolute; margin-left: -3.75px; border-left: 0; padding-left: 0;" id="main-text">
-				<h1 id="hackbi"></h1>
+			<div class="col-sm-12 logo-text pop-in" style="position: absolute; margin-left: -3.75px; border-left: 0; padding-left: 0;"
+			 id="main-text">
+				<h1 style="text-shadow: -6px 8px 0px black;">HACK BI</h1>
 			</div>
 		</div>
 		<div class="container" id="button-container" style="margin-bottom: 0px">
 			<div class="row" style='margin-bottom: 0; padding-bottom: 0'>
 				<div class="col-sm-12 logo-text pop-in" style="position: absolute; color: white" id="button-text">
 					<h4 id="intro" style="position: absolute">24-hour hackathon at Bishop Ireton High School</h4>
-					<h2 id="date" style="font-weight: bold"></h4>
+					<h2 id="date" style="font-weight: bold">
+						</h4>
 				</div>
 			</div>
 			<div class="row" style="margin-bottom: 0; padding-bottom: 0;" id="button-text">
 				<div class="pop-in" style="position: absolute; margin: 100px 100px 100px 0px; z-index: 1001">
-					<a id="registerButton" href="#"><div class="pop-in" style="width: 260px;">Registration Coming Soon</div></a>
+					<a id="registerButton" href="#">
+						<div class="pop-in" style="width: 260px;">Registration Coming Soon</div>
+					</a>
 				</div>
-				
+
 				<div class="pop-in" style="position: absolute; margin: 100px 0px 100px 100px; z-index: 1000">
 					<!--<a id="registerButton" href="#faqScroll"><div class="pop-in" style="width: 150px;">FAQs</div></a>-->
-				
+
 				</div>
 				<div class="pop-in" id="drop" style="font-size: 30px;">
-					<a id="scheduleLink" href="#faqScroll">
+					<a id="faqLink" href="#faqScroll">
 						<span style="color: #fefefe" class="glyphicon glyphicon-chevron-down bounce"></span>
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-<!--
+	<!--
 	<div class="info">
 		<div class="container" style="margin-top: -130px">
 			<div class="row">
@@ -176,7 +182,7 @@
 		</div>
 	</div>
 -->
-<!--
+	<!--
 	<div class="con" id="con1">
 			<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
 				<path id="path1" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
@@ -187,25 +193,31 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 header" id="faqScroll">
-					<h1 id="faq-text">Frequently Asked Questions</h1>
-					<h4>Don't see your question here? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a> to ask it!</h3>
+					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black;">Frequently Asked Questions</h1>
+					<h4>Don't see your question here? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>
+						to ask it!</h3>
 				</div>
 				<div class="col-sm-6 col-xs-12">
 					<div class="qa hideme">
 						<h3>What is a hackathon?</h3>
-						<h4>Hackathons are competitive programming events in which teams and individuals create their own custom projects to showcase.</h3>
+						<h4>Hackathons are competitive programming events in which teams and individuals create their own custom projects
+							to showcase.</h3>
 					</div>
 					<div class="qa hideme">
 						<h3>What is HackBI?</h3>
-						<h4>HackBI is a student-run hackathon at Bishop Ireton High School, where you will have 24 hours to learn how to code and/or work with your friends to make your idea come to life!</h3>
+						<h4>HackBI is a student-run hackathon at Bishop Ireton High School, where you will have 24 hours to learn how to
+							code and/or work with your friends to make your idea come to life!</h3>
 					</div>
 					<div class="qa hideme">
 						<h3>Why should I attend HackBI?</h3>
-						<h4>Whether you're just getting started with coding or have been doing it for a few years, HackBI will be a great place to better your skills and have a lot of fun doing it! HackBI is focused on programming education, so we'll do our best to make sure you don't feel intimidated or overwhelmed by what's going on.</h3>
+						<h4>Whether you're just getting started with coding or have been doing it for a few years, HackBI will be a great
+							place to better your skills and have a lot of fun doing it! HackBI is focused on programming education, so we'll
+							do our best to make sure you don't feel intimidated or overwhelmed by what's going on.</h3>
 					</div>
 					<div class="qa hideme">
 						<h3>Do I need any programming experience to come?</h3>
-						<h4>HackBI is open to any 8th grade or high school students interested, regardless of previous programming experience. We'll have workshops throughout the event to introduce you to new things too.</h3>
+						<h4>HackBI is open to any 8th grade or high school students interested, regardless of previous programming
+							experience. We'll have workshops throughout the event to introduce you to new things too.</h3>
 					</div>
 					<div class="qa hideme">
 						<h3>What should I bring?</h3>
@@ -229,19 +241,25 @@
 					</div>
 					<div class="qa hideme">
 						<h3>What if I have dietary concerns?</h3>
-						<h4>If you have a specific dietary concern, please email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a> to let us know and we'll gladly accomodate you.</h3>
+						<h4>If you have a specific dietary concern, please email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>
+							to let us know and we'll gladly accomodate you.</h3>
 					</div>
 					<div class="qa hideme">
 						<h3>Do I need to come with a team?</h3>
-						<h4>You can come with a pre-determined team if you want, but if you're coming individually there will be an opportunity before hacking begins to join one.</h3>
+						<h4>You can come with a pre-determined team if you want, but if you're coming individually there will be an
+							opportunity before hacking begins to join one.</h3>
 					</div>
 					<div class="qa hideme">
 						<h3>Are there prizes?</h3>
-						<h4>Of course! There will be prizes for each individual in a team (a max of 4 people). The biggest prize will be a paid summer internship at Decipher Technology Studios! You can visit their website <a href = "http://deciphernow.com/" style = "color: #fafcfb">here</a>!</h3>
+						<h4>Of course! There will be prizes for each individual in a team (a max of 4 people). The biggest prize will be
+							a paid summer internship at Decipher Technology Studios! You can visit their website <a href="http://deciphernow.com/"
+							 style="color: #fafcfb">here</a>!</h3>
 					</div>
 					<div class="qa hideme">
 						<h3>What if I don't have a laptop?</h3>
-						<h4>Bishop Ireton has a limited number of computers that you can use if you're in middle school and don't have access to your own, so you can still work on a project. You just can't download any custom software on provided computers.</h3>
+						<h4>Bishop Ireton has a limited number of computers that you can use if you're in middle school and don't have
+							access to your own, so you can still work on a project. You just can't download any custom software on provided
+							computers.</h3>
 					</div>
 					<!--<div class="qa hideme">
 						<h3>What's the difference bewteen the middle school and high school competitions?</h3>
@@ -251,202 +269,36 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="contact">
-		<div class="container">
+		<div class="container" style="width: 100%; padding: 0;">
 			<div class="row">
-				<div class="col-xs-12 header" id="contactScroll">
-					<h1><b>Contact Us</b></h1>
-				</div>
-				<div class="col-sm-6">
-						<div id="map"></div>
-						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"
-    async defer></script>
-						<!--<script src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&center=38.81760103592193,282.870252156231&zoom=12&format=png&maptype=roadmap&style=element:geometry.fill%7Cvisibility:on&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.neighborhood%7Cvisibility:off&style=feature:landscape.man_made%7Celement:geometry.fill%7Ccolor:0xefe9e1%7Csaturation:-35&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi.business%7Cvisibility:off&style=feature:poi.park%7Celement:labels.text%7Cvisibility:off&style=feature:road%7Celement:labels%7Cvisibility:off&style=feature:road.arterial%7Celement:geometry.stroke%7Cweight:2&style=feature:road.highway%7Cvisibility:simplified&style=feature:road.highway%7Celement:geometry.fill%7Ccolor:0xffa35c%7Csaturation:85%7Clightness:10%7Cvisibility:on&style=feature:road.highway%7Celement:geometry.stroke%7Ccolor:0xffd1ad%7Cvisibility:on%7Cweight:0.5&style=feature:road.highway.controlled_access%7Celement:geometry.fill%7Ccolor:0xffa35c%7Cweight:2&style=feature:road.local%7Celement:geometry.stroke%7Ccolor:0xd6d9e6&style=feature:water%7Celement:labels.text%7Cvisibility:off&size=480x360"></script>-->
-						<script>
-						  var map;
-						  function initMap() {
-							map = new google.maps.Map(document.getElementById('map'), {
-							  center: {lat: -34.397, lng: 150.644},
-							  zoom: 8,
-							  styles: [
-  {
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "visibility": "on"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.land_parcel",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.neighborhood",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "landscape.man_made",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#efe9e1"
-      },
-      {
-        "saturation": -35
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.business",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "poi.park",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "labels",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "geometry.stroke",
-    "stylers": [
-      {
-        "weight": 2
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "stylers": [
-      {
-        "visibility": "simplified"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#ffa35c"
-      },
-      {
-        "saturation": 85
-      },
-      {
-        "lightness": 10
-      },
-      {
-        "visibility": "on"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "geometry.stroke",
-    "stylers": [
-      {
-        "color": "#ffd1ad"
-      },
-      {
-        "visibility": "on"
-      },
-      {
-        "weight": 0.5
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway.controlled_access",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#ffa35c"
-      },
-      {
-        "weight": 2
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "geometry.stroke",
-    "stylers": [
-      {
-        "color": "#d6d9e6"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  }
-]
-							});
-						  }
-						</script>
-						
-					<!-- <div id='map'>
-					<script>
-						mapboxgl.accessToken = 'pk.eyJ1IjoibWRvZHNvbiIsImEiOiJjanN5MGdtYmIwN3hnNDNyNW5jMGx3d2x4In0.ve1THmGdWQcv2I9UZMc7xw';
-						const map = new mapboxgl.Map({
-						container: 'map',
-						style: 'mapbox://styles/mapbox/streets-v9',
-						center: [-77.081, 38.809],
-						zoom: 15.5
-						});
-
-						map.addControl(new mapboxgl.NavigationControl());
-
-						var marker = new mapboxgl.Marker({anchor: 'top'})
-						.setLngLat([-77.0810068, 38.809126])
-  						.addTo(map);
-						</script>
-					</div> -->
+					<div class="col-xs-12 col-sm-6" style="padding: 0">
+							<div id="map"></div>
+							<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
+						</div>
+				<div class="col-xs-12 col-sm-6 header" id="contactScroll">
+					<h1 style="margin-top: 15px; font-size: 40pt; text-shadow: -2px 4px 0px black;"><b>Contact</b></h1>
+						<form style="width: 100%; margin-top: -50px; text-align: left; padding: 25px">
+								<div class="form-group">
+									<label>Name</label>
+									<input class="form-control" placeholder="Name">
+								</div>
+								<div class="form-group">
+									<label>Email Address</label>
+									<input class="form-control" placeholder="Email">
+								</div>
+								<div class="form-group">
+										<label>Question</label>
+										<textarea class="form-control" rows="3" placeholder="Question"></textarea>
+									</div>
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</form>
 				</div>
 			</div>
 		</div>
 	</div>
-<!--
+	<!--
 	<div class="con" id="con2">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
 			<path id="path2" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
@@ -456,25 +308,26 @@
 	<div class="sponsors">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 header">
-					<h1><b>Sponsors</b></h1>
+				<div class="col-sm-12 header" style="margin-top: -45px">
+					<h1 style="text-shadow: -4px 6px 0px black;"><b>Sponsors</b></h1>
 					<h3>Interested in being a sponsor? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>!</h3>
-					<br/><br/><br/>
+					<br /><br /><br />
 				</div>
 				<div class="col-sm-12 logos">
-					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-white.png" alt="MLH"/></a>
-					<img class="img-responsive" data-src="img/ibg.png" alt="Innovative Business Group"/>
-					<a href="https://github.com"><img class="img-responsive" data-src="img/github-black.png" alt="GitHub"/></a>
-					<a href="https://www.bishopireton.org/page/Alumni--Parents/PTO"><img class="img-responsive" data-src="img/bi-logo.png" alt="Bishop Ireton High School PTO"/></a>
-					<a href="http://www.thinkfun.com"><img class="img-responsive" data-src="img/think-fun.png" alt="ThinkFun"/></a>
-					<a href="http://www.brandmakers.com"><img class="img-responsive" data-src="img/brandmakers.png" alt="Brand Makers"/></a>
-					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios"/></a>
-					<a href="https://ultrapress.com"><img class="img-responsive" data-src="img/ultra-press.png" alt="UltraPress"/></a>
+					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-white.png" alt="MLH" /></a>
+					<img class="img-responsive" data-src="img/ibg.png" alt="Innovative Business Group" />
+					<a href="https://github.com"><img class="img-responsive" data-src="img/github-black.png" alt="GitHub" /></a>
+					<a href="https://www.bishopireton.org/page/Alumni--Parents/PTO"><img class="img-responsive" data-src="img/bi-logo.png"
+						 alt="Bishop Ireton High School PTO" /></a>
+					<a href="http://www.thinkfun.com"><img class="img-responsive" data-src="img/think-fun.png" alt="ThinkFun" /></a>
+					<a href="http://www.brandmakers.com"><img class="img-responsive" data-src="img/brandmakers.png" alt="Brand Makers" /></a>
+					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios" /></a>
+					<a href="https://ultrapress.com"><img class="img-responsive" data-src="img/ultra-press.png" alt="UltraPress" /></a>
 				</div>
 			</div>
 		</div>
 	</div>
-<!--
+	<!--
 	<div class="con" id="con3">
 		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
 			<path id="path3" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
@@ -482,7 +335,8 @@
 	</div>
 -->
 	<div class="learn-more" id="bottom-bar">
-		<br/><br/><p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>
+		<br /><br />
+		<p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>
 		<p><a href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md">MLH Data Sharing Provision</a></p>
 		<a id="social" href="https://www.facebook.com/officialhackbi/" class="fab fa-facebook make-translucent"></a>
 		<a id="social" href="https://www.twitter.com/HackBIOfficial" class="fab fa-twitter make-translucent"></a>
@@ -503,4 +357,5 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
 </body>
+
 </html>

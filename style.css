@@ -114,10 +114,10 @@ path {
 
 
 :root {
-	--main-color: #fc4d45;
-  --secondary-color: #b2cdc6;
-  --third-color: #fc4d45;
-	--complement-color: rgb(180, 180, 180);
+	--main-color: rgb(252, 61, 70);
+  --secondary-color: rgb(254, 176, 71);
+  --third-color: rgb(252, 61, 70);
+	--complement-color: rgb(163, 195, 185);
 
 	--subtle-font-color: #888;
 }
@@ -352,23 +352,12 @@ body {
 }
 
 .contact {
-	background-color: #cdb7b2;
+	background-color: var(--complement-color);
 	color: white;
 	text-align: center;
 	margin-right: 0;
 	background-size: cover;
 }
-
-.mapboxgl-canvas {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
-/* #map {
-	margin: 15px 0 40px -125px;
-	height: 500px;
-} */
 
 /*FAQ*/
 .faq {
@@ -451,6 +440,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	z-index: 2;
+}
+
+#map {
+	height: 400px;
+	width: 100%;
 }
 
 /*.sponsors .logos img:hover {
@@ -584,10 +578,6 @@ body {
 		opacity: 0;
 	}
 
-	/*.map #map {
-		height: 80vmin;
-	}*/
-
 	.sponsors h1 {
 		font-size: 2.2em;
 	}
@@ -649,10 +639,6 @@ body {
 		margin-top: -50px;
 	}
 
-	/*.map #map {
-		height: 80vmin;
-	}*/
-
 	.sponsors .logos img {
 		max-height: 150px;
 	}
@@ -703,10 +689,6 @@ body {
   #desktopSchedule, #scheduleScroll {
     display: inherit;
 	}
-
-	/*.map #map {
-		height: 60vmin;
-	}*/
 
 	@-webkit-keyframes bounce {
 		0%, 20%, 50%, 80%, 100% {

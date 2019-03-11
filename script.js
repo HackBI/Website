@@ -1,10 +1,9 @@
-
 //reveal .hideme elements when they enter the window
 function updateHideShow() {
-	$('.hideme').each( function(i) {
+	$('.hideme').each(function (i) {
 		var bottom_of_object = $(this).offset().top + ($(this).outerHeight() / 2);
 		var bottom_of_window = $(window).scrollTop() + $(window).height();
-		if ( bottom_of_window > bottom_of_object ) {
+		if (bottom_of_window > bottom_of_object) {
 			$(this).addClass('showme');
 		}
 	});
@@ -17,11 +16,23 @@ function updateBgs() {
 	var threshold = $(window).height() / 6;
 
 	if (bottom_of_nav > threshold && ($(window).width() >= 992)) {
-		$('.nav').css({'background-color': '#f4f4f4', 'height': '50px', 'top': '-7px'});
-		$('.nav li a').css({'color': 'black'});
+		$('.nav').css({
+			'background-color': '#f4f4f4',
+			'height': '50px',
+			'top': '-7px'
+		});
+		$('.nav li a').css({
+			'color': 'black'
+		});
 	} else if (bottom_of_nav < threshold) {
-		$('.nav').css({'background-color': 'transparent', 'height': '60px', 'top': '5px'});
-		$('.nav li a').css({'color': 'white'});
+		$('.nav').css({
+			'background-color': 'transparent',
+			'height': '60px',
+			'top': '5px'
+		});
+		$('.nav li a').css({
+			'color': 'white'
+		});
 	}
 }
 
@@ -30,70 +41,206 @@ function updateBgs() {
 function setJumbotronHeight() {
 	$scrHeight = $(window).innerHeight();
 	$scrWidth = $(window).innerWidth();
-	
+
 	$outerScrHeight = $(window).outerHeight();
 	$outerScrWidth = $(window).outerWidth();
-	
+
 	$mainHeight = $("#main-text").height() / 1.5;
 	$mainWidth = $("#main-text").width() / 2;
 
 	$buttonHeight = $("#button-container").height() / 2;
 	$buttonWidth = $("#button-container").width() / 2;
 
-	$("#button-container").css({'left': (($outerScrWidth / 2 - $buttonWidth) + "px"), 'top': (($outerScrHeight / 2 - $buttonHeight) + "px")});
-	$("#main-text").css({'left': (($outerScrWidth / 2 - $mainWidth) + "px"), 'top': (($outerScrHeight / 2 - $mainHeight) + "px")});
+	$("#button-container").css({
+		'left': (($outerScrWidth / 2 - $buttonWidth) + "px"),
+		'top': (($outerScrHeight / 2 - $buttonHeight) + "px")
+	});
+	$("#main-text").css({
+		'left': (($outerScrWidth / 2 - $mainWidth) + "px"),
+		'top': (($outerScrHeight / 2 - $mainHeight) + "px")
+	});
 }
 
-$(document).ready(function() {
+function initMap() {
+	var map = new google.maps.Map(
+		document.getElementById('map'), {
+			zoom: 16,
+			center: {
+				lat: 38.8092594,
+				lng: -77.0811094
+			},
+			styles: [{
+				"elementType": "geometry.fill",
+				"stylers": [{
+					"visibility": "on"
+				}]
+			},
+			{
+				"featureType": "administrative.land_parcel",
+				"stylers": [{
+					"visibility": "off"
+				}]
+			},
+			{
+				"featureType": "administrative.neighborhood",
+				"stylers": [{
+					"visibility": "off"
+				}]
+			},
+			{
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "saturation": -50
+            },
+            {
+                "lightness": 60
+            }
+        ]
+    },
+			{
+				"featureType": "landscape.man_made",
+				"elementType": "geometry.fill",
+				"stylers": [{
+						"color": "#efe9e1"
+					},
+					{
+						"saturation": -35
+					}
+				]
+			},
+			{
+				"featureType": "poi",
+				"elementType": "labels.text",
+				"stylers": [{
+					"visibility": "on"
+				}]
+			},
+			{
+				"featureType": "poi.business",
+				"stylers": [{
+					"visibility": "off"
+				}]
+			},
+			{
+				"featureType": "road",
+				"elementType": "labels",
+				"stylers": [{
+					"visibility": "on"
+				}]
+			},
+			{
+				"featureType": "road.arterial",
+				"elementType": "geometry.stroke",
+				"stylers": [{
+					"weight": 2
+				}]
+			},
+			{
+				"featureType": "road.highway",
+					"elementType": "geometry.fill",
+					"stylers": [
+							{
+									"color": "#ef8c25"
+							},
+							{
+									"lightness": 40
+							}
+					]
+			},
+			{
+				"featureType": "road.highway",
+				"elementType": "geometry.fill",
+				"stylers": [
+					{
+							"color": "#ef8c25"
+					},
+					{
+							"lightness": 40
+					}
+			]
+			},
+			{
+				"featureType": "road.highway",
+				"elementType": "geometry.stroke",
+				"stylers": [{
+					"visibility": "off"
+			}
+				]
+			},
+			{
+				"featureType": "water",
+				"elementType": "labels.text",
+				"stylers": [{
+					"visibility": "off"
+				}]
+			}
+		]
+		});
+	var marker = new google.maps.Marker({
+		position: {
+			lat: 38.8092500,
+			lng: -77.0809000
+		},
+		map: map
+	});
+}
+
+$(document).ready(function () {
 	$('#font').removeAttr("media");
-	$(".vid-container").css({'height': (window.innerHeight+2) + "px"});
+	$(".vid-container").css({'height': (window.innerHeight + 2) + "px"
+	});
 	setJumbotronHeight();
 
 	if ($scrWidth > 767) {
-		$("#video").css({'min-width': '100%', 'min-height': '100%'})
-		$(".vid-container").css({'opacity': '0'}).animate({'opacity': '.99'}, 1500);
+		$("#video").css({
+			'min-width': '100%',
+			'min-height': '100%'
+		})
+		$(".vid-container").css({
+			'opacity': '0'
+		}).animate({
+			'opacity': '.99'
+		}, 1500);
 
-		var i = 0;
-		var text = 'HACK BI';
-
-		function type() {
-			if (i < text.length) {
-				document.getElementById("hackbi").innerHTML += text.charAt(i);
-				i++;
-				setTimeout(type, 250);
-			}
-		}
-
-		type();
-	}
-	else {
+	} else {
 		var video = document.getElementById('video');
 		video.remove();
-		$(".vid-container").css({'margin-bottom': '40px'});
+		$(".vid-container").css({
+			'margin-bottom': '40px'
+		});
+
 		$('#wave1').wavify({
 			height: 200,
 			bones: 4,
 			amplitude: 90,
 			color: 'rgba(255,140,90,.3)',
 			speed: .15
-		  });
-		$(".wave-container").css({'opacity': '0'}).animate({'opacity': '.99'}, 7000);
+		});
 
-		document.getElementById("hackbi").innerHTML = "HACK BI"
+		$(".wave-container").css({
+			'opacity': '0'
+		}).animate({
+			'opacity': '.99'
+		}, 7000);
+
 	}
 
 	updateHideShow();
 	updateBgs();
-	$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
+	$('canvas').css({
+		'width': $(window).width(),
+		'height': $(window).height() * 1.5
+	});
+		
+	initMap();
 
-	$(".mapboxgl-canvas").css({'position': 'relative', 'width': '100%', 'height': '100%'})
-
-	$(window).scroll(function() {
+	$(window).scroll(function () {
 		updateHideShow();
 		updateBgs();
 	});
 
-	$(window).resize(function() {
+	$(window).resize(function () {
 		// Resize vid-container
 		/* if ($(window).outerWidth() <= 767) {
 			$(".vid-container").css({'margin-bottom': '40px'});
@@ -101,15 +248,18 @@ $(document).ready(function() {
 		else {
 			$(".vid-container").css({'margin-bottom': '0px'});
 		} */
-		$('canvas').css({'width': $(window).width(), 'height': $(window).height() * 1.5});
+		$('canvas').css({
+			'width': $(window).width(),
+			'height': $(window).height() * 1.5
+		});
 	});
 
 
 	//smooth scrolling for anchor links
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
+	$('a[href^="#"]').on('click', function (e) {
+		e.preventDefault();
 
-	    var target = this.hash;
+		var target = this.hash;
 		var $target = $(target);
 
 		$('html, body').stop().animate({'scrollTop': $target.offset().top - $target.height() + 60}, 900, 'swing');
