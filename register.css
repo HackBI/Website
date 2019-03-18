@@ -1,10 +1,11 @@
 body {
-	font-family: Montserrat, Metrophobic;
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	color: rgb(20, 20, 24);
-	background: #fff;
+	background: #fbfbfb;
 }
 
-a, a h3 {
+a,
+a h3 {
 	color: inherit;
 }
 
@@ -13,6 +14,7 @@ a, a h3 {
 	margin: 10rem;
 	display: none;
 }
+
 #thankyou_message h1 {
 	margin-bottom: 4rem;
 }
@@ -20,28 +22,48 @@ a, a h3 {
 .jumbotron {
 	color: #fff;
 	background: var(--main-color);
+	background-image: url('register.jpg');
+	background-position: center;
+	background-position-y: 47%;
+	background-size: cover;
 	border-radius: 0;
 }
 
 .jumbotron h1 {
-	font: 6em Jaapokki;
+	font-family: Jaapokki_Subtract, Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+	margin-bottom: -20px
 	/*background: -webkit-linear-gradient(-45deg, #f06, #ffd700);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
 }
 
 .jumbotron a div {
-  /*color: rgb(20, 20, 20);*/
-  font-size: 2em;
-  /*background: white;*/
-  display: inline-block;
-  padding: 1em;
-  border-radius: 5px;
+	/*color: rgb(20, 20, 20);*/
+	font-size: 2em;
+	/*background: white;*/
+	display: inline-block;
+	padding: 1em;
+	border-radius: 5px;
 }
 
 .jumbotron a:hover {
-  text-decoration: none;
-  opacity: 0.8;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.card {
+	width: 37rem;
+	margin: 0 auto auto auto;
+	float: none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+	background: #fff;
+	border-radius: 10px;
+}
+
+.card img {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 
 #steps {
@@ -56,7 +78,8 @@ a, a h3 {
 	color: #999;
 }
 
-#steps a:hover, #steps a h3:hover {
+#steps a:hover,
+#steps a h3:hover {
 	color: #999;
 }
 
@@ -71,7 +94,9 @@ a:hover {
 .form-check {
 	text-align: left;
 }
-label, .form-check-label {
+
+label,
+.form-check-label {
 	font-weight: normal;
 }
 
@@ -80,7 +105,7 @@ label, .form-check-label {
 }
 
 .btn {
-	font-family: Montserrat;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	font-size: 2rem;
 	color: #fff;
 	/*background-color: #823994;
@@ -104,12 +129,15 @@ label, .form-check-label {
 	margin: 0;
 }
 
-.grade, .middle-school, .high-school {
+.grade,
+.middle-school,
+.high-school {
 	margin-bottom: 2rem;
 	display: none;
 }
 
-.programming-experience, .t-shirt-size {
+.programming-experience,
+.t-shirt-size {
 	margin-top: 2rem;
 }
 
@@ -144,5 +172,69 @@ label, .form-check-label {
 }
 
 #bottom-bar {
-	font-size: 1rem;
+	font-size: 12pt;
+	background-color: #eee;
+	padding: 15px;
+	padding-top: 0;
+}
+
+.learn-more {
+	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
+	font-display: swap;
+  	font-weight: bold;
+	text-align: center;
+	margin-top: 100px;
+	/*transition: background-color 0.4s;*/
+}
+
+#social {
+	font-size: 2rem;
+	padding: 15px;
+}
+
+.eventbrite_embed iframe {
+
+   width: 95%;
+   display: block;
+   margin: auto;
+   border-top: 1px solid silver
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+	.jumbotron h1 {
+		font-size: 95px;
+	}
+
+	/* .card {
+		margin: 0 auto auto auto;
+	} */
+
+}
+
+@media screen and (min-width: 768px) {
+
+	.jumbotron h1 {
+		font-size: 8rem;
+	}
+
+	#c1 {
+		margin: 0 auto auto 0px;
+	}
+
+	#c2 {
+		margin: 0 0px auto auto;
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+
+	#c1, #c2 {
+		margin: 0 auto auto auto;
+	}
+	
 }
