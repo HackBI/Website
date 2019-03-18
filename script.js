@@ -186,6 +186,43 @@ function initMap() {
 	});
 }
 
+var registerReq = 0
+
+function requestNotif() {
+	registerReq=1;
+	$('#contactq').attr('placeholder', 'Request to be notified when registration opens.');
+	$('#contactq').prop('readonly', 'true');
+	$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darkorange'});
+	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing');
+}
+
+function contactSubmit() {
+	var name = $('#namef').val().replace(/\s/g, "+");
+	var email = $('#emailf').val().replace(/\s/g, "+");
+	var question = $('#contactq').val().replace(/\s/g, "+");
+
+	if ((registerReq == 0 && question == "") || name == "" || email == "") {
+		alert("Please enter a value for all fields");
+	}
+	else {
+		var scriptfunc;
+		var scriptdata;
+
+		if (registerReq == 1) {
+			registerReq = 0;
+			$.post('https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=requestRegistrationNotification&name=' + name + '&email=' + email);
+		}
+		else {
+			$.post('https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=contact&name=' + name + '&email=' + email + '&question=' + question);
+		}
+
+		$('#contactsubmit').text('Sent');
+	}
+
+	return;
+
+}
+
 $(document).ready(function () {
 	$('#font').removeAttr("media");
 	$(".vid-container").css({'height': (window.innerHeight + 2) + "px"
@@ -255,6 +292,7 @@ $(document).ready(function () {
 	});
 
 
+
 	//smooth scrolling for anchor links
 	$('a[href^="#"]').on('click', function (e) {
 		e.preventDefault();
@@ -262,6 +300,6 @@ $(document).ready(function () {
 		var target = this.hash;
 		var $target = $(target);
 
-		$('html, body').stop().animate({'scrollTop': $target.offset().top - $target.height() + 60}, 900, 'swing');
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/2) + 20}, 900, 'swing');
 	});
 });
