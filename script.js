@@ -214,10 +214,18 @@ function contactSubmit() {
 
 		if (registerReq == 1) {
 			registerReq = 0;
-			$.post('https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=requestRegistrationNotification&name=' + name + '&email=' + email);
+			$.ajax({
+				'async': false,
+				'type': 'POST',
+				'url': 'https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=requestRegistrationNotification&name=' + name + '&email=' + email;
+			});
 		}
 		else {
-			$.post('https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=contact&name=' + name + '&email=' + email + '&question=' + question);
+			$.ajax({
+				'async': false,
+				'type': 'POST',
+				'url': 'https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=contact&name=' + name + '&email=' + email + '&question=' + question;
+			});
 		}
 
 		$('#contactsubmit').text('Sent');
