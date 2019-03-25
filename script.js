@@ -193,7 +193,8 @@ function requestNotif() {
 	$('#contactq').attr('placeholder', 'Request to be notified when registration opens.');
 	$('#contactq').prop('readonly', 'true');
 	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing', function() {
-		$('#emailf, #namef').animate({'box-shadow': '0 0 2px 2px darkorange'}, 0);
+		$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darkorange'});
+		$("body").addClass("dummyClass").removeClass("dummyClass");
 	});
 }
 
