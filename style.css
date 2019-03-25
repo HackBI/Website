@@ -361,6 +361,7 @@ body {
 	text-align: center;
 	margin-right: 0;
 	background-size: cover;
+	cursor: pointer;
 }
 
 /*FAQ*/
