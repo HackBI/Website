@@ -192,13 +192,16 @@ function requestNotif() {
 	registerReq=1;
 	$('#contactq').attr('placeholder', 'Request to be notified when registration opens.');
 	$('#contactq').prop('readonly', 'true');
-	$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darkorange'});
-	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing');
+	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing', function() {
+		$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darkorange'});
+	});
 }
 
 function contactSubmit() {
 	var name = $('#namef').val().replace(/\s/g, "+");
+	console.log(name);
 	var email = $('#emailf').val().replace(/\s/g, "+");
+	console.log(email);
 	var question = $('#contactq').val().replace(/\s/g, "+");
 
 	if ((registerReq == 0 && question == "") || name == "" || email == "") {
@@ -225,8 +228,7 @@ function contactSubmit() {
 
 $(document).ready(function () {
 	$('#font').removeAttr("media");
-	$(".vid-container").css({'height': (window.innerHeight + 2) + "px"
-	});
+	$(".vid-container").css({'height': (window.innerHeight + 2) + "px"});
 	setJumbotronHeight();
 
 	if ($scrWidth > 767) {
@@ -300,6 +302,15 @@ $(document).ready(function () {
 		var target = this.hash;
 		var $target = $(target);
 
-		$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/2) + 20}, 900, 'swing');
+		var dist;
+		if ($scrWidth > 767) {
+			dist=80;
+		} else if (this.equals("contactScroll")) {
+			dist = 180;
+		} else {
+			dist = 30;
+		}
+
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - dist}, 900, 'swing');
 	});
 });

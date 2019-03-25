@@ -193,7 +193,7 @@
 			<div class="row">
 				<div class="col-xs-12 header" id="faqScroll">
 					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black;">Frequently Asked Questions</h1>
-					<h4>Don't see your question here? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>
+					<h4>Don't see your question here? Click <a href="#contactScroll">here</a>
 						to ask it!</h3>
 				</div>
 				<div class="col-sm-6 col-xs-12">
@@ -272,27 +272,29 @@
 	<div class="contact">
 		<div class="container" style="width: 100%; padding: 0;">
 			<div class="row">
-					<div class="col-xs-12 col-sm-6" style="padding: 0">
-							<div id="map"></div>
+					<div class="col-xs-12 col-sm-6" style="padding: 0;">
+							<div id="map" style="height: 450px"></div>
 							<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 						</div>
-				<div class="col-xs-12 col-sm-6 header" id="contactScroll">
-					<h1 style="margin-top: 15px; font-size: 42pt; text-shadow: -2px 4px 0px black;"><b>Contact</b></h1>
-						<form style="width: 100%; margin-top: -65px; text-align: left; padding: 30px; font-size: 18px">
+				<div class="col-xs-12 col-sm-6 header" id="contactScroll" style="color: #909090;">
+					<h1 style="margin-top: 35px; font-size: 42pt; font-weight: bold; font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;">Contact Us</h1> <!--text-shadow: -2.5px 4.5px 0px black; -->
+						<form style="width: 100%; margin-top: -50px; text-align: left; padding: 30px; font-size: 18px;">
 								<div class="form-group">
 									<label>Name</label>
-									<input id="namef" class="form-control" placeholder="Name">
+									<input id="namef" class="form-control" style="background-color: rgb(251, 251, 251)" placeholder="Name">
 								</div>
 								<div class="form-group">
 									<label>Email Address</label>
-									<input id="emailf" class="form-control" placeholder="Email">
+									<input id="emailf" class="form-control" style="background-color: rgb(251, 251, 251)" placeholder="Email">
 								</div>
 								<div class="form-group">
 										<label>Question</label>
-										<textarea id="contactq" class="form-control" rows="2" placeholder="Question"></textarea>
+										<textarea id="contactq" class="form-control" style="background-color: rgb(251, 251, 251)" rows="2" placeholder="Question"></textarea>
 									</div>
 								<button id="contactsubmit" class="btn btn-primary" onclick="javascript:contactSubmit()">Submit</button>
+							
 							</form>
+							<p style="margin: -15px 0 0 0; font-size: 10pt;">*Also at <a style="text-decoration: none; color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a></p>
 				</div>
 			</div>
 		</div>
@@ -308,7 +310,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 header" style="margin-top: -40px">
-					<h1 style="text-shadow: -4px 6px 0px black; margin-bottom: -8px"><b>Sponsors</b></h1>
+					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black; margin-bottom: -8px"><b>Sponsors</b></h1>
 					<h3>Interested in being a sponsor? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>!</h3>
 					<br /><br /><br />
 				</div>
