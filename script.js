@@ -191,6 +191,7 @@ var registerReq = 0
 function requestNotif() {
 	registerReq=1;
 	$('#contactq').attr('placeholder', 'Request to be notified when registration opens.');
+	$('#contactq').val('');
 	$('#contactq').prop('readonly', 'true');
 	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing', function() {
 		$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darkorange'});
@@ -217,20 +218,26 @@ function contactSubmit() {
 			$.ajax({
 				'async': false,
 				'type': 'POST',
-				'url': 'https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=requestRegistrationNotification&name=' + name + '&email=' + email;
+				'url': 'https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=requestRegistrationNotification&name=' + name + '&email=' + email
 			});
+			$('#emailf, #namef').css({'box-shadow': 'none'});
+			$('#contactq').prop('readonly', false);
+			$('#contactq').prop('placeholder', 'Question');
 		}
 		else {
 			$.ajax({
 				'async': false,
 				'type': 'POST',
-				'url': 'https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=contact&name=' + name + '&email=' + email + '&question=' + question;
+				'url': 'https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=contact&name=' + name + '&email=' + email + '&question=' + question
 			});
 		}
 
 		$('#contactsubmit').text('Sent');
-	}
+		$('#contactsubmit').attr("disabled", true);
+		document.getElementById("contactform").reset();
+		setTimeout(function() { $('#contactsubmit').removeAttr("disabled"); $('#contactsubmit').text('Submit'); }, 1500);
 
+	}
 	return;
 
 }

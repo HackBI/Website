@@ -11,9 +11,22 @@
 }
 
 @font-face {
+	font-family: Montserrat;
+	font-display: swap;
+  src: url('fonts/Montserrat-Regular.ttf'), url('/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: Montserrat;
+	font-display: swap;
+	src: url('fonts/Montserrat-Bold.ttf'), url('/fonts/Montserrat-Bold.ttf');
+	font-weight: bold;
+}
+
+@font-face {
 	font-family: Metrophobic;
 	font-display: block;
-  src: url('fonts/Metrophobic.otf'), url('/fonts/Metrophobic.otf');
+  src: url('fonts/Metrophobic-Regular.ttf'), url('/fonts/Metrophobic-Regular.ttf');
 }
 
 @keyframes pop-in {
@@ -119,7 +132,7 @@ path {
 	--main-color: rgb(252, 61, 70);
   --secondary-color: rgb(254, 176, 71);
   --third-color: rgb(252, 61, 70);
-	--complement-color: rgb(249, 249, 249);
+	--complement-color: rgb(251, 251, 251);
 	
 	/*#53ab94;*/
 
@@ -233,14 +246,19 @@ body {
 }
 
 .contact {
-  z-index: 30;
+	z-index: 30;
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
+}
+
+#namef, #emailf, #contactq {
+	background-color: rgb(252, 252, 252)
 }
 
 .sponsors {
   z-index: 40;
 }
 
-.main .row, .info .row, .faq .row, .sponsors .row, .map .row .contact {
+.main .row, .info .row, .faq .row, .sponsors .row, .map .row {
 	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	font-display: swap;
 	padding: 20px;
