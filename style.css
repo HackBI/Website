@@ -179,7 +179,7 @@ body {
 .nav a {
   color: #fff;
 	font: 1.7rem Montserrat, Arial;
-	font-display: swap;
+	font-display: block;
   text-transform: uppercase;
 	padding-right: 2em;
 }
