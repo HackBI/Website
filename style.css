@@ -1,13 +1,7 @@
-/*@font-face {
-	font-family: Jaapokki;
-	font-display: block;
-  src: url('fonts/Jaapokki-Regular.otf'), url('/fonts/Jaapokki-Regular.otf');
-}*/
-
 @font-face {
-	font-family: Jaapokki_Subtract;
+	font-family: Jaapokki;
 	font-display: swap;
-  src: url('fonts/Jaapokkisubtract-Regular.otf'), url('/fonts/Jaapokkisubtract-Regular.otf');
+  src: url('fonts/Jaapokki-Regular.ttf'), url('/fonts/Jaapokki-Regular.ttf');
 }
 
 @font-face {
@@ -307,7 +301,7 @@ body {
 .main h1 {
 	color: #fbfbfb;
 	font-size: 20rem;
-	font-family: Jaapokki_Subtract, Arial, Helvetica, sans-serif;
+	font-family: Jaapokki, Arial, Helvetica, sans-serif;
 	font-display: swap;
 	display: inline;
 	
