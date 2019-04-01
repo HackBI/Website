@@ -47,6 +47,10 @@ svg {
   left: 0;
 }
 
+.wsimg {
+	height: 100px;
+}
+
 .arrow {
   position: fixed;
   bottom: 20px;
