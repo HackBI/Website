@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="keywords" content="HackBI, Hack BI, Hack, Bishop Ireton, Ireton, BI">
-  <meta name="description" content="Official Website of the 2018 Bishop Ireton HackBI Hackathon">
-  <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
-  <link rel="icon" href="img/logos/icon.jpg">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js"></script>
-  <script type="text/javascript">
-    var list = new Egg();
-    list.addCode("up,up,down,down,left,right,left,right,b,a", function() {
-        window.location.href = "img/logos/list-logo.png";
-    }, "konami-code");
-    list.addHook(function(){
-      console.log("Hook called for: " + this.activeEgg.keys);
-      console.log(this.activeEgg.metadata);
-    });
-    list.listen();
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-81281305-2');
   </script>
-  <title>HackBI II</title>
+  <meta name="keywords" content="HackBI, Hack BI, Hack BI III, HackBI III, Hack BI 3, HackBI 3, HackBI 2, Hack BI 2, HackBI II, Hack BI II, Hack, BI, team">
+  <meta name="description" content="Meet the Bishop Ireton HackBI Hackathon Team">
+  <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
+  <link rel="icon" href="/img/icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>HackBI | Our Team</title>
   <style>
   .jumbotron {
     color: white;
@@ -76,19 +71,31 @@
     width: 250px;
     height: 250px;
   }
+
+  .jumbotron {
+    color: #fff;
+	background: var(--main-color);
+  background-image: url('team.jpg');
+	background-position: center;
+	background-position-y: 47%;
+	background-size: cover;
+  border-radius: 0;
+  margin-bottom: 0;
+  }
   </style>
 </head>
 <body>
   <div class="nav">
     <br/>
     <ul class="pull-left">
-        <li>
-            <a class='navbar-brand' href="#main">
-              <img src="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png" style='height: 20px; width: 20px; margin-top: -16px'>
-            </a>
-          </li>
+      <li>
+        <a class='navbar-brand' href="#main">
+          <img src="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png" style='height: 20px; width: 20px; margin-top: -16px'>
+        </a>
+      </li>
       <li><a href="index.html">Home</a></li>
       <!--<li><a href="register">Register</a></li>-->
+      <li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
     </ul>
   </div>
 
@@ -97,7 +104,7 @@
 			<div class="row">
 				<div class="col-sm-12">
           <br/><br/>
-					<h1>Meet the HackBI II Team</h1>
+					<h1>Meet the HackBI Team</h1>
 				</div>
 			</div>
 		</div>
@@ -110,91 +117,94 @@
         <div class="col-sm-12 col-xs-12">
           <div class="row person">
             <div class="col-sm-5 col-xs-12 col">
+              <img src="img/william.JPG"/>
+            </div>
+            <div class="col-sm-7 col-xs-12 col">
+              <h3>William Mueller</h3>
+              <h3>Will is in charge of everything. I can't really say anything about him–he has a tendency to make people disappear without reason.</h3>
+            </div>
+          </div>
+          <div class="row person">
+            <div class="col-sm-5 col-xs-12 col">
               <img src="img/franky.JPG"/>
             </div>
             <div class="col-sm-7 col-xs-12 col">
               <h3>Franky Padilla Coo</h3>
-              <h3>Franky is helping with the adult volunteers. Get her mad, and all the adults will give you the evil eye for the whole night.</h3>
+              <h3>Franky is helping with everything (aka a whole lotta nothing).</h3>
             </div>
           </div>
-            <div class="row person">
+          <div class="row person">
+            <div class="col-sm-5 col-xs-12 col">
+              <img src="img/alexa.jpg">
+            </div>
+            <div class="col-sm-7 col-xs-12 col">
+              <h3>Critter Johnson</h3>
+              <h3>Critter has an Amazon Echo. If you need to talk to him, he responds to "Alexa."
+              </h3>
+            </div>
+          </div>
+          <div class="row person">
+            <div class="col-sm-5 col-xs-12 col">
+              <img src="img/gaby.jpg">
+            </div>
+            <div class="col-sm-7 col-xs-12 col">
+              <h3>Gaby Garcia</h3>
+              <h3>Gaby is keeping our social media up to date. Well...up to month.</h3>
+            </div>
+          </div>
+          <div class="row person">
+            <div class="col-sm-5 col-xs-12 col">
+              <img src="img/max.jpg"/>
+            </div>
+            <div class="col-sm-7 col-xs-12 col">
+              <h3>Max Dodson</h3>
+              <h3>Max maintains the website. Don't waste your time finding the easter egg he hid on this page.</h3>
+            </div>
+          </div>
+          <div class="row person">
+            <div class="col-sm-5 col-xs-12 col">
+              <img src="img/wali.jpeg"/>
+            </div>
+            <div class="col-sm-7 col-xs-12 col">
+              <h3>Wali Shaikh</h3>
+              <h3>Wali is in charge of food. You might want to bring your own, just in case.</h3>
+            </div>
+          </div>
+          <div class="row person">
+            <div class="col-sm-5 col-xs-12 col">
+              <img src="img/david.jpg"/>
+            </div>
+            <div class="col-sm-7 col-xs-12 col">
+              <h3>David Burdick</h3>
+              <h3>David is helping with the middle school hackathon. Wish him luck.</h3>
+            </div>
+          </div>
+          <div class="row person">
               <div class="col-sm-5 col-xs-12 col">
-                <img src="img/max.jpg"/>
+                <img src="img/matthew.jpg"/>
               </div>
               <div class="col-sm-7 col-xs-12 col">
-                <h3>Max Dodson</h3>
-                <h3>Max wanted this photo to be a candid. It isn't and he isn't.</h3>
+                <h3>Matthew Burdick</h3>
+                <h3>Matthew is helping coordinate our adult volunteers, some of whom will be judging. No, I haven't asked if he accepts bribes.</h3>
               </div>
             </div>
-              <div class="row person">
-                <div class="col-sm-5 col-xs-12 col">
-                  <img src="img/wali.jpeg"/>
-                </div>
-                <div class="col-sm-7 col-xs-12 col">
-                  <h3>Wali Shaikh</h3>
-                  <h3>Wali is in charge of food. You might want to bring your own, just in case.</h3>
-                </div>
-              </div>
-              <div class="row person">
-                <div class="col-sm-5 col-xs-12 col">
-                  <img src="img/david.jpg"/>
-                </div>
-                <div class="col-sm-7 col-xs-12 col">
-                  <h3>David Burdick</h3>
-                  <h3>David is helping out with prizes. Please win or he will take them home.</h3>
-                </div>
-              </div>
-                <div class="row person">
-                  <div class="col-sm-5 col-xs-12 col">
-                    <img src="img/gaby.jpg"/>
-                  </div>
-                  <div class="col-sm-7 col-xs-12 col">
-                    <h3>Gaby Garcia</h3>
-                    <h3>Gaby will be running a photo booth at the hackathon. Ask her to play french horn while she takes your photo. It'll help you smile.</h3>
-                  </div>
-                </div>
-                <div class="row person">
-                  <div class="col-sm-5 col-xs-12 col">
-                    <img src="img/alexa.jpg"/>
-                  </div>
-                  <div class="col-sm-7 col-xs-12 col">
-                    <h3>Critter Johnson</h3>
-                    <h3>Critter was lazy and didn't send in a photo for this so I had to put a meme instead. Make sure to go up to him and ask him how his AWS workshop is. Also, say 'Hey Alexa'.</h3>
-                  </div>
-                </div>
-                <div class="row person">
-                  <div class="col-sm-5 col-xs-12 col">
-                    <img src="img/joseph.JPG"/>
-                  </div>
-                  <div class="col-sm-7 col-xs-12 col">
-                    <h3>Joseph Moore</h3>
-                    <h3>Joseph takes photos and videos or something. Ask for something Monday, and he'll be sure to get it to you by the next Saturday. Maybe.</h3>
-                  </div>
-                </div>
-                <div class="row person">
-                  <div class="col-sm-5 col-xs-12 col">
-                    <img src="img/bella.jpeg"/>
-                  </div>
-                  <div class="col-sm-7 col-xs-12 col">
-                    <h3>Bella Carruci</h3>
-                    <h3>Bella helps run social media. Like her posts and she'll make sure to ignore yours.</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
     <div class="learn-more" id="bottom-bar">
-      <br/><br/><p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>
-      <p><a href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md">MLH Data Sharing Provision</a></p>
-      <a href="https://www.facebook.com/HackBI2017/" class="fa fa-facebook make-translucent"></a>
-      <a href="https://www.twitter.com/HackBIOfficial" class="fa fa-twitter make-translucent"></a>
-      <a href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" class="fa fa-snapchat make-translucent"></a>
-      <a href="https://youtu.be/Nt3Xq3ZB1bc" class="fa fa-youtube make-translucent"></a>
-    </div>
-    <script src="script.js"></script>
+		<br /><br />
+		<p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>
+		<p><a href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md">MLH Data Sharing Provision</a></p>
+		<a id="social" href="https://www.facebook.com/officialhackbi/" class="fab fa-facebook make-translucent"></a>
+		<a id="social" href="https://www.twitter.com/HackBIOfficial" class="fab fa-twitter make-translucent"></a>
+		<a id="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" class="fab fa-snapchat make-translucent"></a>
+		<a id="social" href="https://youtu.be/Nt3Xq3ZB1bc" class="fab fa-youtube make-translucent"></a>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="team.js"></script>
+    <script type="text/javascript" src="img/util.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
   </body>
   </html>

@@ -1,19 +1,26 @@
-/*@font-face {
+@font-face {
 	font-family: Jaapokki;
-	font-display: block;
-  src: url('fonts/Jaapokki-Regular.otf'), url('/fonts/Jaapokki-Regular.otf');
-}*/
+	font-display: swap;
+  src: url('fonts/Jaapokki-Regular.ttf'), url('/fonts/Jaapokki-Regular.ttf');
+}
 
 @font-face {
-	font-family: Jaapokki_Subtract;
+	font-family: Montserrat;
 	font-display: swap;
-  src: url('fonts/Jaapokkisubtract-Regular.otf'), url('/fonts/Jaapokkisubtract-Regular.otf');
+  src: url('fonts/Montserrat-Regular.ttf'), url('/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: Montserrat;
+	font-display: swap;
+	src: url('fonts/Montserrat-Bold.ttf'), url('/fonts/Montserrat-Bold.ttf');
+	font-weight: bold;
 }
 
 @font-face {
 	font-family: Metrophobic;
 	font-display: block;
-  src: url('fonts/Metrophobic.otf'), url('/fonts/Metrophobic.otf');
+  src: url('fonts/Metrophobic-Regular.ttf'), url('/fonts/Metrophobic-Regular.ttf');
 }
 
 @keyframes pop-in {
@@ -38,6 +45,10 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.wsimg {
+	height: 100px;
 }
 
 .arrow {
@@ -111,13 +122,17 @@ path {
   background-color: #eee;
 }
 
-
+.form-control {
+	box-shadow: 0 1px 2px silver;
+}
 
 :root {
 	--main-color: rgb(252, 61, 70);
   --secondary-color: rgb(254, 176, 71);
   --third-color: rgb(252, 61, 70);
-	--complement-color: rgb(163, 195, 185);
+	--complement-color: rgb(251, 251, 251);
+	
+	/*#53ab94;*/
 
 	--subtle-font-color: #888;
 }
@@ -162,7 +177,7 @@ body {
 .nav a {
   color: #fff;
 	font: 1.7rem Montserrat, Arial;
-	font-display: swap;
+	font-display: block;
   text-transform: uppercase;
 	padding-right: 2em;
 }
@@ -229,14 +244,19 @@ body {
 }
 
 .contact {
-  z-index: 30;
+	z-index: 30;
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
+}
+
+#namef, #emailf, #contactq {
+	background-color: rgb(252, 252, 252)
 }
 
 .sponsors {
   z-index: 40;
 }
 
-.main .row, .info .row, .faq .row, .sponsors .row, .map .row .contact {
+.main .row, .info .row, .faq .row, .sponsors .row, .map .row {
 	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	font-display: swap;
 	padding: 20px;
@@ -275,8 +295,8 @@ body {
 
 #button-text a div {
 	/* background-color: rgba(180, 180, 180, .63); */
-	background-color: rgba(220, 220, 220, .53); /*-*/
-	border-color: rgba(220, 220, 220, .83); /*-*/
+	background-color: rgba(240, 240, 240, .43); /*-*/
+	border-color: rgba(250, 250, 250, .93); /*-*/
 	font-size: 16pt;
 	border-width: 4px;
 	border-radius: 150px;
@@ -285,7 +305,7 @@ body {
 .main h1 {
 	color: #fbfbfb;
 	font-size: 20rem;
-	font-family: Jaapokki_Subtract, Arial, Helvetica, sans-serif;
+	font-family: Jaapokki, Arial, Helvetica, sans-serif;
 	font-display: swap;
 	display: inline;
 	
@@ -357,6 +377,7 @@ body {
 	text-align: center;
 	margin-right: 0;
 	background-size: cover;
+	cursor: pointer;
 }
 
 /*FAQ*/
@@ -691,38 +712,39 @@ body {
     display: inherit;
 	}
 
-	@-webkit-keyframes bounce {
-		0%, 20%, 50%, 80%, 100% {
-			-webkit-transform: translateY(0); }
-		40% {
-			-webkit-transform: translateY(-30px); }
-		60% {
-			-webkit-transform: translateY(-15px); } }
-	@-moz-keyframes bounce {
-		0%, 20%, 50%, 80%, 100% {
-			-moz-transform: translateY(0); }
-		40% {
-			-moz-transform: translateY(-30px); }
-		60% {
-			-moz-transform: translateY(-15px); } }
-	@keyframes bounce {
-		0%, 20%, 50%, 80%, 100% {
-			-webkit-transform: translateY(0);
-			-moz-transform: translateY(0);
-			-ms-transform: translateY(0);
-			-o-transform: translateY(0);
-			transform: translateY(0); }
-		40% {
-			-webkit-transform: translateY(-30px);
-			-moz-transform: translateY(-30px);
-			-ms-transform: translateY(-30px);
-			-o-transform: translateY(-30px);
-			transform: translateY(-30px); }
-		60% {
-			-webkit-transform: translateY(-15px);
-			-moz-transform: translateY(-15px);
-			-ms-transform: translateY(-15px);
-			-o-transform: translateY(-15px);
-			transform: translateY(-15px); } }
 
 }
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-webkit-transform: translateY(0); }
+	40% {
+		-webkit-transform: translateY(-30px); }
+	60% {
+		-webkit-transform: translateY(-15px); } }
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-moz-transform: translateY(0); }
+	40% {
+		-moz-transform: translateY(-30px); }
+	60% {
+		-moz-transform: translateY(-15px); } }
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-o-transform: translateY(0);
+		transform: translateY(0); }
+	40% {
+		-webkit-transform: translateY(-30px);
+		-moz-transform: translateY(-30px);
+		-ms-transform: translateY(-30px);
+		-o-transform: translateY(-30px);
+		transform: translateY(-30px); }
+	60% {
+		-webkit-transform: translateY(-15px);
+		-moz-transform: translateY(-15px);
+		-ms-transform: translateY(-15px);
+		-o-transform: translateY(-15px);
+		transform: translateY(-15px); } }

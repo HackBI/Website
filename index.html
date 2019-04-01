@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-81281305-2');
+	</script>
 	<meta name="keywords" content="HackBI, Hack BI, Hack BI III, HackBI III, Hack BI 3, HackBI 3, HackBI 2, Hack BI 2, HackBI II, Hack BI II, Hack, Bishop Ireton, Ireton, BI">
 	<meta name="description" content="Official Website of the Bishop Ireton Hackathon">
 	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
-	<meta name="theme-color" content="#FC4D45" />
-	<link rel="icon" href="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png">
+	<meta name="theme-color" content="#FC4D45"/>
+	<link rel="icon" href="img/icon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="form.css">
-	<link id="font" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" media="none">
 	<link rel="stylesheet" href="style.css">
 	<title>HackBI</title>
 </head>
@@ -20,7 +27,7 @@
 		<ul class="pull-left">
 			<li>
 				<a class='navbar-brand' href="#main">
-					<img src="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png" style='height: 20px; width: 20px; margin-top: -16px'>
+					<img src="img/icon.png" style='height: 20px; width: 20px; margin-top: -16px'>
 				</a>
 			</li>
 			<!--
@@ -32,13 +39,13 @@
 			-->
 			<li><a id="contactLink" href="#contactScroll">Contact</a></li>
 			<li><a id="meetTeamLink" href="team.html">Meet the Team</a></li>
+			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
 		</ul>
 	</div>
 
 	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
 	 href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=red"
-	 target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-red.svg" alt="Major League Hacking 2019 Hackathon Season"
-		 style="width:100%"></a>
+	 target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-red.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
 
 	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px'>
 		<div class="vid-container">
@@ -52,9 +59,8 @@
 				<path id="wave1" /></svg>
 		</div>
 		<div class="row" style='margin-bottom: 0; padding-bottom: 0'>
-			<div class="col-sm-12 logo-text pop-in" style="position: absolute; margin-left: -3.75px; border-left: 0; padding-left: 0;"
-			 id="main-text">
-				<h1 style="text-shadow: -6px 8px 0px black;">HACK BI</h1>
+			<div class="col-sm-12 logo-text pop-in" style="position: absolute; margin-left: -3.75px; border-left: 0; padding-left: 0" id="main-text">
+				<h1 style="text-shadow: -7px 8px 0px black;">HACK BI</h1>
 			</div>
 		</div>
 		<div class="container" id="button-container" style="margin-bottom: 0px">
@@ -66,8 +72,8 @@
 			</div>
 			<div class="row" style="margin-bottom: 0; padding-bottom: 0;" id="button-text">
 				<div class="pop-in" style="position: absolute; margin: 100px 100px 100px 0px; z-index: 1001">
-					<a id="registerButton" href="#">
-						<div class="pop-in" style="width: 260px;">Registration Coming Soon</div>
+					<a id="registerButton" href="javascript:requestNotif()">
+						<div class="pop-in" style="width: 320px;">Be notified when registration opens!</div>
 					</a>
 				</div>
 
@@ -75,7 +81,7 @@
 					<!--<a id="registerButton" href="#faqScroll"><div class="pop-in" style="width: 150px;">FAQs</div></a>-->
 
 				</div>
-				<div class="pop-in" id="drop" style="font-size: 30px;">
+				<div class="pop-in" id="drop" style="font-size: 30px">
 					<a id="faqLink" href="#faqScroll">
 						<span style="color: #fefefe" class="glyphicon glyphicon-chevron-down bounce"></span>
 					</a>
@@ -193,8 +199,7 @@
 			<div class="row">
 				<div class="col-xs-12 header" id="faqScroll">
 					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black;">Frequently Asked Questions</h1>
-					<h4>Don't see your question here? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>
-						to ask it!</h3>
+					<h4>Don't see your question here? Click <a href="#contactScroll">here</a> to ask it!</h4>
 				</div>
 				<div class="col-sm-6 col-xs-12">
 					<div class="qa hideme">
@@ -260,10 +265,6 @@
 							access to your own, so you can still work on a project. You just can't download any custom software on provided
 							computers.</h3>
 					</div>
-					<!--<div class="qa hideme">
-						<h3>What's the difference bewteen the middle school and high school competitions?</h3>
-						<h3>Middle school </h3>
-					</div>-->
 				</div>
 			</div>
 		</div>
@@ -272,43 +273,39 @@
 	<div class="contact">
 		<div class="container" style="width: 100%; padding: 0;">
 			<div class="row">
-					<div class="col-xs-12 col-sm-6" style="padding: 0">
-							<div id="map"></div>
+					<div class="col-xs-12 col-sm-6" style="padding: 0;">
+							<div id="map" style="height: 460px"></div>
 							<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 						</div>
-				<div class="col-xs-12 col-sm-6 header" id="contactScroll">
-					<h1 style="margin-top: 15px; font-size: 40pt; text-shadow: -2px 4px 0px black;"><b>Contact</b></h1>
-						<form style="width: 100%; margin-top: -50px; text-align: left; padding: 25px">
+				<div class="col-xs-12 col-sm-6 header" id="contactScroll" style="color: #909090;">
+					<h1 style="margin-top: 35px; font-size: 42pt; font-weight: bold; text-shadow: -3px 5px 0px #e5e5e5;">Contact Us</h1> <!--text-shadow: -2.5px 4.5px 0px black; -->
+						<form id="contactform" style="width: 100%; margin-top: -50px; text-align: left; padding: 30px; font-size: 18px;">
 								<div class="form-group">
 									<label>Name</label>
-									<input class="form-control" placeholder="Name">
+									<input id="namef" class="form-control is-valid" placeholder="Name">
 								</div>
 								<div class="form-group">
 									<label>Email Address</label>
-									<input class="form-control" placeholder="Email">
+									<input id="emailf" class="form-control" placeholder="Email">
 								</div>
 								<div class="form-group">
 										<label>Question</label>
-										<textarea class="form-control" rows="3" placeholder="Question"></textarea>
+										<textarea id="contactq" class="form-control" rows="2" placeholder="Question" style="resize: vertical"></textarea>
 									</div>
-								<button type="submit" class="btn btn-primary">Submit</button>
+								<button id="contactsubmit" class="btn btn-primary" type="submit" onclick="javascript:contactSubmit(); return false;">Submit</button>
+							
 							</form>
+							<p style="margin: -15px 0 0 0; font-size: 10pt;">*Also at <a style="text-decoration: none; color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--
-	<div class="con" id="con2">
-		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-			<path id="path2" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
-		</svg>
-	</div>
--->
+
 	<div class="sponsors">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 header" style="margin-top: -45px">
-					<h1 style="text-shadow: -4px 6px 0px black;"><b>Sponsors</b></h1>
+				<div class="col-sm-12 header" style="margin-top: -40px">
+					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black; margin-bottom: -8px"><b>Sponsors</b></h1>
 					<h3>Interested in being a sponsor? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>!</h3>
 					<br /><br /><br />
 				</div>
@@ -326,13 +323,7 @@
 			</div>
 		</div>
 	</div>
-	<!--
-	<div class="con" id="con3">
-		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-			<path id="path3" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
-		</svg>
-	</div>
--->
+
 	<div class="learn-more" id="bottom-bar">
 		<br /><br />
 		<p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>

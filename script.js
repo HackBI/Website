@@ -186,10 +186,65 @@ function initMap() {
 	});
 }
 
+var registerReq = 0
+
+function requestNotif() {
+	registerReq=1;
+	$('#contactq').attr('placeholder', 'Request to be notified when registration opens.');
+	$('#contactq').val('');
+	$('#contactq').prop('readonly', 'true');
+	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing', function() {
+		$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darkorange'});
+		$("body").addClass("dummyClass").removeClass("dummyClass");
+	});
+}
+
+function contactSubmit() {
+	var name = $('#namef').val().replace(/\s/g, "+");
+	console.log(name);
+	var email = $('#emailf').val().replace(/\s/g, "+");
+	console.log(email);
+	var question = $('#contactq').val().replace(/\s/g, "+");
+
+	if ((registerReq == 0 && question == "") || name == "" || email == "") {
+		alert("Please enter a value for all fields");
+	}
+	else {
+		var scriptfunc;
+		var scriptdata;
+
+		if (registerReq == 1) {
+			registerReq = 0;
+			$.ajax({
+				'async': false,
+				'type': 'POST',
+				'url': 'https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=requestRegistrationNotification&name=' + name + '&email=' + email
+			});
+			$('#emailf, #namef').css({'box-shadow': 'none'});
+			$('#contactq').prop('readonly', false);
+			$('#contactq').prop('placeholder', 'Question');
+		}
+		else {
+			$.ajax({
+				'async': false,
+				'type': 'POST',
+				'url': 'https://script.google.com/macros/s/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=contact&name=' + name + '&email=' + email + '&question=' + question
+			});
+		}
+
+		$('#contactsubmit').text('Sent');
+		$('#contactsubmit').attr("disabled", true);
+		document.getElementById("contactform").reset();
+		setTimeout(function() { $('#contactsubmit').removeAttr("disabled"); $('#contactsubmit').text('Submit'); }, 1500);
+
+	}
+	return;
+
+}
+
 $(document).ready(function () {
 	$('#font').removeAttr("media");
-	$(".vid-container").css({'height': (window.innerHeight + 2) + "px"
-	});
+	$(".vid-container").css({'height': (window.innerHeight + 2) + "px"});
 	setJumbotronHeight();
 
 	if ($scrWidth > 767) {
@@ -255,6 +310,7 @@ $(document).ready(function () {
 	});
 
 
+
 	//smooth scrolling for anchor links
 	$('a[href^="#"]').on('click', function (e) {
 		e.preventDefault();
@@ -262,6 +318,15 @@ $(document).ready(function () {
 		var target = this.hash;
 		var $target = $(target);
 
-		$('html, body').stop().animate({'scrollTop': $target.offset().top - $target.height() + 60}, 900, 'swing');
+		var dist;
+		if ($scrWidth > 767) {
+			dist=80;
+		} else if (this.equals("contactScroll")) {
+			dist = 180;
+		} else {
+			dist = 30;
+		}
+
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - dist}, 900, 'swing');
 	});
 });
