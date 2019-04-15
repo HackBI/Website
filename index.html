@@ -38,7 +38,8 @@
 			<li><a id="registerLink" href="register">Register</a></li>
 			-->
 			<li><a id="contactLink" href="#contactScroll">Contact</a></li>
-			<li><a id="meetTeamLink" href="team.html">Meet the Team</a></li>
+			<li><a id="meetTeamLink" href="team">Meet the Team</a></li>
+			<li><a id="workshopLink" href="workshops">Workshops</a></li>
 			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
 		</ul>
 	</div>
@@ -273,10 +274,10 @@
 	<div class="contact">
 		<div class="container" style="width: 100%; padding: 0;">
 			<div class="row">
-					<div class="col-xs-12 col-sm-6" style="padding: 0;">
-							<div id="map" style="height: 460px"></div>
-							<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
-						</div>
+				<div class="col-xs-12 col-sm-6" style="padding: 0;">
+					<div id="map" style="height: 460px"></div>
+					
+				</div>
 				<div class="col-xs-12 col-sm-6 header" id="contactScroll" style="color: #909090;">
 					<h1 style="margin-top: 35px; font-size: 42pt; font-weight: bold; text-shadow: -3px 5px 0px #e5e5e5;">Contact Us</h1> <!--text-shadow: -2.5px 4.5px 0px black; -->
 						<form id="contactform" style="width: 100%; margin-top: -50px; text-align: left; padding: 30px; font-size: 18px;">
@@ -334,8 +335,9 @@
 		<a id="social" href="https://youtu.be/Nt3Xq3ZB1bc" class="fab fa-youtube make-translucent"></a>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="script.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 	<script>
 		if ($(window).outerWidth() <= 767) {
 			document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" defer><\/script>');

@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-81281305-2');
+  </script>
   <meta name="keywords" content="HackBI, Hack BI, Hack, Bishop Ireton, Ireton, BI">
   <meta name="description" content="Official Website of the 2018 Bishop Ireton HackBI Hackathon">
   <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
-  <link rel="icon" href="img/logos/icon.jpg">
+  <link rel="icon" href="img/icon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <title>HackBI II</title>
+  <title>HackBI | Workshops</title>
   <style>
   .jumbotron {
     color: white;
     text-align: center;
     font: 2rem Jaapokki;
     background-color: var(--main-color);
+    background-image: url('img/workshop.jpg');
+    background-position: center;
+	  background-position-y: 40%;
+	  background-size: cover;
     position: relative;
     z-index: 1;
+    margin-bottom: 0;
   }
 
   .people {
@@ -70,8 +84,18 @@
   <div class="nav">
     <br/>
     <ul class="pull-left">
-      <li><a href="/">Back to Main Page</a></li>
-      <li><a href="register">Register</a></li>
+        <li>
+            <a class='navbar-brand' href="/">
+              <img src="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png" style='height: 20px; width: 20px; margin-top: -16px'>
+            </a>
+          </li>
+      <li><a href="/">Home</a></li>
+			<!--
+			<li><a id="registerLink" href="register">Register</a></li>
+			-->
+			<li><a id="contactLink" href="/#contactScroll">Contact</a></li>
+			<li><a id="meetTeamLink" href="team">Meet the Team</a></li>
+			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
     </ul>
   </div>
 
@@ -85,56 +109,10 @@
 			</div>
 		</div>
 	</div>
-  <div class="con" id="con4">
-		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-			<path id="path1" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
-		</svg>
-	</div>
 
   <div class="people">
     <div class="container">
       <div class="row">
-
-        <div class="col-sm-12 col-xs-12">
-          <div class="row person">
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Introductory Go Programming: The Basics of Gopherism</h3>
-              <h3>Go has taken the software industry by storm, becoming one of the fastest growing system languages of all time! In this talk, we will focus in the basics of the Go language, and why it has become a feature-focused, powerful language that the open-source community has enthusiastically adopted!</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-xs-12">
-          <div class="row person">
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Online Notebooks: Jupiter and Khan Academy</h3>
-              <h3>Jupyter Notebooks are used for serious work in machine learning and graphical data analysis, and can be used online so that your work is easy to reproduce.  Khan Academy has a simpler online environment that is good for graphics and animation.</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-xs-12">
-          <div class="row person">
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>How to Read and Understand Everything</h3>
-              <h3>This talk is about how to read --- more voraciously, faster, and with better retention. I mean to teach you why technical papers are harder to read than Harry Potter, and what we can do about it.</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-xs-12">
-          <div class="row person">
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Functional JavaScript: How I Learned to Think Twice and Write Once</h3>
-              <h3>Functional programming is scary, but it has the potential to revolutionize your thinking. I'll discuss the tenents of the powerful paradigm and apply it to the world's most popular language: Javascript.</h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-xs-12">
-          <div class="row person">
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Lua</h3>
-              <h3>A simple yet fun programming language that makes game creation fun and simple.</h3>
-            </div>
-          </div>
-        </div>
         <div class="col-sm-12 col-xs-12">
           <div class="row person">
             <div class="col-sm-7 col-xs-12 col">
@@ -155,7 +133,7 @@
           <div class="row person">
             <div class="col-sm-7 col-xs-12 col">
               <h3>Python</h3>
-              <h3>Python, although a simple language, is used for beginners and with experts. It can be used to make AI, although this workshop isn't quite that difficult.</h3>
+              <h3>Although a simple language, Python is used by beginners and experts alike.</h3>
             </div>
           </div>
         </div>
@@ -163,7 +141,7 @@
           <div class="row person">
             <div class="col-sm-7 col-xs-12 col">
               <h3>Alexa Skills</h3>
-              <h3>Learn how to program an Amazon Alexa to do custom things for you!</h3>
+              <h3>Learn how to develop on the Amazon Alexa platform that runs on Echo and other smarthome devices!</h3>
             </div>
           </div>
         </div>
@@ -179,7 +157,7 @@
           <div class="row person">
             <div class="col-sm-7 col-xs-12 col">
               <h3>Intro to Java</h3>
-              <h3>A helpful introduction for all those interested in getting started with a good programming language for anything you want to do.</h3>
+              <h3>A helpful introduction for all those interested in getting started with a widely-used programming language.</h3>
             </div>
           </div>
         </div>
@@ -188,11 +166,6 @@
   </div>
 </div>
 
-    <div class="con" id="con5">
-  		<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-  			<path id="path5" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
-  		</svg>
-  	</div>
 
     <div class="learn-more" id="bottom-bar">
       <br/><br/><p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>
@@ -203,5 +176,31 @@
       <a href="https://youtu.be/Nt3Xq3ZB1bc" class="fa fa-youtube make-translucent"></a>
     </div>
     <script src="script.js"></script>
+    <script>
+      $(window).scroll(function () {
+        var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
+        var threshold = $(window).height() / 6;
+      
+        if (bottom_of_nav > threshold && ($(window).width() >= 992)) {
+          $('.nav').css({
+            'background-color': '#f4f4f4',
+            'height': '50px',
+            'top': '-7px'
+          });
+          $('.nav li a').css({
+            'color': 'black'
+          });
+        } else if (bottom_of_nav < threshold) {
+          $('.nav').css({
+            'background-color': 'transparent',
+            'height': '60px',
+            'top': '5px'
+          });
+          $('.nav li a').css({
+            'color': 'white'
+          });
+        }
+      });
+    </script>
   </body>
   </html>
