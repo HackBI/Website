@@ -90,8 +90,12 @@
             </a>
           </li>
       <li><a href="/">Home</a></li>
-      <!--<li><a href="register">Register</a></li>-->
-      <li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
+			<!--
+			<li><a id="registerLink" href="register">Register</a></li>
+			-->
+			<li><a id="contactLink" href="/#contactScroll">Contact</a></li>
+			<li><a id="meetTeamLink" href="team">Meet the Team</a></li>
+			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
     </ul>
   </div>
 
@@ -172,5 +176,31 @@
       <a href="https://youtu.be/Nt3Xq3ZB1bc" class="fa fa-youtube make-translucent"></a>
     </div>
     <script src="script.js"></script>
+    <script>
+      $(window).scroll(function () {
+        var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
+        var threshold = $(window).height() / 6;
+      
+        if (bottom_of_nav > threshold && ($(window).width() >= 992)) {
+          $('.nav').css({
+            'background-color': '#f4f4f4',
+            'height': '50px',
+            'top': '-7px'
+          });
+          $('.nav li a').css({
+            'color': 'black'
+          });
+        } else if (bottom_of_nav < threshold) {
+          $('.nav').css({
+            'background-color': 'transparent',
+            'height': '60px',
+            'top': '5px'
+          });
+          $('.nav li a').css({
+            'color': 'white'
+          });
+        }
+      });
+    </script>
   </body>
   </html>

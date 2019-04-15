@@ -194,7 +194,7 @@ function requestNotif() {
 	$('#contactq').val('');
 	$('#contactq').prop('readonly', 'true');
 	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing', function() {
-		$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darkorange'});
+		$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darksalmon'});
 		$("body").addClass("dummyClass").removeClass("dummyClass");
 	});
 }
