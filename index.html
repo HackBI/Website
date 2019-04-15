@@ -51,9 +51,16 @@
 	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px'>
 		<div class="vid-container">
 			<div class="overlay"></div>
-			<video autoplay muted preload="none" loop id="video">
-				<source src="https://raw.githubusercontent.com/maxdodson/Website/master/HackBIShort.mp4" type="video/mp4">
-			</video>
+			<script>
+				if (window.innerWidth <= 767) {
+					document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" defer><\/script>');
+					document.write('<script src="https://rawgit.com/peacepostman/wavify/master/wavify.js" defer><\/script>');
+					document.write('<script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js" defer><\/script>');
+				}
+				else {
+					document.write('<video autoplay muted preload="none" loop id="video"><source src="https://raw.githubusercontent.com/maxdodson/Website/master/HackBIShort.mp4" type="video/mp4"></video>')
+				}
+			</script>
 		</div>
 		<div class="wave-container">
 			<svg width="100%" height="100%" class="wave">
@@ -337,13 +344,6 @@
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="script.js"></script>
-	<script>
-		if ($(window).outerWidth() <= 767) {
-			document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" defer><\/script>');
-			document.write('<script src="https://rawgit.com/peacepostman/wavify/master/wavify.js" defer><\/script>');
-			document.write('<script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js" defer><\/script>');
-		}
-	</script>
 	<script src="jquery.lazyloadxt.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">

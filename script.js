@@ -134,8 +134,6 @@ $(document).ready(function () {
 		}, 1500);
 
 	} else {
-		var video = document.getElementById('video');
-		video.remove();
 		$(".vid-container").css({
 			'margin-bottom': '40px'
 		});
