@@ -344,14 +344,14 @@
 			document.write('<script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js" defer><\/script>');
 		}
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 	<script src="jquery.lazyloadxt.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
 
 	<script>
+		var map;
 		function initMap() {
-			var map = new google.maps.Map(
+			map = new google.maps.Map(
 				document.getElementById('map'), {
 					zoom: 16,
 					center: {
@@ -475,6 +475,7 @@
 			});
 		}
 	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 </body>
 
 </html>
