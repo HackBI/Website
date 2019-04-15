@@ -337,7 +337,6 @@
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="script.js"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 	<script>
 		if ($(window).outerWidth() <= 767) {
 			document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" defer><\/script>');
@@ -345,9 +344,135 @@
 			document.write('<script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js" defer><\/script>');
 		}
 	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 	<script src="jquery.lazyloadxt.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
+
+	<script>
+		var map = new google.maps.Map(
+			document.getElementById('map'), {
+				zoom: 16,
+				center: {
+					lat: 38.8092594,
+					lng: -77.0811094
+				},
+				styles: [{
+					"elementType": "geometry.fill",
+					"stylers": [{
+						"visibility": "on"
+					}]
+				},
+				{
+					"featureType": "administrative.land_parcel",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				},
+				{
+					"featureType": "administrative.neighborhood",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				},
+				{
+					"featureType": "landscape",
+					"stylers": [
+						{
+							"saturation": -50
+						},
+						{
+							"lightness": 60
+						}
+					]
+			},
+				{
+					"featureType": "landscape.man_made",
+					"elementType": "geometry.fill",
+					"stylers": [{
+							"color": "#efe9e1"
+						},
+						{
+							"saturation": -35
+						}
+					]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "labels.text",
+					"stylers": [{
+						"visibility": "on"
+					}]
+				},
+				{
+					"featureType": "poi.business",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				},
+				{
+					"featureType": "road",
+					"elementType": "labels",
+					"stylers": [{
+						"visibility": "on"
+					}]
+				},
+				{
+					"featureType": "road.arterial",
+					"elementType": "geometry.stroke",
+					"stylers": [{
+						"weight": 2
+					}]
+				},
+				{
+					"featureType": "road.highway",
+						"elementType": "geometry.fill",
+						"stylers": [
+								{
+										"color": "#ef8c25"
+								},
+								{
+										"lightness": 40
+								}
+						]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry.fill",
+					"stylers": [
+						{
+								"color": "#ef8c25"
+						},
+						{
+								"lightness": 40
+						}
+				]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry.stroke",
+					"stylers": [{
+						"visibility": "off"
+				}
+					]
+				},
+				{
+					"featureType": "water",
+					"elementType": "labels.text",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				}
+			]
+		});
+		var marker = new google.maps.Marker({
+			position: {
+				lat: 38.8092500,
+				lng: -77.0809000
+			},
+			map: map
+		});
+	</script>
 </body>
 
 </html>
