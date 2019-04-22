@@ -227,7 +227,7 @@ body {
 	margin-right: 0;
 }
 
-.main, .info, .faq, .map, .sponsors .contact {
+.main, .info, .faq, .map, .workshops, .sponsors .contact {
   position: relative;
 }
 
@@ -256,7 +256,7 @@ body {
   z-index: 40;
 }
 
-.main .row, .info .row, .faq .row, .sponsors .row, .map .row {
+.main .row, .info .row, .faq .row, .workshops .row, .sponsors .row, .map .row {
 	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
 	font-display: swap;
 	padding: 20px;
@@ -389,8 +389,9 @@ body {
 	background-size: cover;
 }
 
-.faq .header h1 {
+.faq .header h1, .workshops .header h1 {
 	font-weight: bold;
+	color: white;
 }
 
 .faq a {
@@ -424,9 +425,14 @@ body {
 
 /*SPONSORS*/
 .sponsors {
-  color: white;
+  color: black;
 	text-align: center;
-  background-color: var(--third-color);
+	/*background-color: var(--third-color);*/
+	background-color: rgb(255, 229, 123);
+}
+
+.sponsors h1 {
+	color: white;
 }
 
 .sponsors .row {
@@ -434,8 +440,8 @@ body {
 }
 
 .sponsors a {
-  text-decoration: none;
-  color: white;
+	text-decoration: none;
+	color: black;
 }
 
 .sponsors a:hover {

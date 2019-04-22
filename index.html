@@ -14,9 +14,8 @@
 	<meta name="description" content="Official Website of HackBI: a 24-hour hackathon at Bishop Ireton High School">
 	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
 	<meta name="theme-color" content="#FC4D45"/>
-	<link rel="icon" href="img/icon.png">
+	<link defer rel="icon" href="img/icon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="form.css">
 	<link rel="stylesheet" href="style.css">
 	<title>HackBI</title>
 </head>
@@ -48,7 +47,7 @@
 	 href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=red"
 	 target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-red.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
 
-	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px'>
+	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px; overflow: hidden'>
 		<div class="vid-container">
 			<div class="overlay"></div>
 			<script>
@@ -202,6 +201,8 @@
 			</svg>
 	</div>
 -->
+	
+  
 	<div class="faq">
 		<div class="container">
 			<div class="row">
@@ -278,6 +279,227 @@
 		</div>
 	</div>
 
+	<style>
+
+
+
+			.card {
+			width: 22rem;
+			margin: 10px 0 25px 0;
+			display: inline-block;
+			box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.20), 0 7px 21px 0 rgba(0, 0, 0, 0.19);
+			background: #fff;
+			font-size: 28px;
+			border-radius: 10px;
+			padding-bottom: 15px;
+			position: relative;
+		}
+		
+		.card img {
+			margin: 15px auto 5px auto;
+			height: auto;
+		}
+		
+		/*.card:hover, .card:active {
+			opacity: .7;
+		}*/
+		
+		.card-overlay {
+			opacity: 0;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			max-width: 22rem;
+			border-radius: 10px;
+			color: white;
+			font-size: 16pt;
+			overflow: hidden;
+		}
+		
+		#ptable {
+			display: table;
+			height: 100%;
+		}
+		
+		.card-overlay p {
+			display: table-cell;
+			vertical-align: middle;
+			height: 100%;
+			padding: 0 10px;
+		}
+		
+		.card-overlay:hover, .card-overlay:active {
+			opacity: 1;
+			background-color: rgba(83, 83, 83, 0.87);
+		}
+
+		@media screen and (max-width: 767px) {
+
+.card-columns {
+	column-count: 2;
+}
+
+}
+.workshops {
+	/*background-color: rgb(255, 229, 123);*/
+	background-color: var(--third-color);
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
+}
+
+.header h4 {
+	color: white;
+}
+
+.header a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+
+.card-columns {
+	column-count: 3;
+}
+
+}
+
+@media screen and (min-width: 992px) {
+
+.card-columns {
+	column-count: 4;
+	margin-bottom: -30px;
+}
+
+
+}
+
+			</style>
+		<div class="workshops">
+			<div class="container text-center">
+				<div class="row" style="padding-bottom: 0">
+					<div class="col-xs-12 header" id="workshopsScroll">
+						<h1 id="faq-text" style="text-shadow: -4px 6px 0px black;">Workshops</h1>
+						<h4>Have a recommendation? Let us know <a href="#contactScroll">here</a>!</h4>
+					</div>
+				</div>
+				<div class="card-columns">
+				<div>
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to use HTML and CSS to design a website!</p></div></div>
+					<img data-src="img/html_css.png" class="img-responsive card-img-top" style="width: 60%; margin-bottom: -10px;">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>HTML & CSS</strong></p>
+					</div>
+					</div>
+				</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to make your own skills for the Alexa platform which runs on Echo and other smart devices!</p></div></div>
+					<img data-src="img/alexa.png" class="img-responsive card-img-top" style="width: 48%; margin-bottom: -10px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title" style="padding: 0 8px 0 8px"><strong>Amazon Alexa</strong></p>
+					</div>
+					</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Make your website more advanced with Javascript or use it on its own!</p></div></div>
+					<img data-src="img/javascript.png" class="img-responsive card-img-top" style="width: 27%; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Javascript</strong></p>
+					</div>
+					</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Photoshop to edit photos like professionals!</p></div></div>
+					<img data-src="img/photoshop.png" class="img-responsive card-img-top" style="width: 60%; margin-top: 30px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Photoshop</strong></p>
+					</div>
+					</div>
+		
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Python, an easy to learn yet robust language used by beginners and experts alike!</p></div></div>
+					<img data-src="img/python.png" class="img-responsive card-img-top" style="width: 60%;  margin-top: 25px; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Python</strong></p>
+					</div>
+					</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Create basic apps easily with App Inventor!</p></div></div>
+					<img data-src="img/appinventor.png" class="img-responsive card-img-top" style="width: 75%; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>App Inventor</strong></p>
+					</div>
+					</div>
+				
+					<div class="card" style="">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to program with one of the most popular programming languages!</p></div></div>
+					<img data-src="img/java.png" class="img-responsive card-img-top" style="width: 20%; margin-top: 20px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Java</strong></p>
+					</div>
+					</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Java in a straightforward and visual way!</p></div></div>
+					<img data-src="img/alice.png" class="img-responsive card-img-top" style="width: 60%; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Alice</strong></p>
+					</div>
+					</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use services from Google Cloud Platform to add functionality to your programs!</p></div></div>
+					<img data-src="img/gcp.png" class="img-responsive card-img-top" style="width: 70%; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Google Cloud Platform</strong></p>
+					</div>
+					</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Firebase to develop seamless and scalable apps!</p></div></div>
+					<img data-src="img/firebase.png" class="img-responsive card-img-top" style="width: 85%; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Firebase</strong></p>
+					</div>
+					</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Amazon Web Services to make Alexa skills more advanced!</p></div></div>
+					<img data-src="img/aws.png" class="img-responsive card-img-top" style="width: 65%; margin-top: 20px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Amazon Web Services</strong></p>
+					</div>
+					</div>
+				
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to design computer graphics and illustrations!</p></div></div>
+					<img data-src="img/illustrator.png" class="img-responsive card-img-top" style="width: 60%; margin-top: 20px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Illustrator</strong></p>
+					</div>
+					</div>
+		
+				</div>
+			</div>
+		</div>
+
 	<div class="contact">
 		<div class="container" style="width: 100%; padding: 0;">
 			<div class="row">
@@ -286,7 +508,7 @@
 					
 				</div>
 				<div class="col-xs-12 col-sm-6 header" id="contactScroll" style="color: #909090;">
-					<h1 style="margin-top: 35px; font-size: 42pt; font-weight: bold; text-shadow: -3px 5px 0px #e5e5e5;">Contact Us</h1> <!--text-shadow: -2.5px 4.5px 0px black; -->
+					<h1 style="margin-top: 35px; margin-bottom: 25px; font-size: 42pt; font-weight: bold; text-shadow: -3px 5px 0px #e5e5e5;">Contact Us</h1> <!--text-shadow: -2.5px 4.5px 0px black; -->
 						<form id="contactform" style="width: 100%; margin-top: -50px; text-align: left; padding: 30px; font-size: 18px;">
 								<div class="form-group">
 									<label>Name</label>
@@ -312,20 +534,20 @@
 	<div class="sponsors">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 header" style="margin-top: -40px">
-					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black; margin-bottom: -8px"><b>Sponsors</b></h1>
-					<h3>Interested in being a sponsor? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>!</h3>
-					<br /><br /><br />
+				<div class="col-sm-12 header" style="margin-top: -30px">
+					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black"><b>Sponsors</b></h1>
+					<h4>Interested in being a sponsor? Reach out to us <a href="#contactScroll">here</a>!</h4>
+					<br /><br />
 				</div>
 				<div class="col-sm-12 logos">
-					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-white.png" alt="MLH" /></a>
+					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-black.png" alt="MLH" /></a>
 					<img class="img-responsive" data-src="img/ibg.png" alt="Innovative Business Group" />
 					<a href="https://github.com"><img class="img-responsive" data-src="img/github-black.png" alt="GitHub" /></a>
+					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios" style="width: 55%" /></a>
 					<a href="https://www.bishopireton.org/page/Alumni--Parents/PTO"><img class="img-responsive" data-src="img/bi-logo.png"
 						 alt="Bishop Ireton High School PTO" /></a>
 					<a href="http://www.thinkfun.com"><img class="img-responsive" data-src="img/think-fun.png" alt="ThinkFun" /></a>
 					<a href="http://www.brandmakers.com"><img class="img-responsive" data-src="img/brandmakers.png" alt="Brand Makers" /></a>
-					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios" /></a>
 					<a href="https://ultrapress.com"><img class="img-responsive" data-src="img/ultra-press.png" alt="UltraPress" /></a>
 				</div>
 			</div>
@@ -339,16 +561,16 @@
 		<a id="social" href="https://www.facebook.com/officialhackbi/" class="fab fa-facebook make-translucent"></a>
 		<a id="social" href="https://www.twitter.com/HackBIOfficial" class="fab fa-twitter make-translucent"></a>
 		<a id="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" class="fab fa-snapchat make-translucent"></a>
-		<a id="social" href="https://youtu.be/Nt3Xq3ZB1bc" class="fab fa-youtube make-translucent"></a>
+		<a id="social" href="https://youtu.be/p_xg-GK7heY" class="fab fa-youtube make-translucent"></a>
 	</div>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="script.js"></script>
-	<script src="jquery.lazyloadxt.js"></script>
+	<script defer src="jquery.lazyloadxt.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
 
-	<script>
+	<script defer type="text/javascript">
 		var map;
 		function initMap() {
 			map = new google.maps.Map(
@@ -475,7 +697,7 @@
 			});
 		}
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 </body>
 
 </html>

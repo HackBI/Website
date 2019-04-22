@@ -22,7 +22,8 @@ a h3 {
 .jumbotron h1 {
 	font-family: Jaapokki, Arial, Helvetica, sans-serif;
 	line-height: 1.4;
-	margin-bottom: -20px
+	margin-bottom: -15px;
+	margin-top: -5px;
 	/*background: -webkit-linear-gradient(-45deg, #f06, #ffd700);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
@@ -62,7 +63,7 @@ a h3 {
     margin-bottom: 5px;
 }
 
-.card:hover {
+.card:hover, .card:active {
 	opacity: .7;
 }
 
@@ -92,7 +93,7 @@ a h3 {
 	padding: 0 10px;
 }
 
-.card-overlay:hover {
+.card-overlay:hover, .card-overlay:active {
 	opacity: 1;
 	background-color: rgba(0, 0, 0, .85);
 }
@@ -144,6 +145,8 @@ a:hover {
 
 	.jumbotron h1 {
 		font-size: 95px;
+		margin-top: -20px;
+		margin-bottom: 0;
 	}
 
 	.card-columns {
