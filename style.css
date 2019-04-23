@@ -68,60 +68,6 @@ svg {
   animation: bounce 2s infinite;
 }
 
-path {
-  stroke: none;
-}
-
-#path1 {
-  fill: var(--main-color);
-}
-
-#path2 {
-  fill: var(--secondary-color);
-}
-
-#path3 {
-  fill: var(--third-color);
-}
-
-#path4 {
-  fill: var(--main-color);
-}
-
-#path5 {
-  fill: white;
-}
-
-.con {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 30%;
-  vertical-align: middle;
-  overflow: hidden;
-  margin-top: -14%;
-}
-
-#con1 {
-  background-color: var(--secondary-color);
-}
-
-#con2 {
-  background-color: var(--third-color);
-}
-
-#con3 {
-  background-color: #eee;
-}
-
-#con4 {
-  background-color: white;
-}
-
-#con5 {
-  background-color: #eee;
-}
-
 .form-control {
 	box-shadow: 0 1px 2px silver;
 }
@@ -328,6 +274,16 @@ body {
   opacity: 0.8;
 }
 
+.header {
+	color: white;
+}
+
+.header h4 a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
 /*INFO*/
 .info {
   color: white;
@@ -380,6 +336,11 @@ body {
 	cursor: pointer;
 }
 
+.contacthl {
+	box-shadow: 0 0 2px 2px darksalmon;
+	-webkit-appearance: none;
+}
+
 /*FAQ*/
 .faq {
   color: white;
@@ -423,12 +384,72 @@ body {
 	margin-bottom: 0;
 }
 
+/*WORKSHOPS*/
+.workshops {
+	background-color: var(--third-color);
+	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
+}
+
+.card {
+	width: 22rem;
+	margin: 10px 0 25px 0;
+	display: inline-block;
+	box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.20), 0 7px 21px 0 rgba(0, 0, 0, 0.19);
+	background: #fff;
+	font-size: 28px;
+	border-radius: 10px;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.card img {
+	margin: 15px auto 5px auto;
+	height: auto;
+}
+
+.card-overlay {
+	opacity: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	max-width: 22rem;
+	border-radius: 10px;
+	color: white;
+	font-size: 16pt;
+	overflow: hidden;
+}
+
+#ptable {
+	display: table;
+	height: 100%;
+}
+
+.card-overlay p {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	padding: 0 10px;
+}
+
+.card-overlay:hover, .card-overlay:active {
+	opacity: 1;
+	background-color: rgba(90, 90, 90, 0.85);
+}
+
+.card-overlay:hover ~ .card-body p {
+	color: gray;
+}
+
 /*SPONSORS*/
 .sponsors {
   color: black;
 	text-align: center;
 	/*background-color: var(--third-color);*/
-	background-color: rgb(255, 229, 123);
+	/*background-color: rgb(255, 229, 123);*/
+	background-color: rgb(165, 66, 70);
+	/*background-color: rgb(220, 110, 114);*/
 }
 
 .sponsors h1 {
@@ -532,8 +553,12 @@ body {
 
 /*PHONES*/
 @media screen and (max-width: 767px) {
-    body {
+	body {
 		font-size: 20px;
+	}
+
+	.logo-text {
+		margin-top: -50px;
 	}
 
 	#schedule-text, #faq-text {
@@ -618,6 +643,10 @@ body {
 		font-size: 14pt;
 	}
 
+	.card-columns {
+		column-count: 2;
+	}
+
 }
 
 /*TABLETS*/
@@ -675,6 +704,10 @@ body {
 		font-size: 22px;
 	}
 
+	.card-columns {
+		column-count: 3;
+	}
+
 }
 
 /*COMPUTERS*/
@@ -718,6 +751,10 @@ body {
     display: inherit;
 	}
 
+	.card-columns {
+		column-count: 4;
+		margin-bottom: 0;
+	}
 
 }
 

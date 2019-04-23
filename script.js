@@ -68,10 +68,12 @@ function requestNotif() {
 	$('#contactq').attr('placeholder', 'Request to be notified when registration opens.');
 	$('#contactq').val('');
 	$('#contactq').prop('readonly', 'true');
-	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing', function() {
-		$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darksalmon'});
-		$("body").addClass("dummyClass").removeClass("dummyClass");
-	});
+	$('a[href^="#contactScroll"]').trigger("click");
+	setTimeout(function() {
+		//$('#emailf, #namef').addClass('contacthl');
+		document.getElementById("emailf").classList.add('contacthl');
+		document.getElementById("namef").classList.add('contacthl');
+	}, 1500);
 }
 
 function contactSubmit() {
@@ -85,9 +87,6 @@ function contactSubmit() {
 		alert("Please enter a value for all fields");
 	}
 	else {
-		var scriptfunc;
-		var scriptdata;
-
 		if (registerReq == 1) {
 			registerReq = 0;
 			$.ajax({
@@ -191,13 +190,44 @@ $(document).ready(function () {
 
 		var dist;
 		if ($scrWidth > 767) {
-			dist=80;
-		} else if (this.equals("contactScroll")) {
-			dist = 180;
+			if (target == "#contactScroll") {
+				if ($("#lp").is(".lazy-loaded")) {
+					dist = 150;
+				} else {
+					dist = 280;
+				}
+			} else {
+				dist = 80;
+			}
 		} else {
-			dist = 30;
+			if (target == "#contactScroll") {
+				if ($("#lp").is(".lazy-loaded")) {
+					dist = 150;
+				} else {
+					dist = 480;
+				}
+			} else {
+				dist = 30;
+			}
 		}
 
-		$('html, body').stop().animate({'scrollTop': $target.offset().top - dist}, 900, 'swing');
+		/*if (target == "#contactScroll") {
+			if ($("#lp").is(".lazy-loaded")) {
+				$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height() / 3)}, 900, 'swing');
+				dist = 150;
+			} else {
+				$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height() / 1.5)}, 900, 'swing');
+				dist = 280;
+			}
+		} else {
+			$('html, body').stop().animate({'scrollTop': $target.offset().top - dist}, 900, 'swing');
+		}*/
+
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/3)}, 900, 'swing', function() {
+			$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/3)}, 500, 'swing');
+		});
+		
+
+		//$('html, body').stop().animate({'scrollTop': $target.offset().top - dist}, 900, 'swing');
 	});
 });
