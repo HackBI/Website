@@ -114,6 +114,19 @@ function contactSubmit() {
 
 }
 
+function clearForm() {
+	document.getElementById("contactform").reset();
+	if (registerReq != 0) {
+		$('#contactq').prop('readonly', false);
+		$('#contactq').prop('placeholder', 'Question');
+		document.getElementById("emailf").classList.remove('contacthl');
+		document.getElementById("namef").classList.remove('contacthl');
+		document.getElementById("contactq").classList.remove('contactc');
+		registerReq = 0;
+	}
+	return;
+}
+
 $(document).ready(function () {
 	$('#font').removeAttr("media");
 	$(".vid-container").css({'height': (window.innerHeight + 4) + "px"});
