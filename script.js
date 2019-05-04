@@ -68,26 +68,23 @@ function requestNotif() {
 	$('#contactq').attr('placeholder', 'Request to be notified when registration opens.');
 	$('#contactq').val('');
 	$('#contactq').prop('readonly', 'true');
-	$('html, body').stop().animate({scrollTop: $('#contactScroll').offset().top - 120}, 900, 'swing', function() {
-		$('#emailf, #namef').css({'box-shadow': '0 0 2px 2px darksalmon'});
-		$("body").addClass("dummyClass").removeClass("dummyClass");
-	});
+	$('a[href^="#contactScroll"]').trigger("click");
+	setTimeout(function() {
+		document.getElementById("emailf").classList.add('contacthl');
+		document.getElementById("namef").classList.add('contacthl');
+		document.getElementById("contactq").classList.add('contactc');
+	}, 1500);
 }
 
 function contactSubmit() {
-	var name = $('#namef').val().replace(/\s/g, "+");
-	console.log(name);
-	var email = $('#emailf').val().replace(/\s/g, "+");
-	console.log(email);
-	var question = $('#contactq').val().replace(/\s/g, "+");
+	var name = escape($('#namef').val().replace(/\s/g, "+"));
+	var email = escape($('#emailf').val().replace(/\s/g, "+"));
+	var question = escape($('#contactq').val().replace(/\s/g, "+"));
 
 	if ((registerReq == 0 && question == "") || name == "" || email == "") {
 		alert("Please enter a value for all fields");
 	}
 	else {
-		var scriptfunc;
-		var scriptdata;
-
 		if (registerReq == 1) {
 			registerReq = 0;
 			$.ajax({
@@ -117,9 +114,22 @@ function contactSubmit() {
 
 }
 
+function clearForm() {
+	document.getElementById("contactform").reset();
+	if (registerReq != 0) {
+		$('#contactq').prop('readonly', false);
+		$('#contactq').prop('placeholder', 'Question');
+		document.getElementById("emailf").classList.remove('contacthl');
+		document.getElementById("namef").classList.remove('contacthl');
+		document.getElementById("contactq").classList.remove('contactc');
+		registerReq = 0;
+	}
+	return;
+}
+
 $(document).ready(function () {
 	$('#font').removeAttr("media");
-	$(".vid-container").css({'height': (window.innerHeight + 2) + "px"});
+	$(".vid-container").css({'height': (window.innerHeight + 4) + "px"});
 	setJumbotronHeight();
 
 	if ($scrWidth > 767) {
@@ -134,8 +144,6 @@ $(document).ready(function () {
 		}, 1500);
 
 	} else {
-		var video = document.getElementById('video');
-		video.remove();
 		$(".vid-container").css({
 			'margin-bottom': '40px'
 		});
@@ -156,6 +164,11 @@ $(document).ready(function () {
 
 	}
 
+	if (navigator.userAgent.indexOf("Firefox") != -1) {
+		$('#rb').css({'margin-top': '200px'});
+		$('#rb').css({'margin-left': '100px'});
+	}
+
 	updateHideShow();
 	updateBgs();
 	$('canvas').css({
@@ -169,13 +182,6 @@ $(document).ready(function () {
 	});
 
 	$(window).resize(function () {
-		// Resize vid-container
-		/* if ($(window).outerWidth() <= 767) {
-			$(".vid-container").css({'margin-bottom': '40px'});
-		}
-		else {
-			$(".vid-container").css({'margin-bottom': '0px'});
-		} */
 		$('canvas').css({
 			'width': $(window).width(),
 			'height': $(window).height() * 1.5
@@ -191,15 +197,10 @@ $(document).ready(function () {
 		var target = this.hash;
 		var $target = $(target);
 
-		var dist;
-		if ($scrWidth > 767) {
-			dist=80;
-		} else if (this.equals("contactScroll")) {
-			dist = 180;
-		} else {
-			dist = 30;
-		}
-
-		$('html, body').stop().animate({'scrollTop': $target.offset().top - dist}, 900, 'swing');
+		$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/3)}, 900, 'swing', function() {
+			if (window.scrollY != Math.floor($target.offset().top - ($target.height()/3))) {
+				$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/3)}, 500, 'swing');
+			}
+		});
 	});
 });

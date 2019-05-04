@@ -11,12 +11,11 @@
 		gtag('config', 'UA-81281305-2');
 	</script>
 	<meta name="keywords" content="HackBI, Hack BI, Hack BI III, HackBI III, Hack BI 3, HackBI 3, HackBI 2, Hack BI 2, HackBI II, Hack BI II, Hack, Bishop Ireton, Ireton, BI">
-	<meta name="description" content="Official Website of the Bishop Ireton Hackathon">
+	<meta name="description" content="Official Website of HackBI: a 24-hour hackathon at Bishop Ireton High School">
 	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
 	<meta name="theme-color" content="#FC4D45"/>
 	<link rel="icon" href="img/icon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="form.css">
 	<link rel="stylesheet" href="style.css">
 	<title>HackBI</title>
 </head>
@@ -38,29 +37,34 @@
 			<li><a id="registerLink" href="register">Register</a></li>
 			-->
 			<li><a id="contactLink" href="#contactScroll">Contact</a></li>
+			<li><a id="workshopLink" href="#workshopsScroll">Workshops</a></li>
 			<li><a id="meetTeamLink" href="team">Meet the Team</a></li>
-			<li><a id="workshopLink" href="workshops">Workshops</a></li>
 			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
 		</ul>
 	</div>
 
-	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
-	 href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=red"
-	 target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-red.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
+	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=red" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-red.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>
 
-	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px'>
-		<div class="vid-container">
+	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px; overflow: hidden'>
+		<div class="vid-container" style="margin-bottom: -40px">
 			<div class="overlay"></div>
-			<video autoplay muted preload="none" loop id="video">
-				<source src="https://raw.githubusercontent.com/maxdodson/Website/master/HackBIShort.mp4" type="video/mp4">
-			</video>
+			<script>
+				if (window.innerWidth <= 767) {
+					document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" defer><\/script>');
+					document.write('<script src="https://rawgit.com/peacepostman/wavify/master/wavify.js" defer><\/script>');
+					document.write('<script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js" defer><\/script>');
+				}
+				else {
+					document.write('<video autoplay muted preload="none" loop style="height: 100%; object-fit: cover" id="video"><source src="https://raw.githubusercontent.com/maxdodson/Website/master/HackBIShort.mp4" type="video/mp4"></video>')
+				}
+			</script>
 		</div>
 		<div class="wave-container">
 			<svg width="100%" height="100%" class="wave">
 				<path id="wave1" /></svg>
 		</div>
 		<div class="row" style='margin-bottom: 0; padding-bottom: 0'>
-			<div class="col-sm-12 logo-text pop-in" style="position: absolute; margin-left: -3.75px; border-left: 0; padding-left: 0" id="main-text">
+			<div class="col-sm-12 logo-text pop-in" style="position: absolute; border-left: 0; padding-left: 0" id="main-text">
 				<h1 style="text-shadow: -7px 8px 0px black;">HACK BI</h1>
 			</div>
 		</div>
@@ -74,7 +78,7 @@
 			<div class="row" style="margin-bottom: 0; padding-bottom: 0;" id="button-text">
 				<div class="pop-in" style="position: absolute; margin: 100px 100px 100px 0px; z-index: 1001">
 					<a id="registerButton" href="javascript:requestNotif()">
-						<div class="pop-in" style="width: 320px;">Be notified when registration opens!</div>
+						<div id="rb" class="pop-in" style="width: 320px;">Be notified when registration opens!</div>
 					</a>
 				</div>
 
@@ -90,7 +94,7 @@
 			</div>
 		</div>
 	</div>
-	<!--
+<!--
 	<div class="info">
 		<div class="container" style="margin-top: -130px">
 			<div class="row">
@@ -188,14 +192,7 @@
 		</div>
 	</div>
 -->
-	<!--
-	<div class="con" id="con1">
-			<svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-				<path id="path1" d="M0,100 C0,100 100,200 200,0 C0,0 200,300 300,0 C200,0 200,300 400,0 C300,0 250,300 600,0 C550,10 220,275 750,0 L0,00 Z" style="stroke: none;"></path>
-			</svg>
-	</div>
--->
-	<div class="faq">
+	<div class="faq" id="faq">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 header" id="faqScroll">
@@ -205,28 +202,31 @@
 				<div class="col-sm-6 col-xs-12">
 					<div class="qa hideme">
 						<h3>What is a hackathon?</h3>
-						<h4>Hackathons are competitive programming events in which teams and individuals create their own custom projects
-							to showcase.</h3>
+						<h4>Hackathons are events in which teams and individuals create their own custom programming projects
+							to showcase and potentially win prizes for.</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>What is HackBI?</h3>
 						<h4>HackBI is a student-run hackathon at Bishop Ireton High School, where you will have 24 hours to learn how to
-							code and/or work with your friends to make your idea come to life!</h3>
+							code (or just learn something new) and/or work with your friends to make your idea come to life!</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>Why should I attend HackBI?</h3>
-						<h4>Whether you're just getting started with coding or have been doing it for a few years, HackBI will be a great
+						<h4>Whether you've never programmed before or have been doing it for a few years, HackBI will be a great
 							place to better your skills and have a lot of fun doing it! HackBI is focused on programming education, so we'll
-							do our best to make sure you don't feel intimidated or overwhelmed by what's going on.</h3>
+							do our best to make sure you don't feel intimidated or overwhelmed by what's going on.</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>Do I need any programming experience to come?</h3>
-						<h4>HackBI is open to any 8th grade or high school students interested, regardless of previous programming
-							experience. We'll have workshops throughout the event to introduce you to new things too.</h3>
+						<h4>HackBI is open to any 8th grade or high school students that are interested, regardless of previous programming
+							experience. We'll have workshops throughout the event to introduce you to new things too!</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>What should I bring?</h3>
-						<h4>You'll need an ID, laptop, phone, chargers, and something to sleep with (or just a lot of caffeine).</h3>
+						<h4>You'll need a laptop, charger, and something to sleep with (or just a lot of caffeine). 
+						<br /><br />
+						If you're in middle school, you don't need to bring anything!
+						</h4>
 					</div>
 					<!--
 					<div class="qa hideme">
@@ -238,65 +238,187 @@
 				<div class="col-sm-6 col-xs-12">
 					<div class="qa hideme">
 						<h3>How much does HackBI cost?</h3>
-						<h4>HackBI will be completely free!</h3>
+						<h4>HackBI will be completely free!</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>What about food?</h3>
-						<h4>We'll handle the food for the event, so no need to bring any money for meals.</h3>
+						<h4>We'll handle the food for the event, so no need to bring any money for meals.</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>What if I have dietary concerns?</h3>
-						<h4>If you have a specific dietary concern, please email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>
-							to let us know and we'll gladly accomodate you.</h3>
+						<h4>If you have a specific dietary concern, please indicate it on the registration form and we'll
+							glady accomodate you!
+						</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>Do I need to come with a team?</h3>
 						<h4>You can come with a pre-determined team if you want, but if you're coming individually there will be an
-							opportunity before hacking begins to join one.</h3>
+							opportunity before hacking begins to join one.</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>Are there prizes?</h3>
 						<h4>Of course! There will be prizes for each individual in a team (a max of 4 people). The biggest prize will be
-							a paid summer internship at Decipher Technology Studios! You can visit their website <a href="http://deciphernow.com/"
-							 style="color: #fafcfb">here</a>!</h3>
+							a paid summer internship at <a href="http://deciphernow.com/"
+							 style="color: #fafcfb; text-decoration: underline">Decipher Technology Studios</a>!</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>What if I don't have a laptop?</h3>
-						<h4>Bishop Ireton has a limited number of computers that you can use if you're in middle school and don't have
-							access to your own, so you can still work on a project. You just can't download any custom software on provided
-							computers.</h3>
+						<h4>If you're in middle school, computers will be provided. <br/><br />Otherwise, we have a limited number of computers to lend out.
+							Let us know ahead of time <a href="#contactScroll">here</a>!</h4>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="contact">
+	<div class="workshops" id="workshops">
+		<div class="container text-center">
+			<div class="row" style="padding-bottom: 0">
+				<div class="col-xs-12 header" id="workshopsScroll">
+					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black;">Workshops</h1>
+					<h4>Have a recommendation? Let us know <a href="#contactScroll">here</a>!</h4>
+				</div>
+			</div>
+			<div class="card-columns">
+				<div>
+					<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to use HTML and CSS to design a website!</p></div></div>
+					<img data-src="img/html_css.png" class="img-responsive card-img-top" style="width: 60%; margin-bottom: -10px;">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>HTML & CSS</strong></p>
+					</div>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to make your own skills for the Alexa platform which runs on Echo and other smart devices!</p></div></div>
+					<img data-src="img/alexa.png" class="img-responsive card-img-top" style="width: 48%; margin-bottom: -10px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title" style="padding: 0 8px 0 8px"><strong>Amazon Alexa</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Make your website more advanced with Javascript or use it on its own!</p></div></div>
+					<img data-src="img/javascript.png" class="img-responsive card-img-top" style="width: 27%; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Javascript</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Photoshop to edit photos professionally!</p></div></div>
+					<img data-src="img/photoshop.png" class="img-responsive card-img-top" style="width: 60%; margin-top: 30px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Photoshop</strong></p>
+					</div>
+				</div>
+	
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Python, an easy to learn yet robust language used by beginners and experts alike!</p></div></div>
+					<img data-src="img/python.png" class="img-responsive card-img-top" style="width: 60%;  margin-top: 25px; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Python</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Create basic apps easily with App Inventor!</p></div></div>
+					<img data-src="img/appinventor.png" class="img-responsive card-img-top" style="width: 75%; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>App Inventor</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to program with one of the most popular programming languages!</p></div></div>
+					<img data-src="img/java.png" class="img-responsive card-img-top" style="width: 20%; margin-top: 20px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Java</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn Java in a straightforward and visual way!</p></div></div>
+					<img data-src="img/alice.png" class="img-responsive card-img-top" style="width: 60%; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Alice</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use services from Google Cloud Platform to add functionality to your programs!</p></div></div>
+					<img data-src="img/gcp.png" class="img-responsive card-img-top" style="width: 70%; margin-bottom: 0">
+					<hr />
+					<div class="card-body" id="evb">
+						<p class="card-title"><strong>Google Cloud Platform</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Firebase to develop seamless and scalable apps!</p></div></div>
+					<img data-src="img/firebase.png" class="img-responsive card-img-top" style="width: 85%; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Firebase</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Use Amazon Web Services to make Alexa skills more advanced!</p></div></div>
+					<img data-src="img/aws.png" class="img-responsive card-img-top" style="width: 65%; margin-top: 20px; margin-bottom: 0">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Amazon Web Services</strong></p>
+					</div>
+				</div>
+			
+				<div class="card">
+					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to design computer graphics and illustrations!</p></div></div>
+					<img data-src="img/illustrator.png" class="img-responsive card-img-top" id="lp" style="width: 60%; margin-top: 20px">
+					<hr />
+					<div class="card-body">
+						<p class="card-title"><strong>Illustrator</strong></p>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+
+	<div class="contact" id="contact">
 		<div class="container" style="width: 100%; padding: 0;">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6" style="padding: 0;">
 					<div id="map" style="height: 460px"></div>
-					
 				</div>
 				<div class="col-xs-12 col-sm-6 header" id="contactScroll" style="color: #909090;">
-					<h1 style="margin-top: 35px; font-size: 42pt; font-weight: bold; text-shadow: -3px 5px 0px #e5e5e5;">Contact Us</h1> <!--text-shadow: -2.5px 4.5px 0px black; -->
-						<form id="contactform" style="width: 100%; margin-top: -50px; text-align: left; padding: 30px; font-size: 18px;">
-								<div class="form-group">
-									<label>Name</label>
-									<input id="namef" class="form-control is-valid" placeholder="Name">
-								</div>
-								<div class="form-group">
-									<label>Email Address</label>
-									<input id="emailf" class="form-control" placeholder="Email">
-								</div>
-								<div class="form-group">
-										<label>Question</label>
-										<textarea id="contactq" class="form-control" rows="2" placeholder="Question" style="resize: vertical"></textarea>
-									</div>
-								<button id="contactsubmit" class="btn btn-primary" type="submit" onclick="javascript:contactSubmit(); return false;">Submit</button>
-							
-							</form>
-							<p style="margin: -15px 0 0 0; font-size: 10pt;">*Also at <a style="text-decoration: none; color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a></p>
+					<h1 style="margin-top: 35px; margin-bottom: 25px; font-size: 42pt; font-weight: bold; text-shadow: -3px 5px 0px #e5e5e5;">Contact Us</h1>
+					<form id="contactform" style="width: 100%; margin-top: -50px; text-align: left; padding: 30px; font-size: 18px;">
+						<div class="form-group">
+							<label>Name</label>
+							<input id="namef" class="form-control is-valid" placeholder="Name">
+						</div>
+						<div class="form-group">
+							<label>Email Address</label>
+							<input id="emailf" class="form-control" placeholder="Email">
+						</div>
+						<div class="form-group">
+								<label>Question</label>
+								<textarea id="contactq" class="form-control" rows="2" placeholder="Question" style="resize: vertical"></textarea>
+							</div>
+						<button id="contactsubmit" class="btn btn-primary" type="submit" onclick="javascript:contactSubmit(); return false;">Submit</button>
+						<button id="contactclear" class="btn btn-secondary" type="reset" onclick="javascript:clearForm(); return false;">Clear</button>
+					</form>
+					<p style="margin: -15px 0 0 0; font-size: 10pt;">*Also at <strong><a style="text-decoration: none; color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a></strong></p>
 				</div>
 			</div>
 		</div>
@@ -305,20 +427,20 @@
 	<div class="sponsors">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 header" style="margin-top: -40px">
-					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black; margin-bottom: -8px"><b>Sponsors</b></h1>
-					<h3>Interested in being a sponsor? Email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>!</h3>
-					<br /><br /><br />
+				<div class="col-sm-12 header" style="margin-top: -30px">
+					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black"><b>Sponsors</b></h1>
+					<h4>Interested in being a sponsor? Reach out to us <a href="#contactScroll">here</a>!</h4>
+					<br /><br />
 				</div>
 				<div class="col-sm-12 logos">
-					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-white.png" alt="MLH" /></a>
+					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-black.png" alt="MLH" /></a>
 					<img class="img-responsive" data-src="img/ibg.png" alt="Innovative Business Group" />
 					<a href="https://github.com"><img class="img-responsive" data-src="img/github-black.png" alt="GitHub" /></a>
+					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios" style="width: 55%" /></a>
 					<a href="https://www.bishopireton.org/page/Alumni--Parents/PTO"><img class="img-responsive" data-src="img/bi-logo.png"
 						 alt="Bishop Ireton High School PTO" /></a>
 					<a href="http://www.thinkfun.com"><img class="img-responsive" data-src="img/think-fun.png" alt="ThinkFun" /></a>
 					<a href="http://www.brandmakers.com"><img class="img-responsive" data-src="img/brandmakers.png" alt="Brand Makers" /></a>
-					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios" /></a>
 					<a href="https://ultrapress.com"><img class="img-responsive" data-src="img/ultra-press.png" alt="UltraPress" /></a>
 				</div>
 			</div>
@@ -332,23 +454,16 @@
 		<a id="social" href="https://www.facebook.com/officialhackbi/" class="fab fa-facebook make-translucent"></a>
 		<a id="social" href="https://www.twitter.com/HackBIOfficial" class="fab fa-twitter make-translucent"></a>
 		<a id="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" class="fab fa-snapchat make-translucent"></a>
-		<a id="social" href="https://youtu.be/Nt3Xq3ZB1bc" class="fab fa-youtube make-translucent"></a>
+		<a id="social" href="https://youtu.be/p_xg-GK7heY" class="fab fa-youtube make-translucent"></a>
 	</div>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="script.js"></script>
-	<script>
-		if ($(window).outerWidth() <= 767) {
-			document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" defer><\/script>');
-			document.write('<script src="https://rawgit.com/peacepostman/wavify/master/wavify.js" defer><\/script>');
-			document.write('<script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js" defer><\/script>');
-		}
-	</script>
-	<script src="jquery.lazyloadxt.js"></script>
+	<script defer src="jquery.lazyloadxt.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
-	
-	<script>
+
+	<script defer type="text/javascript">
 		var map;
 		function initMap() {
 			map = new google.maps.Map(
@@ -475,7 +590,7 @@
 			});
 		}
 	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 </body>
 
 </html>
