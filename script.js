@@ -70,18 +70,16 @@ function requestNotif() {
 	$('#contactq').prop('readonly', 'true');
 	$('a[href^="#contactScroll"]').trigger("click");
 	setTimeout(function() {
-		//$('#emailf, #namef').addClass('contacthl');
 		document.getElementById("emailf").classList.add('contacthl');
 		document.getElementById("namef").classList.add('contacthl');
+		document.getElementById("contactq").classList.add('contactc');
 	}, 1500);
 }
 
 function contactSubmit() {
-	var name = $('#namef').val().replace(/\s/g, "+");
-	console.log(name);
-	var email = $('#emailf').val().replace(/\s/g, "+");
-	console.log(email);
-	var question = $('#contactq').val().replace(/\s/g, "+");
+	var name = escape($('#namef').val().replace(/\s/g, "+"));
+	var email = escape($('#emailf').val().replace(/\s/g, "+"));
+	var question = escape($('#contactq').val().replace(/\s/g, "+"));
 
 	if ((registerReq == 0 && question == "") || name == "" || email == "") {
 		alert("Please enter a value for all fields");
@@ -118,7 +116,7 @@ function contactSubmit() {
 
 $(document).ready(function () {
 	$('#font').removeAttr("media");
-	$(".vid-container").css({'height': (window.innerHeight + 2) + "px"});
+	$(".vid-container").css({'height': (window.innerHeight + 4) + "px"});
 	setJumbotronHeight();
 
 	if ($scrWidth > 767) {
@@ -153,6 +151,11 @@ $(document).ready(function () {
 
 	}
 
+	if (navigator.userAgent.indexOf("Firefox") != -1) {
+		$('#rb').css({'margin-top': '200px'});
+		$('#rb').css({'margin-left': '100px'});
+	}
+
 	updateHideShow();
 	updateBgs();
 	$('canvas').css({
@@ -166,13 +169,6 @@ $(document).ready(function () {
 	});
 
 	$(window).resize(function () {
-		// Resize vid-container
-		/* if ($(window).outerWidth() <= 767) {
-			$(".vid-container").css({'margin-bottom': '40px'});
-		}
-		else {
-			$(".vid-container").css({'margin-bottom': '0px'});
-		} */
 		$('canvas').css({
 			'width': $(window).width(),
 			'height': $(window).height() * 1.5
@@ -188,46 +184,10 @@ $(document).ready(function () {
 		var target = this.hash;
 		var $target = $(target);
 
-		var dist;
-		if ($scrWidth > 767) {
-			if (target == "#contactScroll") {
-				if ($("#lp").is(".lazy-loaded")) {
-					dist = 150;
-				} else {
-					dist = 280;
-				}
-			} else {
-				dist = 80;
-			}
-		} else {
-			if (target == "#contactScroll") {
-				if ($("#lp").is(".lazy-loaded")) {
-					dist = 150;
-				} else {
-					dist = 480;
-				}
-			} else {
-				dist = 30;
-			}
-		}
-
-		/*if (target == "#contactScroll") {
-			if ($("#lp").is(".lazy-loaded")) {
-				$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height() / 3)}, 900, 'swing');
-				dist = 150;
-			} else {
-				$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height() / 1.5)}, 900, 'swing');
-				dist = 280;
-			}
-		} else {
-			$('html, body').stop().animate({'scrollTop': $target.offset().top - dist}, 900, 'swing');
-		}*/
-
 		$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/3)}, 900, 'swing', function() {
-			$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/3)}, 500, 'swing');
+			if (window.scrollY != Math.floor($target.offset().top - ($target.height()/3))) {
+				$('html, body').stop().animate({'scrollTop': $target.offset().top - ($target.height()/3)}, 500, 'swing');
+			}
 		});
-		
-
-		//$('html, body').stop().animate({'scrollTop': $target.offset().top - dist}, 900, 'swing');
 	});
 });

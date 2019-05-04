@@ -43,12 +43,10 @@
 		</ul>
 	</div>
 
-	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
-	 href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=red"
-	 target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-red.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
+	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=red" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-red.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>
 
 	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px; overflow: hidden'>
-		<div class="vid-container">
+		<div class="vid-container" style="margin-bottom: -40px">
 			<div class="overlay"></div>
 			<script>
 				if (window.innerWidth <= 767) {
@@ -57,7 +55,7 @@
 					document.write('<script src="https://rawgit.com/peacepostman/wavify/master/jquery.wavify.js" defer><\/script>');
 				}
 				else {
-					document.write('<video autoplay muted preload="none" loop id="video"><source src="https://raw.githubusercontent.com/maxdodson/Website/master/HackBIShort.mp4" type="video/mp4"></video>')
+					document.write('<video autoplay muted preload="none" loop style="height: 100%; object-fit: cover" id="video"><source src="https://raw.githubusercontent.com/maxdodson/Website/master/HackBIShort.mp4" type="video/mp4"></video>')
 				}
 			</script>
 		</div>
@@ -80,7 +78,7 @@
 			<div class="row" style="margin-bottom: 0; padding-bottom: 0;" id="button-text">
 				<div class="pop-in" style="position: absolute; margin: 100px 100px 100px 0px; z-index: 1001">
 					<a id="registerButton" href="javascript:requestNotif()">
-						<div class="pop-in" style="width: 320px;">Be notified when registration opens!</div>
+						<div id="rb" class="pop-in" style="width: 320px;">Be notified when registration opens!</div>
 					</a>
 				</div>
 
@@ -194,7 +192,7 @@
 		</div>
 	</div>
 -->
-	<div class="faq">
+	<div class="faq" id="faq">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 header" id="faqScroll">
@@ -204,17 +202,17 @@
 				<div class="col-sm-6 col-xs-12">
 					<div class="qa hideme">
 						<h3>What is a hackathon?</h3>
-						<h4>Hackathons are competitive programming events in which teams and individuals create their own custom projects
-							to showcase.</h4>
+						<h4>Hackathons are events in which teams and individuals create their own custom programming projects
+							to showcase and potentially win prizes for.</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>What is HackBI?</h3>
 						<h4>HackBI is a student-run hackathon at Bishop Ireton High School, where you will have 24 hours to learn how to
-							code and/or work with your friends to make your idea come to life!</h4>
+							code (or just learn something new) and/or work with your friends to make your idea come to life!</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>Why should I attend HackBI?</h3>
-						<h4>Whether you're just getting started with coding or have been doing it for a few years, HackBI will be a great
+						<h4>Whether you've never programmed before or have been doing it for a few years, HackBI will be a great
 							place to better your skills and have a lot of fun doing it! HackBI is focused on programming education, so we'll
 							do our best to make sure you don't feel intimidated or overwhelmed by what's going on.</h4>
 					</div>
@@ -248,8 +246,9 @@
 					</div>
 					<div class="qa hideme">
 						<h3>What if I have dietary concerns?</h3>
-						<h4>If you have a specific dietary concern, please email us at <a href="mailto:hackbi@bishopireton.org">HackBI@bishopireton.org</a>
-							to let us know and we'll gladly accomodate you.</h4>
+						<h4>If you have a specific dietary concern, please indicate it on the registration form and we'll
+							glady accomodate you!
+						</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>Do I need to come with a team?</h3>
@@ -259,12 +258,13 @@
 					<div class="qa hideme">
 						<h3>Are there prizes?</h3>
 						<h4>Of course! There will be prizes for each individual in a team (a max of 4 people). The biggest prize will be
-							a paid summer internship at Decipher Technology Studios! You can visit their website <a href="http://deciphernow.com/"
-							 style="color: #fafcfb">here</a>!</h4>
+							a paid summer internship at <a href="http://deciphernow.com/"
+							 style="color: #fafcfb; text-decoration: underline">Decipher Technology Studios</a>!</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>What if I don't have a laptop?</h3>
-						<h4>If you're in middle school, computers will be provided. <br/><br />Otherwise, we have a limited number of computers to lend out. Just let us know ahead of time <a href="#contactScroll">here</a>!</h4>
+						<h4>If you're in middle school, computers will be provided. <br/><br />Otherwise, we have a limited number of computers to lend out.
+							Let us know ahead of time <a href="#contactScroll">here</a>!</h4>
 					</div>
 				</div>
 			</div>
