@@ -34,7 +34,6 @@
   }
 }
 
-
 /*ADD TRANSITION TO MAKETRANSLUCENT ITEMS*/
 
 /*MAKE WAVE HEIGHT DEPEND ON JS*/
@@ -567,7 +566,6 @@ body {
 
 	#date {
 		padding-top: 70px;
-		font-size: 16pt;
 	}
 
 	#drop {
@@ -642,6 +640,14 @@ body {
 		column-count: 2;
 	}
 
+	#decipher {
+		width: 80%;
+	}
+
+	#rb {
+		padding: 20px;
+	}
+
 }
 
 /*TABLETS*/
@@ -655,12 +661,13 @@ body {
 	}
 
 	#intro {
-		margin-top: -10px;
+		margin-top: -2px;
 		padding-top: 0px;
 	}
 
 	#date {
 		padding-top: 50px;
+		font-size: 38px;
 	}
 
 	#drop {
@@ -703,6 +710,14 @@ body {
 		column-count: 3;
 	}
 
+	#decipher {
+		width: 55%;
+	}
+
+	#ji {
+		opacity: 0;
+	}
+
 }
 
 /*COMPUTERS*/
@@ -729,9 +744,13 @@ body {
 	}
 
 	#intro {
-		margin-top: -5px;
+		margin-top: 0px;
 		padding-top: 0px;
 		font-size: 22px;
+	}
+
+	#date {
+		padding-top: 65px;
 	}
 
 	.main .row {

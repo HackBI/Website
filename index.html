@@ -65,6 +65,11 @@
 		</div>
 		<div class="row" style='margin-bottom: 0; padding-bottom: 0'>
 			<div class="col-sm-12 logo-text pop-in" style="position: absolute; border-left: 0; padding-left: 0" id="main-text">
+				<script>
+					if (window.innerWidth <= 767) {
+						document.write('<img src="img/Icon100.png" id="ji" style="position: absolute;height: 100px;margin-top: -150px;">');
+					}
+				</script>
 				<h1 style="text-shadow: -7px 8px 0px black;">HACK BI</h1>
 			</div>
 		</div>
@@ -72,7 +77,7 @@
 			<div class="row" style='margin-bottom: 0; padding-bottom: 0'>
 				<div class="col-sm-12 logo-text pop-in" style="position: absolute; color: white" id="button-text">
 					<h4 id="intro" style="position: absolute">24-hour hackathon at Bishop Ireton High School</h4>
-					<h2 id="date" style="font-weight: bold">Tentative Date: November 30-December 1</h2>
+					<h2 id="date" style="font-weight: bold">December 5-6</h2>
 				</div>
 			</div>
 			<div class="row" style="margin-bottom: 0; padding-bottom: 0;" id="button-text">
@@ -201,20 +206,20 @@
 				</div>
 				<div class="col-sm-6 col-xs-12">
 					<div class="qa hideme">
-						<h3>What is a hackathon?</h3>
-						<h4>Hackathons are events in which teams and individuals create their own custom programming projects
-							to showcase and potentially win prizes for.</h4>
-					</div>
-					<div class="qa hideme">
 						<h3>What is HackBI?</h3>
 						<h4>HackBI is a student-run hackathon at Bishop Ireton High School, where you will have 24 hours to learn how to
 							code (or just learn something new) and/or work with your friends to make your idea come to life!</h4>
 					</div>
 					<div class="qa hideme">
+						<h3>What is a hackathon?</h3>
+						<h4>Hackathons are events in which teams and individuals create their own custom programming projects
+							to showcase and potentially win prizes for.</h4>
+					</div>
+					<div class="qa hideme">
 						<h3>Why should I attend HackBI?</h3>
 						<h4>Whether you've never programmed before or have been doing it for a few years, HackBI will be a great
 							place to better your skills and have a lot of fun doing it! HackBI is focused on programming education, so we'll
-							do our best to make sure you don't feel intimidated or overwhelmed by what's going on.</h4>
+							do our best to make sure you don't feel intimidated by what's going on and have fun too.</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>Do I need any programming experience to come?</h3>
@@ -258,8 +263,7 @@
 					<div class="qa hideme">
 						<h3>Are there prizes?</h3>
 						<h4>Of course! There will be prizes for each individual in a team (a max of 4 people). The biggest prize will be
-							a paid summer internship at <a href="http://deciphernow.com/"
-							 style="color: #fafcfb; text-decoration: underline">Decipher Technology Studios</a>!</h4>
+							a paid summer internship at <a href="http://deciphernow.com/">Decipher Technology Studios</a>!</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>What if I don't have a laptop?</h3>
@@ -418,7 +422,7 @@
 						<button id="contactsubmit" class="btn btn-primary" type="submit" onclick="javascript:contactSubmit(); return false;">Submit</button>
 						<button id="contactclear" class="btn btn-secondary" type="reset" onclick="javascript:clearForm(); return false;">Clear</button>
 					</form>
-					<p style="margin: -15px 0 0 0; font-size: 10pt;">*Also at <strong><a style="text-decoration: none; color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a></strong></p>
+					<p style="margin: -15px 0 0 0; font-size: 10pt;">*Or email us at <strong><a style="text-decoration: none; color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a></strong></p>
 				</div>
 			</div>
 		</div>
@@ -434,11 +438,10 @@
 				</div>
 				<div class="col-sm-12 logos">
 					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-black.png" alt="MLH" /></a>
-					<img class="img-responsive" data-src="img/ibg.png" alt="Innovative Business Group" />
+					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios" id="decipher"/></a>
 					<a href="https://github.com"><img class="img-responsive" data-src="img/github-black.png" alt="GitHub" /></a>
-					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios" style="width: 55%" /></a>
-					<a href="https://www.bishopireton.org/page/Alumni--Parents/PTO"><img class="img-responsive" data-src="img/bi-logo.png"
-						 alt="Bishop Ireton High School PTO" /></a>
+					<a href="https://www.bishopireton.org/page/Alumni--Parents/PTO"><img class="img-responsive" data-src="img/bi-logo.png" alt="Bishop Ireton High School PTO" /></a>
+					<img class="img-responsive" data-src="img/ibg.png" alt="Innovative Business Group" />
 					<a href="http://www.thinkfun.com"><img class="img-responsive" data-src="img/think-fun.png" alt="ThinkFun" /></a>
 					<a href="http://www.brandmakers.com"><img class="img-responsive" data-src="img/brandmakers.png" alt="Brand Makers" /></a>
 					<a href="https://ultrapress.com"><img class="img-responsive" data-src="img/ultra-press.png" alt="UltraPress" /></a>
