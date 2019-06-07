@@ -30,10 +30,11 @@
                     <img src="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png" style='height: 20px; width: 20px; margin-top: -16px'>
                 </a>
             </li>
-            <li><a href="index.html">Home</a></li>
-            <li><a id="scheduleLink" href="index.html#scheduleScroll">Schedule</a></li>
-            <li><a id="faqLink" href="index.html#faqScroll">FAQ</a></li>
-            <li><a id="meetTeamLink" href="team">Meet the HackBI Team</a></li>
+            <li><a id="faqLink" href="/#faq">FAQ</a></li>
+			<li><a id="contactLink" href="/#contactScroll">Contact</a></li>
+			<li><a id="workshopLink" href="/#workshops">Workshops</a></li>
+			<li><a id="meetTeamLink" href="/team">Meet the Team</a></li>
+			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
         </ul>
     </div>
     <!-- <div class="wave-container">
@@ -58,9 +59,28 @@
                     <img src="students.jpg" class="card-img-top" width="100%">
                     <div class="card-body" id="evb">
                         <h2 class="card-title"><strong>Students</strong></h2>
-                        <a href="#eventbrite" class="btn btn-primary">Register</a>
-
-                        <div id="eventbrite-widget-container-55495250789" class="eventbrite_embed"></div>
+                    
+                        <!-- Noscript content for added SEO -->
+                        <noscript><a href="https://www.eventbrite.com/e/hack-bi-iii-tickets-61404733210" rel="noopener noreferrer" target="_blank"></noscript>
+                        <!-- You can customize this button any way you like -->
+                        <button id="eventbrite-widget-modal-trigger-61404733210" class="btn btn-primary" style="margin-top: 15px; margin-bottom: 30px" type="button">Register</button>
+                        <noscript></a>Buy Tickets on Eventbrite</noscript>
+                        
+                        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+                        
+                        <script type="text/javascript">
+                            var exampleCallback = function() {
+                                console.log('Order complete!');
+                            };
+                        
+                            window.EBWidgets.createWidget({
+                                widgetType: 'checkout',
+                                eventId: '61404733210',
+                                modal: true,
+                                modalTriggerElementId: 'eventbrite-widget-modal-trigger-61404733210',
+                                onOrderComplete: exampleCallback
+                            });
+                        </script>
 
                     </div>
                 </div>
@@ -72,7 +92,7 @@
                         <h2 class="card-title"><strong>Adult Volunteers</strong></h2>
                         <a href="https://www.signupgenius.com/index.cfm?go=c.SignUpSearch&eid=0DC4C0DBFFC4FE62&cs=09B7BADB8FCD8B177B7964035BB39BCC&sortby=l.title"
                             target="_blank"><img src="https://www.signupgenius.com/images/sign-up-now2.gif" width="250"
-                                height="45" border="0" alt="Sign Up!"></a>
+                                height="45" alt="Sign Up!"></a>
                     </div>
                 </div>
             </div>

@@ -26,6 +26,20 @@
     background-color: var(--main-color);
     position: relative;
     z-index: 1;
+    color: #fff;
+    background: var(--main-color);
+    background-image: url('team.jpg');
+    background-position: center;
+    background-position-y: 47%;
+    background-size: cover;
+    border-radius: 0;
+    padding-bottom: 70px;
+    margin-bottom: 0;
+  }
+
+  .jumbotron h1 {
+    padding: 0;
+    margin: 0;
   }
 
   .people {
@@ -73,15 +87,16 @@
     padding-right: 20px;
   }
 
-  .jumbotron {
-    color: #fff;
-	background: var(--main-color);
-  background-image: url('team.jpg');
-	background-position: center;
-	background-position-y: 47%;
-	background-size: cover;
-  border-radius: 0;
-  margin-bottom: 0;
+  @media screen and (max-width: 767px) {
+    .jumbotron h1 {
+      font-size: 8rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .jumbotron h1 {
+      font-size: 8rem;
+    }
   }
   </style>
 </head>
