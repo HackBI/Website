@@ -26,7 +26,7 @@ a h3 {
 
 .jumbotron h1 {
 	font-family: Jaapokki, Arial, Helvetica, sans-serif;
-	line-height: 1.4;
+	line-height: 1.2;
 	margin-bottom: -20px
 	/*background: -webkit-linear-gradient(-45deg, #f06, #ffd700);
 	-webkit-background-clip: text;
@@ -56,9 +56,10 @@ a h3 {
 	border-radius: 10px;
 }
 
-.card img {
+.card .card-img-top {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
+	margin-top: 0;
 }
 
 a:hover {
@@ -117,7 +118,7 @@ a:hover {
 @media screen and (max-width: 767px) {
 
 	.jumbotron h1 {
-		font-size: 95px;
+		font-size: 8rem;
 	}
 
 	/* .card {
