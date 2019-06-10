@@ -128,7 +128,7 @@ body {
 }
 
 .overlay {
-	background-color: rgba(255, 179, 71, .115);
+	background-color: rgba(255, 179, 71, .13);
 	display: block;
 	position: absolute;
 	margin-top: -48px;
@@ -224,11 +224,11 @@ body {
 
 #button-text a div {
 	/* background-color: rgba(180, 180, 180, .63); */
-	background-color: rgba(240, 240, 240, .43); /*-*/
+	background-color: rgba(240, 240, 240, .4); /*-*/
 	border-color: rgba(250, 250, 250, .93); /*-*/
 	font-size: 16pt;
-	border-width: 4px;
-	border-radius: 150px;
+	border-width: 3px;
+	border-radius: 50px;
 }
 
 .main h1 {
@@ -247,9 +247,8 @@ body {
   color: white;
   font-size: 4rem;
   display: inline-block;
-  padding: 0.8em;
-  border-radius: 5px;
-  border: 10px solid white;
+  padding: 0.6em;
+  border: 4px solid white;
 }
 
 .main a:hover {

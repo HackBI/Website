@@ -9,6 +9,28 @@ a h3 {
 	color: inherit;
 }
 
+.nav {
+	z-index: 99;
+}
+
+iframe body {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+.modal-title {
+	display: inline;
+}
+
+.modal-footer {
+	height: 75px;
+}
+
+.modal {
+	text-align: center;
+}
+
 .cardrow {
 	text-align: center;
 	padding-bottom: 35px;
@@ -69,7 +91,7 @@ a:hover {
 .btn {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	font-size: 2rem;
-	color: #fff;
+	color: white;
 	/*background-color: #823994;
 	border-color: #823994;*/
 	background-color: var(--main-color);
@@ -77,10 +99,26 @@ a:hover {
 	margin-bottom: 4rem;
 }
 
-.btn:hover {
+/*.btn:hover {
 	background-color: var(--secondary-color);
 	border-color: var(--secondary-color);
+	color: white;
 	cursor: pointer;
+}
+
+.btn:focus {
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+	color: white;
+}*/
+
+.btn:hover, .btn:focus {
+	opacity: .9;
+	color: white;
+}
+
+#sigbtn:hover {
+	opacity: .85;
 }
 
 #bottom-bar {
@@ -106,13 +144,119 @@ a:hover {
 }
 
 .eventbrite_embed iframe {
-
    width: 95%;
    display: block;
    margin: auto;
    border-top: 1px solid silver
+}
 
+#container {
+	margin-top: 50px;
+	border: 1px solid lightgray;
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 5px;
+}
 
+.file {
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: left;
+	padding: 0;
+	max-width: 750px;
+	color: #4f4f4f;
+	background-color: #fafafa;
+	border: .5px solid rgb(195, 203, 204);
+	border-radius: 3px;
+	width: fit-content;
+	margin-left: 5%;
+}
+
+.file ~ .file {
+  	margin-top: 3px;
+}
+
+.name {
+	max-width: 650px;
+	padding: 0;
+	margin-right: 15px;
+	display: inline-block;
+	padding: 10px;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.x {
+	width: 25px;
+	padding-right: 10px;
+	stroke: rgb(155, 163, 164);
+	fill: transparent;
+	stroke-linecap: round;
+	stroke-width: 5;
+	height: 30px;
+	display: inline-block;
+	margin: 0; 
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+    max-width: 80%;
+    font-size: 2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    color: white;
+    background-color: var(--main-color);
+}
+
+#filebutton:hover {
+	opacity: .9;
+}
+
+svg {
+	position: relative;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.content {
+	font-family: "Metrophobic";
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+	margin: 15px auto 0 auto;
+	padding: 0;
+}
+
+.box {
+	background-color: rgba(240, 220, 222, .4);
+	height: 244px;
+	position: relative;
+	border: 2px dashed #df888c;
+	border-radius: 10px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media screen and (max-width: 767px) {

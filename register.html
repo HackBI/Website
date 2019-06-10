@@ -37,11 +37,6 @@
 			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
         </ul>
     </div>
-    <!-- <div class="wave-container">
-            <svg width="100%" height="100%" class="wave">
-                <path id="wave1" />
-            </svg>
-        </div> -->
     <div class="jumbotron text-center">
         <br/>
         <h1>Register for HackBI III</h1>
@@ -59,11 +54,15 @@
                     <img src="students.jpg" class="card-img-top" width="100%">
                     <div class="card-body" id="evb">
                         <h2 class="card-title"><strong>Students</strong></h2>
-                    
-                        <!-- Noscript content for added SEO -->
+
+                        <button type="button" class="btn" data-toggle="modal" data-target="#registrationModal" style="margin-top: 15px; margin-bottom: 30px">
+                            Register
+                        </button>
+                        
+  
+                        <!--
                         <noscript><a href="https://www.eventbrite.com/e/hack-bi-iii-tickets-61404733210" rel="noopener noreferrer" target="_blank"></noscript>
-                        <!-- You can customize this button any way you like -->
-                        <button id="eventbrite-widget-modal-trigger-61404733210" class="btn btn-primary" style="margin-top: 15px; margin-bottom: 30px" type="button">Register</button>
+                        <button id="eventbrite-widget-modal-trigger-61404733210" class="btn" style="margin-top: 15px; margin-bottom: 30px" type="button">Register</button>
                         <noscript></a>Buy Tickets on Eventbrite</noscript>
                         
                         <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
@@ -81,23 +80,100 @@
                                 onOrderComplete: exampleCallback
                             });
                         </script>
-
+                        -->
                     </div>
                 </div>
             </div>
+            
             <div class="col-sm-6" style="padding: 0; margin: 0">
                 <div class="card" id="c2" style="padding-bottom: 37px">
                     <img src="volunteers.jpg" class="card-img-top" width="100%">
                     <div class="card-body">
                         <h2 class="card-title"><strong>Adult Volunteers</strong></h2>
                         <a href="https://www.signupgenius.com/index.cfm?go=c.SignUpSearch&eid=0DC4C0DBFFC4FE62&cs=09B7BADB8FCD8B177B7964035BB39BCC&sortby=l.title"
-                            target="_blank"><img src="https://www.signupgenius.com/images/sign-up-now2.gif" width="250"
+                            target="_blank"><img id="sigbtn" src="https://www.signupgenius.com/images/sign-up-now2.gif" width="250"
                                 height="45" alt="Sign Up!"></a>
                     </div>
                 </div>
             </div>
         </div>
-    
+        <div class="modal fade" id="registrationModal" style="z-index: 10000;" tabindex="-1" role="dialog" aria-labelledby="Registration" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding-top: 22px">
+                        <h2 class="modal-title"><strong>Student Registration</strong></h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 36pt; padding: 0; margin: 0; margin-left: -35px;">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>1. Register for a spot</h3>
+                        <noscript><a href="https://www.eventbrite.com/e/hack-bi-iii-tickets-61404733210" rel="noopener noreferrer" target="_blank"></noscript>
+                        <button id="eventbrite-widget-modal-trigger-61404733210" class="btn" style="margin: 10px 0 0 0; width: 150px" type="button"><strong>Register</strong></button>
+                        <noscript></a>Buy Tickets on Eventbrite</noscript>
+                        
+                        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+                        
+                        <script type="text/javascript">
+                            var exampleCallback = function() {
+                                console.log('Order complete!');
+                            };
+                        
+                            window.EBWidgets.createWidget({
+                                widgetType: 'checkout',
+                                eventId: '61404733210',
+                                modal: true,
+                                modalTriggerElementId: 'eventbrite-widget-modal-trigger-61404733210',
+                                onOrderComplete: exampleCallback
+                            });
+                        </script>
+                        
+                        <hr style="width: 180px;">
+
+                        <h3>2. Print and fill out <a href='Forms.pdf' target="_blank"><u>forms</u></a></h3>
+                        
+                        <hr style="width: 220px;">
+
+                        <h3>3. Upload forms</h3>
+                        <div class="content">
+                            <label for="file-1" style="width: 90%">
+                                <div class="box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+                                    <input type="file" id="file-1" class="inputfile" multiple="multiple">
+                                    <label id="filebutton" style="margin-top: 100px" for="file-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span id="fn">Choose or drop files&hellip;</span></label>
+                                </div>
+                            </label>
+                            <template id="filename" style="display: none">
+                                <div class="file">
+                                    <div class="name"></div>
+                                    <svg viewBox="0 0 40 40" class="x">
+                                        <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
+                                    </svg>
+                                    <script>
+                                    $(document.scripts[document.scripts.length - 4]).siblings('.x').click(function() {
+                                        var fname = $(this).parent().find('.name').text();
+                                        $(this).parent().remove();
+                                        for (var i = 0; i < uploaded_files.length; i++) {
+                                            if (uploaded_files[i]['name'] == fname) {
+                                                uploaded_files.splice(i, 1);
+                                                break;
+                                            }
+                                        }
+                                        });
+                                    </script>
+                                </div>
+                            </template>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <div style="text-align: left; display: inline-block; float: left; color: darkgray; padding-left: 10%;">
+                            * You may register and return here when your forms are completed.
+                        </div>
+                        <button type="button" class="btn" id="submitbtn" data-dismiss="modal" onclick="javascript:doPost();">Submit!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
 
@@ -112,6 +188,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="register.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
 
