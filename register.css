@@ -265,6 +265,10 @@ svg {
 		font-size: 8rem;
 	}
 
+	.modal-dialog {
+		margin-top: 7%;
+	}
+
 	/* .card {
 		margin: 0 auto auto auto;
 	} */

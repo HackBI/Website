@@ -54,33 +54,9 @@
                     <img src="students.jpg" class="card-img-top" width="100%">
                     <div class="card-body" id="evb">
                         <h2 class="card-title"><strong>Students</strong></h2>
-
                         <button type="button" class="btn" data-toggle="modal" data-target="#registrationModal" style="margin-top: 15px; margin-bottom: 30px">
                             Register
                         </button>
-                        
-  
-                        <!--
-                        <noscript><a href="https://www.eventbrite.com/e/hack-bi-iii-tickets-61404733210" rel="noopener noreferrer" target="_blank"></noscript>
-                        <button id="eventbrite-widget-modal-trigger-61404733210" class="btn" style="margin-top: 15px; margin-bottom: 30px" type="button">Register</button>
-                        <noscript></a>Buy Tickets on Eventbrite</noscript>
-                        
-                        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-                        
-                        <script type="text/javascript">
-                            var exampleCallback = function() {
-                                console.log('Order complete!');
-                            };
-                        
-                            window.EBWidgets.createWidget({
-                                widgetType: 'checkout',
-                                eventId: '61404733210',
-                                modal: true,
-                                modalTriggerElementId: 'eventbrite-widget-modal-trigger-61404733210',
-                                onOrderComplete: exampleCallback
-                            });
-                        </script>
-                        -->
                     </div>
                 </div>
             </div>
@@ -90,20 +66,22 @@
                     <img src="volunteers.jpg" class="card-img-top" width="100%">
                     <div class="card-body">
                         <h2 class="card-title"><strong>Adult Volunteers</strong></h2>
-                        <a href="https://www.signupgenius.com/index.cfm?go=c.SignUpSearch&eid=0DC4C0DBFFC4FE62&cs=09B7BADB8FCD8B177B7964035BB39BCC&sortby=l.title"
+                        <h3 style="margin-top: 43px;">Coming Soon</h3>
+                        <!--<a href="https://www.signupgenius.com/index.cfm?go=c.SignUpSearch&eid=0DC4C0DBFFC4FE62&cs=09B7BADB8FCD8B177B7964035BB39BCC&sortby=l.title"
                             target="_blank"><img id="sigbtn" src="https://www.signupgenius.com/images/sign-up-now2.gif" width="250"
                                 height="45" alt="Sign Up!"></a>
+                        -->
                     </div>
                 </div>
             </div>
         </div>
         <div class="modal fade" id="registrationModal" style="z-index: 10000;" tabindex="-1" role="dialog" aria-labelledby="Registration" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
-                    <div class="modal-header" style="padding-top: 22px">
-                        <h2 class="modal-title"><strong>Student Registration</strong></h2>
+                    <div class="modal-header" style="padding-top: 22px; text-align: center;">
+                        <h2 class="modal-title" style="margin-right: -15px;"><strong>Student Registration</strong></h2>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true" style="font-size: 36pt; padding: 0; margin: 0; margin-left: -35px;">×</span>
+                            <span aria-hidden="true" style="font-size: 36pt;">×</span>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -115,8 +93,9 @@
                         <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
                         
                         <script type="text/javascript">
-                            var exampleCallback = function() {
-                                console.log('Order complete!');
+                            var orderComplete = function() {
+                                $('#eventbrite-widget-modal-trigger-61404733210').css({'background-color': 'green', 'border-color': 'green'});
+                                $('#eventbrite-widget-modal-trigger-61404733210').animate({'opacity': '.65', 'background-color': 'green', 'border-color': 'green'}, 900, 'swing');
                             };
                         
                             window.EBWidgets.createWidget({
@@ -124,13 +103,13 @@
                                 eventId: '61404733210',
                                 modal: true,
                                 modalTriggerElementId: 'eventbrite-widget-modal-trigger-61404733210',
-                                onOrderComplete: exampleCallback
+                                onOrderComplete: orderComplete
                             });
                         </script>
                         
                         <hr style="width: 180px;">
 
-                        <h3>2. Print and fill out <a href='Forms.pdf' target="_blank"><u>forms</u></a></h3>
+                        <h3>2. Print and fill out <a href='HackBI_Forms.pdf' target="_blank"><u>forms</u></a></h3>
                         
                         <hr style="width: 220px;">
 
@@ -166,8 +145,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <div style="text-align: left; display: inline-block; float: left; color: darkgray; padding-left: 10%;">
-                            * You may register and return here when your forms are completed.
+                        <div style="text-align: left; display: inline-block; float: left; color: darkgray; padding-left: 10%; max-width: 70%">
+                            <h5>* You may register and return here when your forms are completed.</h5>
                         </div>
                         <button type="button" class="btn" id="submitbtn" data-dismiss="modal" onclick="javascript:doPost();">Submit!</button>
                     </div>
