@@ -37,7 +37,7 @@
 			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
         </ul>
     </div>
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-center" style="background-image: url('register.jpg');">
         <br/>
         <h1>Register for HackBI III</h1>
         <br/>
@@ -114,6 +114,7 @@
                         <hr style="width: 220px;">
 
                         <h3>3. Upload forms</h3>
+                        <h5 style="color: gray">Please name your files: <i>First Name_Last Name</i></h5>
                         <div class="content">
                             <label for="file-1" style="width: 90%">
                                 <div class="box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
@@ -145,7 +146,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <div style="text-align: left; display: inline-block; float: left; color: darkgray; padding-left: 10%; max-width: 70%">
+                        <div style="text-align: left; display: inline-block; float: left; color: gray; padding-left: 10%; max-width: 70%">
                             <h5>* You may register and return here when your forms are completed.</h5>
                         </div>
                         <button type="button" class="btn" id="submitbtn" data-dismiss="modal" onclick="javascript:doPost();">Submit!</button>

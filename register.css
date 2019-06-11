@@ -1,5 +1,5 @@
 body {
-	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
+	font-family: Montserrat, Verdana, Arial, sans-serif;
 	color: rgb(20, 20, 24);
 	background: #fbfbfb;
 }
@@ -39,7 +39,7 @@ iframe body {
 .jumbotron {
 	color: #fff;
 	background: var(--main-color);
-	background-image: url('register.jpg');
+	/*background-image: url('register.jpg');*/
 	background-position: center;
 	background-position-y: 47%;
 	background-size: cover;
@@ -47,7 +47,7 @@ iframe body {
 }
 
 .jumbotron h1 {
-	font-family: Jaapokki, Arial, Helvetica, sans-serif;
+	font-family: Jaapokki, "Trebuchet MS", Arial, sans-serif;
 	line-height: 1.2;
 	margin-bottom: -20px
 	/*background: -webkit-linear-gradient(-45deg, #f06, #ffd700);
@@ -89,7 +89,7 @@ a:hover {
 }
 
 .btn {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	font-family: Montserrat, Verdana, Arial, sans-serif;
 	font-size: 2rem;
 	color: white;
 	/*background-color: #823994;
@@ -130,7 +130,7 @@ a:hover {
 
 .learn-more {
 	/*font-family: Consolas, 'Andale Mono', Helvetica, sans-serif;*/
-	font-family: Montserrat, Metrophobic, Arial, Helvetica, sans-serif;
+	font-family: Montserrat, Verdana, Arial, sans-serif;
 	font-display: swap;
   	font-weight: bold;
 	text-align: center;
@@ -210,7 +210,7 @@ a:hover {
 }
 
 .inputfile + label {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	font-family: Montserrat, Verdana, Arial, sans-serif;
     max-width: 80%;
     font-size: 2rem;
     border-radius: 4px;
