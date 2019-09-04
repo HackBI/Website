@@ -20,11 +20,16 @@ $(document).ready(function() {
 		updateBgs();
 	});
 
+	pattern = new RegExp('[a-zA-Z]{2,}\_[a-zA-Z]{2,}.+');
+
 	$("#file-1").change(function(){
-		console.log('File(s) inserted.');
 		try {
 			for (var i=0; i < this.files.length; i++) {
-				$('.content').append($('template').html().replace('<div class="name"></div>','<div class="name">' + this.files[i].name + '</div>'));
+				if (!(pattern.test(this.files[i].name))) {
+					alert('File "' + this.files[i].name + '" is not named properly.\n\nPlease name your files: "First Name_Last Name" and please do not abbreviate. Extensions and numbers at the end are okay.');
+					continue;
+				}
+				$('.content').append($('template').html().replace('<div class="name"></div>','<div class="name" data-file-size="' + this.files[i].size + '">' + this.files[i].name + '</div>'));
 				uploaded_files.push(this.files[i]);
 			}
 		} catch {
@@ -35,85 +40,36 @@ $(document).ready(function() {
 
 	uploaded_files = [];
 	ajaxresponses = 0;
-	
-	var clicked = 0;
-
-	$('a[href^="#eventbrite"]').on('click',function (e) {
-		
-	    if (clicked != 0) {
-			return;
-	    }
-	    clicked++;
-		
-	    e.preventDefault();
-
-		$('#evb').animate({'margin-bottom': '15px'}, 900, 'swing');
-		//$('.eventbrite_embed iframe').animate({'opacity': 1}, 500, 'swing');
-
-		function next() {
-			var exampleCallback = function () {
-				console.log('Order complete!');
-			};
-	
-			window.EBWidgets.createWidget({
-				// Required
-				widgetType: 'checkout',
-				eventId: '55495250789',
-				iframeContainerId: 'eventbrite-widget-container-55495250789',
-	
-				// Optional
-				iframeContainerHeight: 425, // Widget height in pixels. Defaults to a minimum of 425px if not provided
-				onOrderComplete: exampleCallback // Method called when an order has successfully completed
-			});
-		}
-
-		var script = document.createElement('script');
-		script.src = 'https://www.eventbrite.com/static/widgets/eb_widgets.js';
-		document.getElementsByTagName("head")[0].appendChild(script);
-		   
-		if(script.readyState) {  // only required for IE <9
-			script.onreadystatechange = function() {
-			  if ( script.readyState === "loaded" || script.readyState === "complete" ) {
-				script.onreadystatechange = null;
-				next();
-			  }
-			};
-		  } else {  //Others
-			script.onload = function() {
-			  next();
-			};
-		  }
-
-	});
 });
 
 function dropHandler(ev) {
-	console.log('File(s) dropped');
 	ev.preventDefault();
   
 	if (ev.dataTransfer.items) {
-	  // Use DataTransferItemList interface to access the file(s)
-	  for (var i = 0; i < ev.dataTransfer.items.length; i++) {
-		// If dropped items aren't files, reject them
-		if (ev.dataTransfer.items[i].kind === 'file') {
-		  var file = ev.dataTransfer.items[i].getAsFile();
-		  console.log('... file[' + i + '].name = ' + file.name);
-		  $('.content').append($('#filename').html().replace('<div class="name"></div>','<div class="name">' + file.name + '</div>'));
-		  uploaded_files.push(file);
-		}
-	  }
+		for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+			if (ev.dataTransfer.items[i].kind === 'file') {
+		  		var file = ev.dataTransfer.items[i].getAsFile();
+		  		if (!(pattern.test(file.name))) {
+					alert('File "' + file.name + '" is not named properly.\n\nPlease name your files: "First Name_Last Name" and please do not abbreviate. Extensions and numbers at the end are okay.');
+					continue;
+				}
+		  		$('.content').append($('#filename').html().replace('<div class="name"></div>','<div class="name" data-file-size="' + file.size + '">' + file.name + '</div>'));
+		  		uploaded_files.push(file);
+			}
+	  	}
 	} else {
-		// Use DataTransfer interface to access the file(s)
 		for (var i = 0; i < ev.dataTransfer.files.length; i++) {
-			console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
-			$('.content').append($('template').html().replace('<div class="name"></div>','<div class="name">' + ev.dataTransfer.files[i].name + '</div>'));
+			if (!(pattern.test(ev.dataTransfer.files[i].name))) {
+				alert('File "' + ev.dataTransfer.files[i].name + '" is not named properly.\n\nPlease name your files: "First Name_Last Name" and please do not abbreviate. Extensions and numbers at the end are okay.');
+				continue;
+			}
+			$('.content').append($('template').html().replace('<div class="name"></div>','<div class="name" data-file-size="' + ev.dataTransfer.files[i].size + '">' + ev.dataTransfer.files[i].name + '</div>'));
 			uploaded_files.push(ev.dataTransfer.files[i]);
 		}
 	}
 }
   
 function dragOverHandler(ev) {
-	console.log('File(s) in drop zone'); 
 	ev.preventDefault();
 }
   
@@ -144,7 +100,8 @@ function doPost() {
 					data: fd,
 					crossDomain: true,
 					contentType: false,
-					processData: false,
+					dataType: false,
+        			processData: false,
 					success: updateStatus
 				});
 			}

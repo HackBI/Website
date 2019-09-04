@@ -49,7 +49,9 @@ iframe body {
 .jumbotron h1 {
 	font-family: Jaapokki, "Trebuchet MS", Arial, sans-serif;
 	line-height: 1.2;
-	margin-bottom: -20px
+	margin-bottom: -20px;
+	padding-left: 10px;
+	padding-right: 10px;
 	/*background: -webkit-linear-gradient(-45deg, #f06, #ffd700);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
@@ -161,13 +163,14 @@ a:hover {
 
 .file {
 	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
 	text-align: left;
 	padding: 0;
 	max-width: 750px;
 	color: #4f4f4f;
-	background-color: #fafafa;
-	border: .5px solid rgb(195, 203, 204);
-	border-radius: 3px;
+	background-color: #fcfcfc;
+	border: 1px solid rgb(195, 203, 204);
+	border-radius: 9px;
 	width: fit-content;
 	margin-left: 5%;
 }
@@ -198,6 +201,10 @@ a:hover {
 	height: 30px;
 	display: inline-block;
 	margin: 0; 
+}
+
+.x:hover {
+	cursor: pointer;
 }
 
 .inputfile {
