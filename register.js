@@ -96,12 +96,11 @@ function doPost() {
 			
 				$.ajax({
 					type: 'POST',
-					url: 'https://script.google.com/macros/s/AKfycbzDg5C5xQnFNwwlqQoinEZNJPGMBDhNDq6V96uC2z6Doby088Q/exec',
+					url: 'https://script.google.com/a/bishopireton.org/macros/s/AKfycbwmHJmStJLbsKnYfC37hse0DazJFmdcs4WuMQfamI7e5kZHlr8/exec',
 					data: fd,
 					crossDomain: true,
 					contentType: false,
-					dataType: false,
-        			processData: false,
+        				processData: false,
 					success: updateStatus
 				});
 			}
