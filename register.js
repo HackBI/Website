@@ -111,8 +111,9 @@ function doPost() {
 				ajaxresponses++;
 			}
 		}
-	} catch {
+	} catch(e) {
 		alert("Something didn't work quite right. Try again.");
+		console.log(e);
 	}
 
 	if (ajaxresponses == uploaded_files.length) {
