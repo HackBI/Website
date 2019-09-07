@@ -100,6 +100,7 @@ function doPost() {
 					data: fd,
 					crossDomain: true,
 					contentType: false,
+					dataType: 'text/javascript',
         				processData: false,
 					success: updateStatus
 				});
