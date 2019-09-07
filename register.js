@@ -94,29 +94,29 @@ function doPost() {
 				fd.append('mimetype', mimetype);
 				fd.append('filename', filename);
 			
-				$.ajax({
+				var ajax_response = $.ajax({
 					type: 'POST',
-					url: 'https://script.google.com/macros/s/AKfycbzDg5C5xQnFNwwlqQoinEZNJPGMBDhNDq6V96uC2z6Doby088Q/exec',
+					url: 'https://script.google.com/a/bishopireton.org/macros/s/AKfycbwmHJmStJLbsKnYfC37hse0DazJFmdcs4WuMQfamI7e5kZHlr8/exec',
 					data: fd,
 					crossDomain: true,
 					contentType: false,
-					dataType: false,
-        			processData: false,
-					success: updateStatus
+					dataType: 'text/javascript',
+        			processData: false
 				});
 			}
-			fr.readAsDataURL(file);
+			fr.readAsDataURL(file); // https://script.google.com/macros/s/AKfycbzDg5C5xQnFNwwlqQoinEZNJPGMBDhNDq6V96uC2z6Doby088Q/exec
+
+			if (ajax_response['status'] == 20) {
+				ajaxresponses++;
+			}
 		}
 	} catch {
 		alert("Something didn't work quite right. Try again.");
 	}
-}
-  
-function updateStatus() {
-	ajaxresponses++;
+
 	if (ajaxresponses == uploaded_files.length) {
-	  $('#submitbtn').text('Submitted.');
-	  $('.file').remove();
-	  uploaded_files.length = 0;
-	}
+		$('#submitbtn').text('Submitted.');
+		$('.file').remove();
+		uploaded_files.length = 0;
+	  }
 }
