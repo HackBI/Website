@@ -118,7 +118,7 @@ function doPost() {
 					}
 				});
 			}
-			fr.readAsDataURL(file); // https://script.google.com/macros/s/AKfycbzDg5C5xQnFNwwlqQoinEZNJPGMBDhNDq6V96uC2z6Doby088Q/exec	
+			fr.readAsDataURL(file); // https://script.google.com/macros/s/AKfycbzDg5C5xQnFNwwlqQoinEZNJPGMBDhNDq6V96uC2z6Doby088Q/exec
 		}
 	} catch(e) {
 		alert("Something didn't work quite right. Try again.");
