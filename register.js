@@ -112,7 +112,10 @@ function doPost() {
 							if (ajaxresponses == uploaded_files.length) {
                                 $('#submitbtn').text('Submitted');
                                 $('.file').remove();
-                                uploaded_files.length = 0;
+								uploaded_files.length = 0;
+								setTimeout(function() {
+									$('.modal').modal('toggle');
+								}, 1000);
                             }
 						}
 					}
