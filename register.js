@@ -113,6 +113,7 @@ function doPost() {
                                 $('#submitbtn').text('Submitted');
                                 $('.file').remove();
 								uploaded_files.length = 0;
+								ajaxresponses = 0;
 								setTimeout(function() {
 									$('.modal').modal('toggle');
 								}, 1000);
