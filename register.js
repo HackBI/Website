@@ -40,6 +40,7 @@ $(document).ready(function() {
 
 	uploaded_files = [];
 	ajaxresponses = 0;
+	ajax_response = null;
 });
 
 function dropHandler(ev) {
@@ -94,29 +95,37 @@ function doPost() {
 				fd.append('mimetype', mimetype);
 				fd.append('filename', filename);
 			
-				$.ajax({
+				ajax_response = $.ajax({
 					type: 'POST',
 					url: 'https://script.google.com/macros/s/AKfycbzDg5C5xQnFNwwlqQoinEZNJPGMBDhNDq6V96uC2z6Doby088Q/exec',
 					data: fd,
 					crossDomain: true,
 					contentType: false,
-					dataType: false,
-        			processData: false,
-					success: updateStatus
+					dataType: 'text/javascript',
+					processData: false,
+					beforeSend: function() {
+						$('#submitbtn').text('Uploading..');
+					},
+					statusCode: {
+                    	200: function() {
+                        	ajaxresponses++;
+							if (ajaxresponses == uploaded_files.length) {
+                                $('#submitbtn').text('Submitted');
+                                $('.file').remove();
+								uploaded_files.length = 0;
+								ajaxresponses = 0;
+								setTimeout(function() {
+									$('.modal').modal('toggle');
+								}, 1000);
+                            }
+						}
+					}
 				});
 			}
-			fr.readAsDataURL(file);
+			fr.readAsDataURL(file); // https://script.google.com/macros/s/AKfycbzDg5C5xQnFNwwlqQoinEZNJPGMBDhNDq6V96uC2z6Doby088Q/exec
 		}
-	} catch {
+	} catch(e) {
 		alert("Something didn't work quite right. Try again.");
-	}
-}
-  
-function updateStatus() {
-	ajaxresponses++;
-	if (ajaxresponses == uploaded_files.length) {
-	  $('#submitbtn').text('Submitted.');
-	  $('.file').remove();
-	  uploaded_files.length = 0;
+		console.log(e);
 	}
 }

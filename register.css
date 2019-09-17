@@ -266,6 +266,10 @@ svg {
 	margin-right: auto;
 }
 
+#submitinfo {
+	max-width: 70%;
+}
+
 @media screen and (max-width: 767px) {
 
 	.jumbotron h1 {
@@ -279,6 +283,10 @@ svg {
 	/* .card {
 		margin: 0 auto auto auto;
 	} */
+
+	#submitinfo {
+		max-width: 65%;
+	}
 
 }
 
