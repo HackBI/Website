@@ -115,7 +115,7 @@ function doPost() {
 								uploaded_files.length = 0;
 								ajaxresponses = 0;
 								setTimeout(function() {
-									$('.modal').modal('toggle');
+									$('#registrationModal').modal('toggle');
 								}, 1000);
                             }
 						}
@@ -128,4 +128,30 @@ function doPost() {
 		alert("Something didn't work quite right. Try again.");
 		console.log(e);
 	}
+}
+
+function notifSubmit() {
+	var name = escape($('#namef').val().replace(/\s/g, "+"));
+	var email = escape($('#emailf').val().replace(/\s/g, "+"));
+
+	$.ajax({
+		'async': false,
+		'type': 'POST',
+		'url': 'https://script.google.com/macros/s/AKfycbwvNmiF7oFouuSkzQuxV-A3wPcYkduRHXmJjLG0jUJrsOjTE7S7/exec?name=' + name + '&email=' + email,
+		crossDomain: true,
+		contentType: false,
+		dataType: 'text/javascript',
+		processData: false,
+		beforeSend: function() {
+			$('#volbtnsubmit').text('Submitting..');
+		},
+		statusCode: {
+			200: function() {
+				$('#volbtnsubmit').text('Thank you!');
+				setTimeout(function() {
+					$('#volunteerModal').modal('toggle');
+				}, 1000);
+			}
+		}
+	});
 }
