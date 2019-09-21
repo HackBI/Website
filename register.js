@@ -117,6 +117,9 @@ function doPost() {
 								setTimeout(function() {
 									$('#registrationModal').modal('toggle');
 								}, 1000);
+								setTimeout(function() {
+									location.reload();
+								}, 5000);
                             }
 						}
 					}
@@ -151,6 +154,9 @@ function notifSubmit() {
 				setTimeout(function() {
 					$('#volunteerModal').modal('toggle');
 				}, 1000);
+				setTimeout(function() {
+					location.reload();
+				}, 5000);
 			}
 		}
 	});
