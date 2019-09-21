@@ -101,6 +101,34 @@ a:hover {
 	margin-bottom: 4rem;
 }
 
+.volbtn {
+	/*margin-top: 43px; box-shadow: 0px 0px 0px 10px white, 0px 0px 0px 11px gray;*/
+	font-family: Montserrat, Verdana, Arial, sans-serif;
+	font-size: 2rem;
+	padding: 6px 12px;
+	color: #232121;
+	background-color: white;
+	border: 1px solid #232121;
+	border-radius: 6px;
+}
+
+.volbtn:hover, .volbtn:focus, .volbtn:active {
+	background-color: #232121;
+	color: white;
+}
+
+#volbtnsubmit {
+	font-family: Montserrat, Verdana, Arial, sans-serif;
+	font-size: 2rem;
+	padding: 6px 10px;
+	margin-top: 5px;
+	background-color: #232121;
+	color: white;
+	border: 1px solid #232121;
+	border-radius: 6px;
+	text-align: right;
+}
+
 /*.btn:hover {
 	background-color: var(--secondary-color);
 	border-color: var(--secondary-color);
@@ -278,6 +306,10 @@ svg {
 
 	.modal-dialog {
 		margin-top: 7%;
+	}
+
+	#volunteerModal .modal-dialog {
+		margin-top: 20%;
 	}
 
 	/* .card {

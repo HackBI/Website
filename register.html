@@ -66,11 +66,13 @@
                     <img src="img/volunteers.jpg" class="card-img-top" width="100%">
                     <div class="card-body">
                         <h2 class="card-title"><strong>Adult Volunteers</strong></h2>
-                        <h3 style="margin-top: 43px; box-shadow: 0px 0px 0px 10px white, 0px 0px 0px 11px gray;width: fit-content;margin-left: auto;border-radius: 1px;margin-right: auto;">Coming Soon</h3>
                         <!--<a href="https://www.signupgenius.com/index.cfm?go=c.SignUpSearch&eid=0DC4C0DBFFC4FE62&cs=09B7BADB8FCD8B177B7964035BB39BCC&sortby=l.title"
                             target="_blank"><img id="sigbtn" src="https://www.signupgenius.com/images/sign-up-now2.gif" width="250"
                                 height="45" alt="Sign Up!"></a>
                         -->
+                        <button type="button" class="volbtn" data-toggle="modal" data-target="#volunteerModal" style="margin-top: 15px; margin-bottom: 8px">
+                            Be Notified
+                        </button>
                     </div>
                 </div>
             </div>
@@ -151,6 +153,31 @@
                             <h5>* You may register and return here when your forms are completed.</h5>
                         </div>
                         <button type="button" class="btn" id="submitbtn" onclick="javascript:doPost();">Submit!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="volunteerModal" style="z-index: 10000;" tabindex="-1" role="dialog" aria-labelledby="Vounteer Notification Dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding-top: 22px; text-align: center;">
+                        <h2 class="modal-title" style="margin-right: -15px;"><strong>Volunteer Notification</strong></h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 36pt;">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="text-align: right; padding-left: 40px; padding-right: 40px">
+                        <form id="contactform" style="text-align: left; font-size: 2rem;">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input id="namef" class="form-control is-valid" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input id="emailf" class="form-control" placeholder="Email">
+                            </div>
+                        </form>
+                        <button id="volbtnsubmit" type="submit" onclick="javascript:notifSubmit(); return false;">Submit</button>
                     </div>
                 </div>
             </div>
