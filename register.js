@@ -38,6 +38,10 @@ $(document).ready(function() {
 		}
 	});
 
+	$("#timesbtn").click(function() {
+		$("#timesalert").toggle();
+	});
+
 	uploaded_files = [];
 	ajaxresponses = 0;
 	ajax_response = null;
