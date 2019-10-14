@@ -40,9 +40,6 @@
 			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
 		</ul>
 	</div>
-
-	<!--<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=red" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-red.svg" alt="Major League Hacking 2020 Hackathon Season" style="width:100%"></a>-->
-
 	<div class="jumbotron main" id="main" style='padding-bottom: 0; margin-bottom:-90px; overflow: hidden'>
 		<div class="vid-container" style="margin-bottom: -40px">
 			<div class="overlay"></div>
@@ -243,7 +240,7 @@
 				<div class="col-sm-6 col-xs-12">
 					<div class="qa hideme">
 						<h3>Who can attend HackBI?</h3>
-						<h4>HackBI is open to all high schoolers for both days, December 7-8, and to eighth graders for the first day only. If you're an adult and would like to come, consider volunteering.</h4>
+						<h4>HackBI is open to all high schoolers for both days, December 7-8 (10AM Sat-12PM Sun), and to eighth graders for December 7 only (10AM-10PM). If you're an adult and would like to come, consider <a href="register">volunteering</a>.</h4>
 					</div>
 					<div class="qa hideme">
 						<h3>How much does HackBI cost?</h3>
@@ -340,7 +337,7 @@
 						<p class="card-title"><strong>App Inventor</strong></p>
 					</div>
 				</div>
-			
+
 				<div class="card">
 					<div class="card-overlay" onclick=""><div id="ptable"><p>Learn how to program with one of the most popular programming languages!</p></div></div>
 					<img data-src="img/java.png" class="img-responsive card-img-top" style="width: 20%; height: 80px; margin-top: 20px; margin-bottom: 0">
@@ -390,6 +387,64 @@
 		</div>
 	</div>
 
+	<div class="faq" id="faq">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 header" style="margin-top: -15px">
+					<h1 id="faq-text" style="text-shadow: -4px 6px 0px black"><b>Robotics</b></h1>
+					<h2>Build, code, and control a custom robot!</h2>
+				</div>
+			</div>
+			<div class="row" style="margin: -50px 0 -50px 0">
+				<div class="col-xs-4">
+					<img data-src="img/robot3.png" class="img-responsive" style="/*max-width: 300px; max-height: 87%;*/">
+				</div>
+				<div class="col-xs-4">
+					<img data-src="img/course.png" class="img-responsive" style="/*max-width: 399px; max-height: 42%;*/ margin-top: 20px">
+				</div>
+				<div class="col-xs-4">
+					<img data-src="img/robot1.png" class="img-responsive" style="/*max-width: 250px; max-height: 100%;*/">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12" style="margin: 0; padding: 0; text-align: center; position: relative;">
+					<h3 style="font-size: 18pt">Visit our Robotics room at HackBI!</h3>
+					<h4 style="font-size: 15pt">Supplies are limited, so sign up if you're interested!</h4>
+					<button type="button" class="robbtn" data-toggle="modal" data-target="#roboticsModal" style="margin-top: 15px; margin-bottom: 8px">
+						I'm interested
+					</button>
+					<h5 style="font-size: 10pt">You must be registered for HackBI first.</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="roboticsModal" style="z-index: 10000;" tabindex="-1" role="dialog" aria-labelledby="Robotics Signup Dialog" aria-hidden="true">
+		<div class="modal-dialog modal-md modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding-top: 22px; text-align: center;">
+					<h2 class="modal-title" style="margin-right: -15px;font-size: 36px;"><strong>Robotics Signup</strong></h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" style="font-size: 36pt;">×</span>
+					</button>
+				</div>
+				<div class="modal-body" style="text-align: right; padding-left: 40px; padding-right: 40px; font-size: 24px;">
+					<form id="contactform" style="text-align: left;">
+						<div class="form-group">
+							<label>Name</label>
+							<input id="namef" class="form-control is-valid" placeholder="Name">
+						</div>
+						<div class="form-group">
+							<label>Email Address</label>
+							<input id="emailf" class="form-control" placeholder="Email">
+						</div>
+					</form>
+					<button id="btnsubmit" type="submit" onclick="javascript:notifSubmit(); return false;">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="contact" id="contact">
 		<div class="container" style="width: 100%; padding: 0;">
 			<div class="row">
@@ -429,9 +484,9 @@
 					<br /><br />
 				</div>
 				<div class="col-sm-12 logos">
-					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-black.png" alt="MLH" /></a>
 					<a href="http://deciphernow.com"><img class="img-responsive" data-src="img/decipher.png" alt="Decipher Technology Studios" id="decipher"/></a>
 					<a href="https://github.com"><img class="img-responsive" data-src="img/github-black.png" alt="GitHub" /></a>
+					<a href="https://mlh.io"><img class="img-responsive" data-src="img/mlh-black.png" alt="MLH" /></a>
 					<a href="https://www.bishopireton.org/page/Alumni--Parents/PTO"><img class="img-responsive" data-src="img/bi-logo.png" alt="Bishop Ireton High School PTO" /></a>
 					<img class="img-responsive" data-src="img/ibg.png" alt="Innovative Business Group" />
 					<a href="http://www.thinkfun.com"><img class="img-responsive" data-src="img/think-fun.png" alt="ThinkFun" /></a>
@@ -445,16 +500,17 @@
 	<div class="learn-more" id="bottom-bar">
 		<br /><br />
 		<p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" rel="nofollow">MLH Code of Conduct</a></p>
-		<p><a href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md" rel="nofollow">MLH Data Sharing Provision</a></p>
 		<a id="social" href="https://www.facebook.com/officialhackbi/" class="fab fa-facebook make-translucent"></a>
 		<a id="social" href="https://www.twitter.com/HackBIOfficial" class="fab fa-twitter make-translucent"></a>
 		<a id="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" class="fab fa-snapchat make-translucent"></a>
 		<a id="social" href="https://youtu.be/p_xg-GK7heY" class="fab fa-youtube make-translucent"></a>
+		<br/><br/>
 	</div>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="script.js"></script>
 	<script defer src="jquery.lazyloadxt.js"></script>
+	<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
 

@@ -308,6 +308,10 @@ svg {
 		margin-top: 7%;
 	}
 
+	#volunteerModal .modal-dialog {
+		margin-top: 20%;
+	}
+
 	/* .card {
 		margin: 0 auto auto auto;
 	} */
