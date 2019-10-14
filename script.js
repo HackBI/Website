@@ -114,6 +114,32 @@ function contactSubmit() {
 
 }
 
+function notifSubmit() {
+	$('#btnsubmit').text('Working..');
+	var name = escape($('#namef').val().replace(/\s/g, "+"));
+	var email = escape($('#emailf').val().replace(/\s/g, "+"));
+
+	$.ajax({
+		'type': 'POST',
+		'url': 'https://script.google.com/macros/s/AKfycbxedUj20c_jqyXlqyHYnBghGP3QIMvoSaAcJHv5A-Q_jgWoGkCq/exec?name=' + name + '&email=' + email,
+		crossDomain: true,
+		contentType: false,
+		dataType: 'text/javascript',
+		processData: false,
+		beforeSend: function() {
+			$('#btnsubmit').text('Working..');
+		},
+		statusCode: {
+			200: function() {
+				$('#btnsubmit').text('Thank you!');
+				setTimeout(function() {
+					$('#roboticsModal').modal('toggle');
+				}, 1000);
+			}
+		}
+	});
+}
+
 function clearForm() {
 	document.getElementById("contactform").reset();
 	if (registerReq != 0) {

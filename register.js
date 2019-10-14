@@ -134,11 +134,11 @@ function doPost() {
 }
 
 function notifSubmit() {
+	$('#volbtnsubmit').text('Working..');
 	var name = escape($('#namef').val().replace(/\s/g, "+"));
 	var email = escape($('#emailf').val().replace(/\s/g, "+"));
 
 	$.ajax({
-		'async': false,
 		'type': 'POST',
 		'url': 'https://script.google.com/macros/s/AKfycbwvNmiF7oFouuSkzQuxV-A3wPcYkduRHXmJjLG0jUJrsOjTE7S7/exec?name=' + name + '&email=' + email,
 		crossDomain: true,
@@ -146,7 +146,7 @@ function notifSubmit() {
 		dataType: 'text/javascript',
 		processData: false,
 		beforeSend: function() {
-			$('#volbtnsubmit').text('Submitting..');
+			$('#volbtnsubmit').text('Working..');
 		},
 		statusCode: {
 			200: function() {

@@ -315,7 +315,6 @@ body {
 	text-align: center;
 	margin-right: 0;
 	background-size: cover;
-	cursor: pointer;
 }
 
 .contacthl {
@@ -433,6 +432,45 @@ body {
 
 .card-overlay:hover ~ .card-body p {
 	color: gray;
+}
+
+.robbtn {
+	font-family: Montserrat, Verdana, Arial, sans-serif;
+	font-size: 18px;
+	color: white;
+	background-color: rgba(150,150,150,.1);
+	border-color: white;
+	padding: 6px 10px;
+	border-radius: 8px;
+}
+
+.robbtn:hover, .robbtn:focus, .robbtn:active {
+	color: white;
+	background-color: rgba(150,150,150,.3);
+}
+
+.modal-title {
+	display: inline;
+}
+
+.modal-footer {
+	height: 75px;
+}
+
+.modal {
+	text-align: center;
+}
+
+#btnsubmit {
+	font-family: Montserrat, Verdana, Arial, sans-serif;
+	font-size: 2rem;
+	padding: 6px 10px;
+	margin-top: 5px;
+	background-color: #232121;
+	color: white;
+	border: 1px solid #232121;
+	border-radius: 6px;
+	text-align: right;
 }
 
 /*SPONSORS*/
