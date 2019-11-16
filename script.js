@@ -116,8 +116,8 @@ function contactSubmit() {
 
 function notifSubmit() {
 	$('#btnsubmit').text('Working..');
-	var name = escape($('#namef').val().replace(/\s/g, "+"));
-	var email = escape($('#emailf').val().replace(/\s/g, "+"));
+	var name = escape($('#namei').val().replace(/\s/g, "+"));
+	var email = escape($('#emaili').val().replace(/\s/g, "+"));
 
 	$.ajax({
 		'type': 'POST',
