@@ -1,11 +1,128 @@
 <!DOCTYPE html>
-<html><head>
-<meta name="robots" content="noindex" />
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-81281305-2');
+	</script>
+	<meta name="keywords" content="HackBI, Hack BI, Hackathon, Hack BI III, Hack BI 3, Hack BI 2, Hack BI II, Hack BI 4, Hack BI IV, Bishop Ireton">
+	<meta name="description" content="Code of Conduct at HackBI">
+	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
+	<meta name="theme-color" content="#FC4D45"/>
+	<link rel="icon" href="img/icon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Conduct | HackBI</title>
 </head>
+
+<style>
+    .jumbotron {
+      color: white;
+      text-align: center;
+      font: 2rem Jaapokki;
+      background-color: var(--main-color);
+      background-position: center;
+        background-position-y: 40%;
+        background-size: cover;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 0;
+    }
+    .jumbotron h2 {
+	font-family: Jaapokki, Arial, Helvetica, sans-serif;
+	line-height: 1.4;
+	margin-bottom: -15px;
+    margin-top: -5px;
+    text-align: left;
+    padding-left: 100px;
+    color: var(--secondary-color);
+    text-decoration: underline;
+    }
+    .jumbotron p {
+        font-family: Jaapokki, Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+        text-align: left;
+        padding-left: 100px;
+    }
+</style>
 <body>
-    <script type="text/javascript">
-        window.location = "https://static.mlh.io/docs/mlh-code-of-conduct.pdf";
+    <div class="nav">
+      <br/>
+      <ul class="pull-left">
+            <li>
+              <a class='navbar-brand' href="/">
+                <img src="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png" style='height: 20px; width: 20px; margin-top: -16px'>
+              </a>
+            </li>
+        <li><a id="faqLink" href="/#faq">FAQ</a></li>
+        <li><a id="contactLink" href="/#contact">Contact</a></li>
+        <li><a id="workshopLink" href="#workshop">Workshops</a> </li>
+        <li><a id="meetTeamLink" href="team">Meet the Team</a></li>
+        <li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
+        <!-- UNCOMMENT WHEN HACKATHON BEGINS
+        <li><a id="registerLink" href="register">Register</a></li>
+        -->
+      </ul>
+    </div>
+  
+    <div class="jumbotron">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-sm-12">
+            <br/><br/>
+                      <h1>Conduct</h1>
+                  </div>
+              </div>
+          </div>
+
+          <h2>MLH Code of Conduct</h2>
+          <br>
+          <p>See it<a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"> here.</a></p>
+          <br>
+          <br>
+          <h2>COVID-19 Guidelines</h2>
+          <br>
+          <p>See it <a href="COVID_Guidelines.html">here.</a></p>
+          <br>
+          <br>
+          <p>
+            All hackers must read carefully and abide by all the rules and guidelines. 
+          </p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+      $(window).scroll(function () {
+        var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
+        var threshold = $(window).height() / 6;
+      
+        if (bottom_of_nav > threshold && ($(window).width() >= 992)) {
+          $('.nav').css({
+            'background-color': '#f4f4f4',
+            'height': '50px',
+            'top': '-7px'
+          });
+          $('.nav li a').css({
+            'color': 'black'
+          });
+        } else if (bottom_of_nav < threshold) {
+          $('.nav').css({
+            'background-color': 'transparent',
+            'height': '60px',
+            'top': '5px'
+          });
+          $('.nav li a').css({
+            'color': 'white'
+          });
+        }
+      });
     </script>
-    <p>Unable to redirect (JS disabled). See <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">https://static.mlh.io/docs/mlh-code-of-conduct.pdf</a></p>
 </body>
 </html>
