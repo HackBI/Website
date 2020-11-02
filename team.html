@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,421 +11,501 @@
 
     gtag('config', 'UA-81281305-2');
   </script>
-  <meta name="keywords" content="HackBI, Hack BI, Hack BI III, Hack BI 3, Bishop Ireton, team, members, students">
-  <meta name="description" content="Meet the students behind HackBI!">
-  <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
+  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meet the Team - HackBI</title>
   <link rel="icon" href="img/icon.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <meta name="keywords" content="HackBI, Hack BI, Hack BI IV, Hack BI 4, Bishop Ireton, team, members, students">
+  <meta name="description" content="Meet the team behind HackBI: a 24-hour student-run hackathon!">
+  <meta name="theme-color" content="#FC4D45">
+  <meta property="og:title" content="HackBI Team">
+  <meta property="og:description" content="Meet the team behind HackBI: a 24-hour student-run hackathon!">
+  <meta property="og:site_name" content="HackBI">
+  <meta property="og:image" content="img/team.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hackbiofficial">
+  <meta name="twitter:title" content="HackBI Team">
+  <meta name="twitter:description" content="Meet the team behind HackBI: a 24-hour student-run hackathon!">
+  <meta name="twitter:image" content="img/team.jpg">
   
-  <title>Meet the Team | HackBI</title>
   <style>
-  .jumbotron {
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    font-family: Jaapokki, "Trebuchet MS", Arial, sans-serif;
-    background-color: var(--main-color);
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    background: var(--main-color);
-    background-image: url('team.jpg');
-    background-position: center;
-    background-position-y: 47%;
-    background-size: cover;
-    border-radius: 0;
-    padding-bottom: 70px;
-    margin-bottom: 0;
-  }
-
-  .jumbotron h1 {
-    padding: 0;
-    margin: 0;
-  }
-
-  .people {
-    color: white;
-    font-family: Montserrat, Metrophobic;
-  	text-align: center;
-  	margin-right: 0;
-    background-color: white;
-  	background-size: cover;
-  }
-
-  .people a {
-    color: white;
-  	font-weight: bold;
-  }
-
-  .people .person {
-    color: black;
-  	text-align: left;
-  	background-color: transparent;
-  	padding: 40px;
-  	margin: 40px 0 40px 0;
-    position: relative;
-    z-index: 2;
-  }
-
-  .people .person h3:first-child {
-  	font-size: 2em;
-  	font-weight: bold;
-  	padding-bottom: 15px;
-  	margin-top: 0;
-  }
-
-  .people .person h3:last-child {
-  	margin-bottom: 0;
-  }
-
-  .people .person .col:last-child {
-    margin-top: 6rem;
-  }
-
-  img {
-    width: 250px;
-    height: 250px;
-    padding-right: 20px;
-  }
-
-  @media screen and (max-width: 767px) {
-    .jumbotron h1 {
-      font-size: 8rem;
+    html {
+	    font-size: 16px;
     }
-  }
-
-  @media screen and (min-width: 768px) {
-    .jumbotron h1 {
-      font-size: 8rem;
+    .jumbotron {
+      color: white;
+      text-align: center;
+      background: var(--main-color);
+      background-image: url('img/team.jpg');
+      background-position: center;
+      background-position-y: 47%;
+      background-size: cover;
+      height: 20rem;
+      margin: 0;
+      border-radius: 0;
     }
-  }
+    .center {
+      text-align: center;
+      display: flex;
+      align-items : center;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    .jumbotron h1 {
+        font-family: Montserrat, Helvetica, "Trebuchet MS", Arial, sans-serif;
+        font-size: 4.2rem;
+        font-weight: bold;
+        text-shadow: 0 0 10px black;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .people {
+      width: 100%;
+    }
+    .people .person {
+      font-family: Lato, Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;
+      font-display: swap;
+      color: black;
+      background-color: white;
+      text-align: left;
+      padding: 40px;
+      margin: 20px 0 20px 0;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid #f6f6f6;
+      border: 1px solid #f3f4f6;
+      border-radius: 2px;
+      box-shadow: 0 4px 4px -4px rgb(189, 189, 189);
+      transition: transform .5s;
+    }
+    .people .person:hover {
+      transform: translate(-2px, -2px);
+    }
+    .people .person h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    .people .person h3 {
+      font-size: 1.3rem;
+      padding-bottom: 15px;
+    }
+    .people .person p {
+      font-size: 1.2rem;
+    }
+    .person img {
+      width: 100%;
+      max-width: 230px;
+      clip-path: circle();
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1100px !important;
+      }
+    }
+    @media (max-width: 767px) {
+      .people .person {
+        text-align: center;
+      }
+    }
+    @media (min-width: 992px) {
+      .people .person .col-md-4 {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <br/>
-    <ul class="pull-left">
-      <li>
-				<a class='navbar-brand' href="/">
-					<img src="img/icon.png" style='height: 20px; width: 20px; margin-top: -16px; padding: 0;'>
-				</a>
-			</li>
-      <li><a id="faqLink" href="/#faq">FAQ</a></li>
-			<!--
-			<li><a id="registerLink" href="register">Register</a></li>
-			-->
-			<li><a id="contactLink" href="/#contact">Contact</a></li>
-			<li><a id="workshopLink" href="/#workshops">Workshops</a></li>
-			<li><a id="meetTeamLink" href="team">Meet the Team</a></li>
-			<li><a id="CovidGuidelines" href="COVID_Guidelines">COVID-19 Guidelines</a></li> 
-			<li><a id="devpostLink" href="https://hackbi-iii.devpost.com/" target="_blank">Last Year</a></li><li>
-			
-    </ul>
-  </div>
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
+    <div class="container" style="max-width: 1200px;">
+      <a class="navbar-brand" href="../" title="Scroll to top">
+        <svg id="brand" style="margin-top: 5px;" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
+          <title>HackBI</title>
+          <g id="Icon">
+            <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:#fff2a6"></path>
+            <path d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z" transform="translate(-5.23 -5.58)" style="fill:#b45859"></path>
+            <path d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+            <path d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+            <path d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73" transform="translate(-5.23 -5.58)" style="fill:#353535"></path>
+            <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+            <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+            <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z" transform="translate(-5.23 -5.58)" style="fill:#e07380;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2.5px"></path>
+          </g>
+          <g id="Text" style="fill: white">
+            <path d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z" transform="translate(-5.23 -5.58)"></path>
+            <polygon points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"></polygon>
+            <path d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z" transform="translate(-5.23 -5.58)"></path>
+          </g>
+        </svg>
+      </a>
+      <!--
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
+        Register
+        <span class="cta-arrow" data-stuff="➝">❯</span>
+      </a>
+      -->
+      <button class="hamburger hamburger--squeeze navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../">Home</a>
+          </li>
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="../register">Register</a>
+          </li>
+          -->
+          <li class="nav-item">
+            <a class="nav-link" href="../#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="">Team<span class="sr-only">(current page)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://hackbi-iii.devpost.com/">Last Year</a>
+          </li>
+        </ul>
+      </div>
+      <!--
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
+        Register
+        <span class="cta-arrow" data-stuff="➝">❯</span>
+      </a>
+      -->
+    </div>
+  </nav>
 
-  <div class="jumbotron">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-12">
-          <br/><br/>
-					<h1 style="text-shadow: -4px 6px 0px black">Meet the HackBI IV Team</h1>
-				</div>
-			</div>
+  <div class="jumbotron center">
+		<div class="container container-fluid">
+			<h1>Meet the Team</h1>
 		</div>
 	</div>
 
-  <div class="people">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-sm-12 col-xs-12">
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/critter.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Critter Johnson</h3>
-              <h4>⤞HackBI IV Leader⤝</h4>
-              <h3>Oh, look, it's Christopher Johnson our great leader!!! He runs the whole show. He's the most organized person I know (he definently did NOT submit his picture 5 months late).
-               He's wearing a HACK shirt because he's been to many hackathons. Also, make sure to ask him if he surfs when you see him, he loves it (tell him Lian sent you).</h3>
-            </div>
-          </div>
-
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/jomar.png">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Jomar Roque </h3>
-              <h4>⤞Admin Team Leader⤝</h4>
-              <h3>Jack Ambery isn’t the only fisherman in town. But before you take up your pitchforks and complain about how “He’s holding a great white shark,” asking me to “At least make it believable,” entertain the idea of a reality where Jomar Roque is actually 20+ feet in size. Wouldn’t the world be all the better for it?</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/cameron.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Cameron Arnold</h3>
-              <h4>⤞Admin Team Leader⤝</h4>
-              <h3>Cameron is a junior at BI and also one the leaders of the HackBI IV Admin team! Her favorite food is the snack that smiles back and Baby Mario is her go to Mario Kart character. Worried about The Office leaving Netflix next year? Well, you’re in luck! Ask her to recite Season 4 Episode 13 (the iconic “Dinner Party”) —she knows the entire episode from memory! Catch her at the Women in Science workshop!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/lian.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Lian Amond</h3>
-              <h4>⤞Admin Team⤝<h4> 
-              <h3>Lian is a senior at BI and is programming the Meet the Team page. Some wise words from Lian: “I’ve never done anything with computer science but I’m figuring it out.” (mood) Nevertheless, A+++ for effort!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/joseph.jpeg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Joseph Charuhas</h3>
-              <h4>⤞Admin Team⤝</h4>
-              <h3>Joseph is a junior at BI and is also in charge of the HackBI website! Joseph makes electronic music on his computer—will HackBI IV be having its very own DJ? Looks like we might be needing one (see Natalie and Sarah’s bios). When he’s not raving or contemplating life at the Potomac River, you can find Joseph at the HTML / CSS or JavaScript workshops! </h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/natalie.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Natalie Ramirez</h3>
-              <h4>⤞Admin Team⤝</h4>
-              <h3>Natalie is a junior and is helping run the Beginner Java and Alice workshops! She has experience in Java, HTML, and CSS. Catch her on the slopes, on the field, or in a pool— she loves snowboarding, field hockey , and swim! Natalie can rap all of “Can’t Hold Us,” and may be one of the contenders for HackBI IV’s official rapper (see Sarah’s bio).</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/matt.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Matt Lorenzo</h3>
-              <h4>⤞Admin Team⤝</h4>
-              <h3>BrotherBear, aka Matt, is a senior at BI and is also a part of the Admin team. (No he does not know why his username for almost EVERYTHING is BrotherBear, but according to Matt “we’ll roll with it”). He’s currently on that Valorant grind and claims to have only lost one game of NBA 2k ever. Anyone looking to challenge that? Stop by the GitHub workshop! He also claims the title as “Biggest Uzi stan you will meet” and loves sneakers. (Although you can’t see them in this picture).</h3>
-            </div> 
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/maeve.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Maeve Chawk</h3>
-              <h4>⤞Admin Team⤝</h4>
-              <h3>Maeve is a junior at BI and will be running the Alice and App Inventor workshops! More importantly, “I have really soft hair :)” -Maeve 2020.</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/david.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>David Burdick</h3>
-              <h4>⤞Admin Team⤝</h4>
-              <h3>This is David’s second HackBI, and this year he’s part of the Admin team. His favorite color is blue (baby blue, to be specific) and he helped make the workshop section of the website. David is also proud to admit he likes pineapple on pizza “(don’t judge me)”… you can debate what pizza toppings are valid if you stop by his App Inventor workshop!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/jacka.png">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Jack Ambery</h3>
-              <h4>⤞Logistics Team Leader⤝</h4>
-              <h3>When Jack isn’t coding away, you can usually find him fishing at his secret spot, climbing a mountain, or cooking a meal over a fire. This might lead you to believe he’s a true outdoorsman, but really he just needs privacy so he can plan his coup on Critter’s regime.</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/kieran.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Kieran Kelleher</h3>
-              <h4>⤞Logistics Team⤝</h4>
-              <h3>Kieran, a junior at BI and proud member of the Logistics team, seems to live a double triple life as a Minecraft Gamer™, business man(?) and elite soccer and track player. Here, you can see Kieran in one of his many disguises. Have any questions about HackBI IV’s very own Clark Kent? Make sure you stop by the Minecraft Command Blocks workshop!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/joe.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Joe Lis</h3>
-              <h4>⤞Logistics Team⤝</h4>
-              <h3>Joe Lis has a knack for being in the right spot at the right time (several broken limbs not withstanding). I mean, just look at that gorgeous sunset! If you need to find a friendly face at Hack BI IV, just look for Joe. He hates being known as the tall, skinny kid, but if you see a tall, skinny kid, there’s a good chance that’s him.</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/laura.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Laura Segura</h3>
-              <h4>⤞Logistics Team⤝</h4>
-              <h3>Laura Segura is a senior at Bishop Ireton High School (no way 😮) and is a member of the XC and track teams despite having a deep hatred for running. She also really likes Ethiopian food and Colombia (as a whole). She is biological twins with Wilson from Castaway (identical obv) and her two goals in life are to speak a language from every continent (she had three down so far) and try a dish from every country. Talk to Laura Segura about every Netflix series she’s watched at the Snap Workshop! Did I mention she likes Colombia? According to Laura: “I’m the Hispanic version of Sam lee.”</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/arthur.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Arthur Seng</h3>
-              <h4>⤞Logistics Team⤝</h4>
-              <h3>Arthur Seng is a weird dude. No judgement, just facts. The glue stick hurling, water bottle chugging, plastic bag parachuting madman is about as close to the prototypical “ideas guy” as you can get. Be on the lookout for him and his dad jokes at Hack BI IV!</h3>
-              </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/dagny.JPG">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Dagny Scannell</h3>
-              <h4>⤞Logistics Team⤝</h4>
-              <h3>Dagny is a senior at BI and likes belting Broadway songs. If you’ve ever been to a BITA show, you can definitely confirm this! Have you ever wondered what would happen if you let a bunch of crickets loose on a skyscraper? Well don’t ask Dagny because she’s terrified of both crickets and heights. To end on a better note, (haha see what I did there) Dagny is 100% confident in the fact that Disney really is the happiest place on Earth.</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/sam.JPG">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Samantha Lee</h3>
-              <h4>⤞Logistics Team⤝</h4>
-              <h3>Sam Lee, Logistics. AKA Laura Segura 2: Electric Boogaloo. While Sam may think she’s the same person as her best friend, her British accent and her wildly washed out look are a dead giveaway when it comes to telling the pair apart. Come visit her in person, where she can explain to you who Laura Segura is and why she’s in this bio!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/caleb.png">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Caleb Finamore</h3>
-              <h4>⤞Marketing Team Leader⤝</h4>
-              <h3>Caleb Michael Finamore is a senior at BI and is the leader of the Marketing Team! As you can see, Caleb prefers extra BIG Cheez-Its and knows how to strike a pose. (📸 creds to an undisclosed source). When he’s not using Photoshop, you can find Caleb on that Rocket League and Minecraft grind. He’s also one of Ireton’s Finest™ BIBVS goalies—you can’t miss him on the field. Like. Literally. The highlighter yellow and pink kits with matching bright orange cleats will forever be iconic. If you want to see his graphic design skills in action make sure to visit the Advanced Photoshop and Design Principles workshops!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/alex.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Alex Cuenco-Olaya</h3>
-              <h4>⤞Marketing Team⤝</h4>
-              <h3>Alex is a senior at BI. As a member of the marketing team this year, she’s made the sponsorship packet and, as you can tell from the photo, is currently writing these bios! (Dark mode FTW). If you were in her AP Lang class you’d know how much she loves Minecraft—and Photoshop! Mrs. Briody’s Image Editing class? 10/10 would recommend. She also thinks it’s kind of weird to write about herself in third person so I’m just gonna stop here. Hope everyone liked their bios!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/caro.png">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Caroline Czarnecki</h3>
-              <h4>⤞Marketing Team⤝</h4>
-              <h3>Caro is a senior at BI and is this years SCA President (congrats!!). This is her first year participating in HackBI and is part of the marketing team! She loves fishing, painting, and can kickbox (so don’t mess with her.) If Caro was an emoji she’d def be 🌞. Make sure to find Caro at the Photoshop workshop!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/sarah.jpeg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Sarah Fleming</h3>
-              <h4>⤞Marketing Team⤝</h4>
-              <h3>Sarah is a junior at BI and loves soccer, swim, and snowboarding. (Hmmm. I wonder if she’d get along with Natalie 🧐) Oddly enough, they both claim to know all the words to “Can’t Hold Us,” (a certified banger, I approve.) Should we expect a rap battle at HackBI IV? Either way, this is her second year on the team and she’s really excited!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/julia.png">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Julia Lin</h3>
-              <h4>⤞Marketing Team⤝</h4>
-              <h3>Julia is a senior member of the marketing team. The friendly face behind the HackBI instagram page, she spends her time off the net visiting Spain, playing tennis, and falling asleep in Mr. Rauer’s history class.</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/janet.jpeg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Janet Le</h3>
-              <h4>⤞Marketing Team⤝</h4>
-              <h3>She’s just a small-time girl living in a lonelyyy worlddd—wait wrong intro. Actually, Janet’s just a girl who’s a part of the marketing team for Hack BI IV! You’ll see her at the VEX competition or wandering around the school searching for coffee. Janet also has the best handwriting and calligraphy skills at Ireton. Wanna see for yourself? Come visit the Design Principles workshop!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/gabby.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Gabby Nguyen</h3>
-              <h4>⤞Marketing Team⤝</h4>
-              <h3>Gabby is a junior at BI and can pretty much do it all! She plays field hockey for BI and for a club, swam with a USA team competitively for 9 years , and plays the clarinet, piano, and bass guitar. As a member of the marketing team, she’s putting her photographer skills to good use! Fun fact: Her interest in coding began in the sixth grade!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/courtney.jpeg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Courtney Quinn</h3>
-              <h4>⤞Middle School Team Leader⤝</h4>
-              <h3>Courtney is a junior at BI and is the leader of the Middle School team this year! This will be her second year as a part of the HackBI team. I’m sure she’s super excited! Some super fun facts about Courtney (that could be related?): she’s cracked her head open and is left handed! If you want to hear the backstory then swing by the Women in Science workshop!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/matthew.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Matthew Burdick</h3>
-              <h4>⤞Middle School Team⤝</h4>
-              <h3>Matthew is a senior at BI and is part of the Middle School team! His favorite food is pad Thai and his favorite color is green. Matthew may or may not be part of the other pair of twins on the HackBI IV team. (and may or may not be the twin with a better taste in foods. (Sorry David.)) “Aliens are going to conquer the earth”- Matthew Burdick 2020</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/christian.jpg">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Christian Rockwell</h3>
-              <h4>⤞Middle School Team⤝</h4>
-              <h3>Christian Rockwell isn’t quite a senior yet, but he might as well be to the middle school kids he’ll be helping out. They can judge his hackathon skills as much as they want, but if he needs to impress them, just hand him a copy of Super Mario Bros. — he can play a level blindfolded!</h3>
-            </div>
-          </div>
-          <div class="row person">
-            <div class="col-sm-5 col-xs-12 col">
-              <img src="img/maria.png">
-            </div>
-            <div class="col-sm-7 col-xs-12 col">
-              <h3>Maria Mateo</h3>
-              <h4>⤞Middle School Team⤝</h4>
-              <h3>Maria Mateo promises this grainy photo is not representative of her effort level for the rest of her Hack BI work. Nobody is quite sure why she’s on the middle school team, because she has a reputation for being super quiet and whatever the antonym of outgoing is, but maybe once you get to know her, this bio will seem to be absolute nonsense.</h3>
-            </div>
-          </div>
-
-    <div class="learn-more" id="bottom-bar">
-		<br /><br />
-		<p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" rel="nofollow">MLH Code of Conduct</a></p>
-		<a id="social" href="https://www.facebook.com/officialhackbi/" class="fab fa-facebook make-translucent"></a>
-		<a id="social" href="https://www.twitter.com/HackBIOfficial" class="fab fa-twitter make-translucent"></a>
-		<a id="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" class="fab fa-snapchat make-translucent"></a>
-		<a id="social" href="https://youtu.be/p_xg-GK7heY" class="fab fa-youtube make-translucent"></a>
-      <br/><br/>
+  <div class="people container">
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/critter.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Critter Johnson</h2>
+        <h3>HackBI IV Leader</h3>
+        <p>Oh, look, it's Christopher Johnson our great leader!!! He runs the whole show. He's the most organized person I know (he definently did NOT submit his picture 5 months late). He's wearing a HACK shirt because he's been to many hackathons. Also, make sure to ask him if he surfs when you see him, he loves it (tell him Lian sent you).</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/jomar.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Jomar Roque</h2>
+        <h3>Admin Team Leader</h3>
+        <p>Jack Ambery isn’t the only fisherman in town. But before you take up your pitchforks and complain about how “He’s holding a great white shark,” asking me to “At least make it believable,” entertain the idea of a reality where Jomar Roque is actually 20+ feet in size. Wouldn’t the world be all the better for it?</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/cameron.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Cameron Arnold</h2>
+        <h3>Admin Team Leader</h3>
+        <p>Cameron is a junior at BI and also one the leaders of the HackBI IV Admin team! Her favorite food is the snack that smiles back and Baby Mario is her go to Mario Kart character. Worried about The Office leaving Netflix next year? Well, you’re in luck! Ask her to recite Season 4 Episode 13 (the iconic “Dinner Party”) —she knows the entire episode from memory! Catch her at the Women in Science workshop!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/lian.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Lian Amond</h2>
+        <h3>Admin Team</h3>
+        <p>Lian is a senior at BI and is programming the Meet the Team page. Some wise words from Lian: “I’ve never done anything with computer science but I’m figuring it out.” (mood) Nevertheless, A+++ for effort!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/joseph.jpeg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Joseph Charuhas</h2>
+        <h3>Admin Team</h3>
+        <p>Joseph is a junior at BI and is also in charge of the HackBI website! Joseph makes electronic music on his computer—will HackBI IV be having its very own DJ? Looks like we might be needing one (see Natalie and Sarah’s bios). When he’s not raving or contemplating life at the Potomac River, you can find Joseph at the HTML / CSS or JavaScript workshops!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/natalie.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Natalie Ramirez</h2>
+        <h3>Admin Team</h3>
+        <p>Natalie is a junior and is helping run the Beginner Java and Alice workshops! She has experience in Java, HTML, and CSS. Catch her on the slopes, on the field, or in a pool— she loves snowboarding, field hockey , and swim! Natalie can rap all of “Can’t Hold Us,” and may be one of the contenders for HackBI IV’s official rapper (see Sarah’s bio).</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/matt.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Matt Lorenzo</h2>
+        <h3>Admin Team</h3>
+        <p>BrotherBear, aka Matt, is a senior at BI and is also a part of the Admin team. (No he does not know why his username for almost EVERYTHING is BrotherBear, but according to Matt “we’ll roll with it”). He’s currently on that Valorant grind and claims to have only lost one game of NBA 2k ever. Anyone looking to challenge that? Stop by the GitHub workshop! He also claims the title as “Biggest Uzi stan you will meet” and loves sneakers. (Although you can’t see them in this picture).</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/maeve.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Maeve Chawk</h2>
+        <h3>Admin Team</h3>
+        <p>Maeve is a junior at BI and will be running the Alice and App Inventor workshops! More importantly, “I have really soft hair :)” -Maeve 2020.</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/david.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>David Burdick</h2>
+        <h3>Admin Team</h3>
+        <p>This is David’s second HackBI, and this year he’s part of the Admin team. His favorite color is blue (baby blue, to be specific) and he helped make the workshop section of the website. David is also proud to admit he likes pineapple on pizza “(don’t judge me)”… you can debate what pizza toppings are valid if you stop by his App Inventor workshop!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/jacka.png"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Jack Ambery</h2>
+        <h3>Logistics Team Leader</h3>
+        <p>When Jack isn’t coding away, you can usually find him fishing at his secret spot, climbing a mountain, or cooking a meal over a fire. This might lead you to believe he’s a true outdoorsman, but really he just needs privacy so he can plan his coup on Critter’s regime.</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/kieran.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Kieran Kelleher</h2>
+        <h3>Logistics Team</h3>
+        <p>Kieran, a junior at BI and proud member of the Logistics team, seems to live a double triple life as a Minecraft Gamer™, business man(?) and elite soccer and track player. Here, you can see Kieran in one of his many disguises. Have any questions about HackBI IV’s very own Clark Kent? Make sure you stop by the Minecraft Command Blocks workshop!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/joe.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Joe Lis</h2>
+        <h3>Logistics Team</h3>
+        <p>Joe Lis has a knack for being in the right spot at the right time (several broken limbs not withstanding). I mean, just look at that gorgeous sunset! If you need to find a friendly face at Hack BI IV, just look for Joe. He hates being known as the tall, skinny kid, but if you see a tall, skinny kid, there’s a good chance that’s him.</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/laura.jpg">
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Laura Segura</h2>
+        <h3>Logistics Team</h3>
+        <p>Laura Segura is a senior at Bishop Ireton High School (no way 😮) and is a member of the XC and track teams despite having a deep hatred for running. She also really likes Ethiopian food and Colombia (as a whole). She is biological twins with Wilson from Castaway (identical obv) and her two goals in life are to speak a language from every continent (she had three down so far) and try a dish from every country. Talk to Laura Segura about every Netflix series she’s watched at the Snap Workshop! Did I mention she likes Colombia? According to Laura: “I’m the Hispanic version of Sam lee.”</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/arthur.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Arthur Seng</h2>
+        <h3>Logistics Team</h3>
+        <p>Arthur Seng is a weird dude. No judgement, just facts. The glue stick hurling, water bottle chugging, plastic bag parachuting madman is about as close to the prototypical “ideas guy” as you can get. Be on the lookout for him and his dad jokes at Hack BI IV!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/dagny.JPG"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Dagny Scannell</h2>
+        <h3>Logistics Team</h3>
+        <p>Dagny is a senior at BI and likes belting Broadway songs. If you’ve ever been to a BITA show, you can definitely confirm this! Have you ever wondered what would happen if you let a bunch of crickets loose on a skyscraper? Well don’t ask Dagny because she’s terrified of both crickets and heights. To end on a better note, (haha see what I did there) Dagny is 100% confident in the fact that Disney really is the happiest place on Earth.</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/sam.JPG"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Sam Lee</h2>
+        <h3>Logistics Team</h3>
+        <p>Sam Lee, Logistics. AKA Laura Segura 2: Electric Boogaloo. While Sam may think she’s the same person as her best friend, her British accent and her wildly washed out look are a dead giveaway when it comes to telling the pair apart. Come visit her in person, where she can explain to you who Laura Segura is and why she’s in this bio!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/caleb.png"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Caleb Finamore</h2>
+        <h3>Marketing Team Leader</h3>
+        <p>Caleb Michael Finamore is a senior at BI and is the leader of the Marketing Team! As you can see, Caleb prefers extra BIG Cheez-Its and knows how to strike a pose. (📸 creds to an undisclosed source). When he’s not using Photoshop, you can find Caleb on that Rocket League and Minecraft grind. He’s also one of Ireton’s Finest™ BIBVS goalies—you can’t miss him on the field. Like. Literally. The highlighter yellow and pink kits with matching bright orange cleats will forever be iconic. If you want to see his graphic design skills in action make sure to visit the Advanced Photoshop and Design Principles workshops!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/alex.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Alex Cuenco-Olaya</h2>
+        <h3>Marketing Team</h3>
+        <p>Alex is a senior at BI. As a member of the marketing team this year, she’s made the sponsorship packet and, as you can tell from the photo, is currently writing these bios! (Dark mode FTW). If you were in her AP Lang class you’d know how much she loves Minecraft—and Photoshop! Mrs. Briody’s Image Editing class? 10/10 would recommend. She also thinks it’s kind of weird to write about herself in third person so I’m just gonna stop here. Hope everyone liked their bios!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/caro.png"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Caroline Czarnecki</h2>
+        <h3>Marketing Team</h3>
+        <p>Caro is a senior at BI and is this years SCA President (congrats!!). This is her first year participating in HackBI and is part of the marketing team! She loves fishing, painting, and can kickbox (so don’t mess with her.) If Caro was an emoji she’d def be 🌞. Make sure to find Caro at the Photoshop workshop!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/sarah.jpeg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Sarah Fleming</h2>
+        <h3>Marketing Team</h3>
+        <p>Sarah is a junior at BI and loves soccer, swim, and snowboarding. (Hmmm. I wonder if she’d get along with Natalie 🧐) Oddly enough, they both claim to know all the words to “Can’t Hold Us,” (a certified banger, I approve.) Should we expect a rap battle at HackBI IV? Either way, this is her second year on the team and she’s really excited!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/julia.png"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Julia Lin</h2>
+        <h3>Marketing Team</h3>
+        <p>Julia is a senior member of the marketing team. The friendly face behind the HackBI instagram page, she spends her time off the net visiting Spain, playing tennis, and falling asleep in Mr. Rauer’s history class.</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/janet.jpeg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Janet Le</h2>
+        <h3>Marketing Team</h3>
+        <p>She’s just a small-time girl living in a lonelyyy worlddd—wait wrong intro. Actually, Janet’s just a girl who’s a part of the marketing team for Hack BI IV! You’ll see her at the VEX competition or wandering around the school searching for coffee. Janet also has the best handwriting and calligraphy skills at Ireton. Wanna see for yourself? Come visit the Design Principles workshop!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/gabby.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Gabby Nguyen</h2>
+        <h3>Marketing Team</h3>
+        <p>Gabby is a junior at BI and can pretty much do it all! She plays field hockey for BI and for a club, swam with a USA team competitively for 9 years , and plays the clarinet, piano, and bass guitar. As a member of the marketing team, she’s putting her photographer skills to good use! Fun fact: Her interest in coding began in the sixth grade!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/courtney.jpeg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Courtney Quinn</h2>
+        <h3>Middle School Team Leader</h3>
+        <p>Courtney is a junior at BI and is the leader of the Middle School team this year! This will be her second year as a part of the HackBI team. I’m sure she’s super excited! Some super fun facts about Courtney (that could be related?): she’s cracked her head open and is left handed! If you want to hear the backstory then swing by the Women in Science workshop!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/matthew.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Matthew Burdick</h2>
+        <h3>Middle School Team</h3>
+        <p>Matthew is a senior at BI and is part of the Middle School team! His favorite food is pad Thai and his favorite color is green. Matthew may or may not be part of the other pair of twins on the HackBI IV team. (and may or may not be the twin with a better taste in foods. (Sorry David.)) “Aliens are going to conquer the earth”- Matthew Burdick 2020</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/christian.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Christian Rockwell</h2>
+        <h3>Middle School Team</h3>
+        <p>Christian Rockwell isn’t quite a senior yet, but he might as well be to the middle school kids he’ll be helping out. They can judge his hackathon skills as much as they want, but if he needs to impress them, just hand him a copy of Super Mario Bros. — he can play a level blindfolded!</p>
+      </div>
+    </div>
+    <div class="row person hideme">
+      <div class="col-md-4 col-xs-12">
+        <img data-src="img/maria.jpg"/>
+      </div>
+      <div class="col-md-8 col-xs-12">
+        <h2>Maria Mateo</h2>
+        <h3>Middle School Team</h3>
+        <p>Maria Mateo promises this grainy photo is not representative of her effort level for the rest of her Hack BI work. Nobody is quite sure why she’s on the middle school team, because she has a reputation for being super quiet and whatever the antonym of outgoing is, but maybe once you get to know her, this bio will seem to be absolute nonsense.</p>
+      </div>
+    </div>
   </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="team.js"></script>
-    <script defer type="text/javascript" src="img/util.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css">
+
+  <div class="footer">
+    <div class="container text-center">
+      <a href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314" target="_blank" rel="nofollow">
+        Bishop Ireton High School
+      </a>
+      <br>
+      <a href="conduct" rel="nofollow">Conduct</a>
+      <br>
+      <a class="social" href="https://www.facebook.com/officialhackbi/" target="_blank">
+        <img data-src="../img/facebook.svg" title="Facebook">
+      </a>
+      <a class="social" href="https://www.instagram.com/hackbiofficial/" target="_blank" rel="noopener">
+        <img data-src="../img/instagram.svg" title="Instagram">
+      </a>
+      <a class="social" href="https://www.twitter.com/HackBIOfficial" target="_blank">
+        <img data-src="../img/twitter.svg" title="Twitter">
+      </a>
+      <a class="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" target="_blank">
+        <img data-src="../img/snapchat.svg" title="Snapchat">
+      </a>
+      <a class="social" href="https://youtu.be/EZ1UAPTvYns" target="_blank">
+        <img data-src="../img/youtube.svg" title="YouTube">
+      </a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script defer src="jquery.lazyloadxt.js"></script>
+
   </body>
   </html>
