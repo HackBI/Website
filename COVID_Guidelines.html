@@ -2,46 +2,70 @@
 <html>
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-81281305-2');
   </script>
+  -->
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COVID-19 Guidelines | HackBI</title>
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
   <meta name="keywords" content="HackBI, Hack BI, Hack BI III, Hack BI 3, Bishop Ireton, COVID, Coronavirus">
   <meta name="description" content="Due to COVID-19, HackBI IV will be following guidelines that have not been used at previous HackBI events. This page contains the COVID-19 guidelines that HackBI IV participants will be expected to follow.">
-  <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
-  <link rel="icon" href="img/icon.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#FC4D45">
+  <meta property="og:title" content="HackBI Team">
+  <meta property="og:description" content="Meet the team behind HackBI: a 24-hour student-run hackathon!">
+  <meta property="og:site_name" content="HackBI">
+  <meta property="og:image" content="img/team.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hackbiofficial">
+  <meta name="twitter:title" content="HackBI Team">
+  <meta name="twitter:description" content="Meet the team behind HackBI: a 24-hour student-run hackathon!">
+  <meta name="twitter:image" content="img/team.jpg">
   
-  <title>COVID-19 Guidelines | HackBI</title>
+  
   <style>
+    html {
+      font-size: 16px;
+    }
   .jumbotron {
     color: white;
-    text-align: center;
-    font-size: 2rem;
-    font-family: Jaapokki, "Trebuchet MS", Arial, sans-serif;
-    background-color: var(--main-color);
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    background: var(--main-color);
-    /* background-image: url('people-wearing-masks.png'); */
-    background-position: center;
-    background-position-y: 47%;
-    background-size: cover;
-    border-radius: 0;
-    padding-bottom: 70px;
-    margin-bottom: 0;
+      text-align: center;
+      background: var(--main-color);
+     /* background-image: url('img/team.jpg'); */
+      background-position: center;
+      background-position-y: 47%;
+      background-size: cover;
+      height: 20rem;
+      margin: 0;
+      border-radius: 0;
   }
 
   .jumbotron h1 {
-    padding: 0;
-    margin: 0;
-  }
+        font-family: Montserrat, Helvetica, "Trebuchet MS", Arial, sans-serif;
+        font-size: 4.2rem;
+        font-weight: bold;
+        text-shadow: 0 0 10px black;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .center {
+      text-align: center;
+      display: flex;
+      align-items : center;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 0;
+    }
 
   .para {
     color: black;
@@ -68,7 +92,10 @@
     height: 250px;
     padding-right: 20px;
   }
-
+  @media (min-width: 1200px) {
+      .container {
+        max-width: 1100px !important;
+      }
   @media screen and (max-width: 767px) {
     .jumbotron h1 {
       font-size: 8rem;
@@ -83,36 +110,71 @@
   </style>
 </head>
 <body>
-  <div class="nav">
-    <br/>
-    <ul class="pull-left">
-      <li>
-				<a class='navbar-brand' href="/">
-					<img src="img/icon.png" style='height: 20px; width: 20px; margin-top: -16px; padding: 0;'>
-				</a>
-			</li>
-      <li><a id="faqLink" href="/#faq">FAQ</a></li>
-			<!--
-			<li><a id="registerLink" href="register">Register</a></li>
-			-->
-			<li><a id="contactLink" href="/#contact">Contact</a></li>
-			<li><a id="workshopLink" href="/#workshops">Workshops</a></li>
-			<li><a id="meetTeamLink" href="team">Meet the Team</a></li>
-			<li><a id="CovidGuidelines" href="COVID_Guidelines">COVID-19 Guidelines</a></li> 
-			<li><a id="devpostLink" href="https://hackbi-iii.devpost.com/" target="_blank">Last Year</a></li>
-    </ul>
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
+        <div class="container" style="max-width: 1200px;">
+          <a class="navbar-brand" href="#" title="Scroll to top">
+            <svg id="brand" style="margin-top: 5px;" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
+              <title>HackBI</title>
+              <g id="Icon">
+                <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:#fff2a6"></path>
+                <path d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z" transform="translate(-5.23 -5.58)" style="fill:#b45859"></path>
+                <path d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+                <path d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+                <path d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+                <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73" transform="translate(-5.23 -5.58)" style="fill:#353535"></path>
+                <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+                <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+                <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+                <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+                <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+                <path d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+                <path d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z" transform="translate(-5.23 -5.58)" style="fill:#e07380;stroke:#000;stroke-miterlimit:10"></path>
+                <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2.5px"></path>
+              </g>
+              <g id="Text" style="fill: white">
+                <path d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z" transform="translate(-5.23 -5.58)"></path>
+                <polygon points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"></polygon>
+                <path d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z" transform="translate(-5.23 -5.58)"></path>
+                <path d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z" transform="translate(-5.23 -5.58)"></path>
+                <path d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z" transform="translate(-5.23 -5.58)"></path>
+                <path d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z" transform="translate(-5.23 -5.58)"></path>
+              </g>
+            </svg>
+          </a>
+          <button class="hamburger hamburger--squeeze navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="">Register<span class="sr-only">(current page)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../#faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://hackbi-iii.devpost.com/">Last Year</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <div class="jumbotron center">
+    <div class="container container-fluid">
+      <h1>COVID-19 Guidelines</h1>
+    </div>
   </div>
-
-  <div class="jumbotron">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-12">
-          <br/><br/>
-					<h1 style="text-shadow: -4px 6px 0px black">COVID-19 Guidelines</h1>
-				</div>
-			</div>
-		</div>
-	</div>
 
   <div class="para">
 <br>
@@ -154,14 +216,30 @@ Guidlines and Procedures Taken to Keep a Safe and Healthy Enviroment:
 <br>
 <br>
           </div>
-    <div class="learn-more" id="bottom-bar">
-		<br /><br />
-		<p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" rel="nofollow">MLH Code of Conduct</a></p>
-		<a id="social" href="https://www.facebook.com/officialhackbi/" class="fab fa-facebook make-translucent"></a>
-		<a id="social" href="https://www.twitter.com/HackBIOfficial" class="fab fa-twitter make-translucent"></a>
-		<a id="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" class="fab fa-snapchat make-translucent"></a>
-		<a id="social" href="https://youtu.be/p_xg-GK7heY" class="fab fa-youtube make-translucent"></a>
-      <br/><br/>
+     <div class="footer">
+    <div class="container text-center">
+      <a href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314" target="_blank" rel="nofollow">
+        Bishop Ireton High School
+      </a>
+      <br>
+      <a href="conduct" rel="nofollow">Conduct</a>
+      <br>
+      <a class="social" href="https://www.facebook.com/officialhackbi/" target="_blank">
+        <img data-src="../img/facebook.svg" title="Facebook">
+      </a>
+      <a class="social" href="https://www.instagram.com/hackbiofficial/" target="_blank" rel="noopener">
+        <img data-src="../img/instagram.svg" title="Instagram">
+      </a>
+      <a class="social" href="https://www.twitter.com/HackBIOfficial" target="_blank">
+        <img data-src="../img/twitter.svg" title="Twitter">
+      </a>
+      <a class="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" target="_blank">
+        <img data-src="../img/snapchat.svg" title="Snapchat">
+      </a>
+      <a class="social" href="https://youtu.be/EZ1UAPTvYns" target="_blank">
+        <img data-src="../img/youtube.svg" title="YouTube">
+      </a>
+    </div>
   </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="team.js"></script>
