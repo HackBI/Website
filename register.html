@@ -331,30 +331,33 @@
                         </div>
                         <div class="modal-body-main">
                             <h3 style="padding-top: 12px">1. Register for a spot</h3>
-                            <noscript>
-                                <a href="https://www.eventbrite.com/e/hack-bi-iv-tickets-124010377377" rel="noopener noreferrer" target="_blank">
-                            </noscript>
-                            <button id="eventbrite-widget-modal-trigger-61404733210" class="btn btn-danger" style="margin-top: 4px; width: 150px" type="button"><strong>Register</strong></button>
-                            <noscript>
-                                </a>Buy Tickets on Eventbrite
-                            </noscript>
-                            <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-                            <script type="text/javascript">
-                                window.EBWidgets.createWidget({
-                                    widgetType: 'checkout',
-                                    eventId: '61404733210',
-                                    modal: true,
-                                    modalTriggerElementId: 'eventbrite-widget-modal-trigger-61404733210',
-                                    onOrderComplete: function() {
-                                        $('#eventbrite-widget-modal-trigger-61404733210').css({'background-color': 'green','border-color': 'green'});
-                                        $('#eventbrite-widget-modal-trigger-61404733210').html('Registered');
-                                    }
-                                });
-                            </script>
+                            <!-- Noscript content for added SEO -->
+				<noscript><a href="https://www.eventbrite.com/e/hack-bi-iv-tickets-124010377377" rel="noopener noreferrer" target="_blank"></noscript>
+					<!-- You can customize this button any way you like -->
+				<button id="eventbrite-widget-modal-trigger-124010377377" type="button">Register</button>
+				<noscript></a>Buy Tickets on Eventbrite</noscript>
+
+				<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+				<script type="text/javascript">
+    				var exampleCallback = function() {
+        				console.log('Order complete!');
+   				 };
+
+   				 window.EBWidgets.createWidget({
+        				widgetType: 'checkout',
+        				eventId: '124010377377',
+       					 modal: true,
+        				modalTriggerElementId: 'eventbrite-widget-modal-trigger-124010377377',
+        				onOrderComplete: exampleCallback
+    				});
+				</script>
 
                             <hr style="width: 180px;">
 
                             <h3>2a. For BI Students: Print and fill out <a href='BI Student Forms.pdf' target="_blank" rel="nofollow"><u>forms</u></a>*</h3>
+				
+				<hr style="width: 180px;">
 				
 				<h3>2b. For Non-BI Students: Print and fill out <a href='Guest Student Forms.pdf' target="_blank" rel="nofollow"><u>forms</u></a>*<br>
 				Please fill out these additional forms: <a href='https://forms.office.com/Pages/ResponsePage.aspx?id=epDU_JHubUyUMWiutTX882_74TiwDPJOkQ1c4KIevhtUNjVGOERKVTRCRDNYNlNXQzM3MDA2UzM4Ty4u' target="_blank" rel="nofollow"><u>Form1</u>
