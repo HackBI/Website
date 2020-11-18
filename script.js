@@ -9,7 +9,7 @@ function contactSubmit() {
 	else {
 		$.ajax({
 			'type': 'POST',
-			'url': `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=contact&name=${name}&email=${email}&questions=${question}`,
+			'url': `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=contact&name=${name}&email=${email}&question=${question}`,
 			crossDomain: true,
 			contentType: false,
 			dataType: 'text/javascript',
@@ -34,8 +34,8 @@ function contactSubmit() {
 
 function preregisterSubmit() {
 	$('#volbtnsubmit').prop('disabled', 'true');
-	var name = escape($('#namef').val().replace(/\s/g, "+"));
-	var email = escape($('#emailf').val().replace(/\s/g, "+"));
+	var name = escape($('#namef-m').val().replace(/\s/g, "+"));
+	var email = escape($('#emailf-m').val().replace(/\s/g, "+"));
 	
 	$.ajax({
 		'type': 'POST',
@@ -77,8 +77,10 @@ $(document).ready(function() {
 		$('video').append('<source src="HackBIShort.mp4" type="video/mp4">');
 		$('video').css('opacity', '.89');
 		$('video').get(0).load();
+		$('video').show();
+		$('#main-bg-still').hide();
 	}
 	else { // Else keep poster image
-		$('video').css('opacity', '.95');
+		$('#main-bg-still').css('opacity', '.65');
 	}
 });

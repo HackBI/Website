@@ -1,1 +1,0 @@
-$(document).ready(function() {$.getScript('https://cdn.rawgit.com/mikeflynn/egg.js/master/egg.min.js',function(){var util = new Egg();util.addCode("up,down,up,up,down,down,h,a,c,k,b,i",function(){$('body').animate({'opacity': '0'}, 2000);ga.getAll()[0].send("event", "FoundEE");}).listen();});});

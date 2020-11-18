@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,7 +10,6 @@
 
     gtag('config', 'UA-81281305-2');
   </script>
-  -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HackBI</title>
@@ -20,16 +18,16 @@
   <link rel="stylesheet" href="style.css">
 
   <meta name="keywords" content="HackBI, Hack BI, Hackathon, Hack BI IV, Hack BI 4, Hack BI 2, Hack BI II, Bishop Ireton">
-  <meta name="description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta name="description" content="HackBI is a 2-day student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
   <meta name="theme-color" content="#FC4D45">
   <meta property="og:title" content="HackBI">
-  <meta property="og:description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta property="og:description" content="HackBI is a 2-day student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
   <meta property="og:site_name" content="HackBI">
   <meta property="og:image" content="img/Icon100.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@hackbiofficial">
   <meta name="twitter:title" content="HackBI">
-  <meta name="twitter:description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta name="twitter:description" content="HackBI is a 2-day student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
   <meta name="twitter:image" content="img/Icon100.png">
 </head>
 
@@ -65,12 +63,12 @@
           </g>
         </svg>
       </a>
-      <!--
-      <a href="register" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
+      
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed" style="padding: 3px 20px; width: fit-content;">
         Register
         <span class="cta-arrow" data-stuff="➝">❯</span>
       </a>
-      -->
+      
       <button class="hamburger hamburger--squeeze navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
@@ -78,9 +76,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
+          <!--
           <li class="nav-item">
             <a class="nav-link" href="#home">Home<span class="sr-only">(current page)</span></a>
           </li>
+          -->
           <!--
           <li class="nav-item">
             <a class="nav-link" href="register">Register</a>
@@ -93,6 +93,9 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="conduct">COVID-19</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="team">Team</a>
           </li>
           <li class="nav-item">
@@ -100,17 +103,18 @@
           </li>
         </ul>
       </div>
-      <!--
+      
       <a href="register" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
         Register
         <span class="cta-arrow" data-stuff="➝">❯</span>
       </a>
-      -->
+      
     </div>
   </nav>
 
   <div class="jumbotron jumbotron-fluid text-center" id="home">
-    <video autoplay muted poster="img/register.jpg" preload="none" loop></video>
+    <video class="main-bg" autoplay muted poster="img/register.jpg" preload="none" loop></video>
+    <img class="main-bg" id="main-bg-still" src="img/register.jpg">
     <div class="text-wrapper">
       <svg class="main-text" viewBox="100 0 350 90" xmlns="http://www.w3.org/2000/svg">
         <title>HackBI</title>
@@ -137,17 +141,14 @@
         </g>
       </svg>
       <br>
-      <!--
-      <h5 id="lead1" class="lead-text">24-hour hackathon at Bishop Ireton High School</h5>
-      <br>
-      <h2 id="lead2" class="lead-text">December 7-8</h2>
-      <br>
+      
+      <h2 id="lead2" class="lead-text">January 23 - 24</h2>
+
       <button type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn">Register</button>
       <button type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn">Volunteer</button>
-      -->
-      <h2 id="lead2" class="lead-text">January 23 - 24</h2>
       
-      <div type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn" style="
+      <!--
+      <div class="btn btn-outline-light btn-lg text-nowrap mainbtn" style="
         margin-top: 35px;
         padding: 15px 50px;
         width: fit-content !important;
@@ -157,6 +158,7 @@
         border-radius: 50px;
         text-shadow: none;" data-toggle="modal" data-target="#preregisterModal">Be notified when<br>registration&nbsp;opens!
       </div>
+      -->
     </div>
     <div id="arrow" class="text-center d-none d-md-block">
       <a href="#intro" title="Scroll down" id="arrow-svg">
@@ -186,143 +188,18 @@
           <form>
             <div class="form-group">
               <label>Name</label>
-              <input id="namef" class="form-control field" placeholder="Name">
+              <input id="namef-m" class="form-control field" placeholder="Name">
             </div>
             <div class="form-group">
               <label>Email Address</label>
-              <input id="emailf" class="form-control field" placeholder="Email">
+              <input id="emailf-m" class="form-control field" placeholder="Email">
             </div>
           </form>
-          <button id="volbtnsubmit" class="btn btn-dark" type="submit" onclick="if(validateField({field:$('#namef'),type:'name'}) && validateField({field:$('#emailf'),type:'email'})) { preregisterSubmit() }; return false;" style="border-radius: 50px; margin: 24px auto 0 auto; padding: 8px 40px; display: block;">Submit</button>
+          <button id="volbtnsubmit" class="btn btn-dark" type="submit" onclick="if(validateField({field:$('#namef-m'),type:'name'}) && validateField({field:$('#emailf-m'),type:'email'})) { preregisterSubmit() }; return false;" style="border-radius: 50px; margin: 24px auto 0 auto; padding: 8px 40px; display: block;">Submit</button>
         </div>
       </div>
     </div>
   </div>
-
-  <style>
-    .row h5 {
-      padding-top: 8px;
-      color: rgb(63, 66, 70)
-    }
-    .row > .panel {
-        margin-bottom: 20px;
-    }
-    .container > .row > .col-12 {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    .row .row-panel {
-        width: 100%;
-        background-color: rgb(245,245,247);
-        margin: 0;
-        border-radius: 4px;
-        box-shadow: 0.5px 3px 8px #d6d6d6;
-    }
-    .row .row-panel .col-4, .row .row-panel .col-8 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .round-img {
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-    }
-
-    .card {
-        border: none !important;
-        transform: translateZ(1px);
-        margin-bottom: 2rem !important;
-    }
-
-    .flip-card {
-      perspective: 1000px;
-      height: 240px;
-    }
-
-    .flip-card-inner {
-      position: relative;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.9s ease;
-      transform-style: preserve-3d;
-
-      width: 100%;
-      max-width: 14rem;
-      margin: 0 auto;
-      box-shadow: 0 5px 8px -2px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0,0,0,.24);
-      color: #202124;
-      font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
-      font-size: 28px;
-      border-radius: 10px;
-      border-bottom: 5px solid white;
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-
-      border-radius: 30px;
-      border-bottom-left-radius: 28px;
-      border-bottom-right-radius: 28px;
-    }
-
-    .flip-card:hover .flip-card-inner {
-      transform: rotateY(180deg);
-      transition: transform .45s ease;
-    }
-
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
-      width: 100%;
-      height: 100%;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-    }
-
-    .flip-card-front {
-      font-size: 28px;
-      padding: 10px;
-      font-weight: bold;
-    }
-
-    .flip-card-front img {
-      margin: 0 auto 0 auto;
-    }
-
-    .flip-card-back {
-      font-size: 15pt;
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      transform: rotateY(180deg);
-    }
-
-    @media screen and (max-width: 991px) {
-        .img-sm-left {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        .img-sm-right {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-    }
-    @media screen and (min-width: 992px) {
-        .img-md-left {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        .img-md-right {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
-    }
-  </style>
 
   <div class="jumbotron-fluid" style="text-align: center; padding: 15px 0 70px 0; background-color: white;">
     <div class="container">
@@ -331,7 +208,7 @@
         <div class="col-12 col-lg-6 panel hideme">
           <div class="row row-panel">
             <div class="col-8">
-                <img src="temp/learning (2).jpeg" class="round-img img-sm-left img-md-left" style="width: 100%; ">
+                <img src="img/learning.jpg" class="round-img img-sm-left img-md-left" style="width: 100%; ">
             </div>
             <div class="col-4">
                 <h4>Learn.</h4>
@@ -344,14 +221,14 @@
                 <h4>Collaborate.</h4>
             </div>
             <div class="col-8">
-                <img src="temp/teamwork.jpeg" class="round-img img-sm-right img-md-left" style="width: 100%;">
+                <img src="img/teamwork.jpg" class="round-img img-sm-right img-md-left" style="width: 100%;">
             </div>
           </div>
         </div>
         <div class="col-12 col-lg-6 panel hideme">
           <div class="row row-panel">
             <div class="col-8 order-lg-2">
-                <img src="temp/presentation.jpeg" class="round-img img-sm-left img-md-right" style="width: 100%;">
+                <img src="img/presentation.jpg" class="round-img img-sm-left img-md-right" style="width: 100%;">
             </div>
             <div class="col-4">
                 <h4>Pitch.</h4>
@@ -364,12 +241,12 @@
                     <h4>Celebrate.</h4>
                 </div>
                 <div class="col-8">
-                    <img src="temp/awards.jpeg" class="round-img img-sm-right img-md-right" style="width: 100%;">
+                    <img src="img/awards.jpg" class="round-img img-sm-right img-md-right" style="width: 100%;">
                 </div>
             </div>
         </div>
       </div>
-      </div>
+    </div>
   </div>
 
   <div class="section faq jumbotron-fluid" style="background-color: rgb(244,244,246); padding-bottom: 70px; padding-top: 60px;">
@@ -383,14 +260,14 @@
         <div class="col-12">
           <div class="qa hideme" style="margin-bottom: 0;">
             <h3>How is HackBI responding to COVID-19?</h3>
-            <h4>See the <a href="COVID_Guidelines">COVID guidelines</a> page.</h4>
+            <h4>See the <a href="conduct">COVID guidelines</a> page.</h4>
           </div>
         </div>
 
         <div class="col-sm-6 col-12">
           <div class="qa hideme">
             <h3>What is HackBI?</h3>
-            <h4>HackBI is a student-run hackathon at Bishop Ireton High School. You'll have a 12 hour and 10 hour day to learn
+            <h4>HackBI is a student-run hackathon at Bishop Ireton High School. There will be 2 days for you to learn
               a variety of new things, collaborate, and make your idea come to life!</h4>
           </div>
           <div class="qa hideme">
@@ -412,7 +289,7 @@
           <div class="qa hideme">
             <h3>Are there prizes?</h3>
             <h4>Of course! There will be prizes for each individual in a team (4 people max). The grand prize will be
-              a paid summer internship at <a href="https://deciphernow.com/" target="_blank">Decipher Technology Studios</a>!</h4>
+              a paid summer internship at <a href="https://deciphernow.com/" target="_blank" rel="nofollow noopener">Decipher Technology Studios</a>!</h4>
           </div>
           <div class="qa hideme">
             <h3>What should I bring?</h3>
@@ -432,9 +309,7 @@
           <div class="qa hideme">
             <h3>Who can attend HackBI?</h3>
             <h4>
-              HackBI is open to high schoolers for both days, December 7-8 (10am Sat.–12pm Sun.)
-              and eighth graders for the first day, December 7 (10am–10pm).
-              HackBI is open to all high schoolers for both days, from 10am on Saturday, Jan. 23, to 8pm on Sunday, Jan. 24, and to eighth graders from 10am to 8pm on both days. There are options for both in-person hacking and online hacking for both high schoolers and middle schoolers.
+              HackBI is open to all high schoolers for both days, from 10am-10pm on Saturday, Jan. 23, and from 8am-8pm on Sunday, Jan. 24. Eighth graders attend from 10am-8pm on either day. There are options for in-person and online hacking for both high schoolers and middle schoolers.
               <br><br>
               If you're an adult and would like to come, consider <a href="volunteer">volunteering</a>!
             </h4>
@@ -607,7 +482,7 @@
             </div>
           </div>
 				</div>
-			
+        <!--
 				<div class="card flip-card">
           <div class="flip-card-inner" style="box-shadow: 0 5px 8px -2px rgba(0, 0, 0, 0.15), 5px 6px 0px 0px #5d5d5d, 0 4px 12px rgba(0,0,0,.24);">
             <div class="flip-card-front">
@@ -620,7 +495,7 @@
             </div>
           </div>
 				</div>
-        
+        -->
         <div class="card flip-card">
           <div class="flip-card-inner" style="box-shadow: 0 5px 8px -2px rgba(0, 0, 0, 0.15), 5px 6px 0px 0px #6670ea, 0 4px 12px rgba(0,0,0,.24);">
             <div class="flip-card-front">
@@ -737,7 +612,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 header">
-          <h1>Sponsors</h1>
+          <h1>2019 Sponsors</h1>
           <h4>Interested in being a sponsor? <a href="#contact">Contact us</a>!</h4>
         </div>
         <div class="col-12 logos">
@@ -756,7 +631,7 @@
   
   <div class="footer">
     <div class="container text-center">
-      <a href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314" target="_blank" rel="nofollow" style="display: block;">
+      <a href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314" target="_blank" rel="nofollow noopener" style="display: block;">
         Bishop Ireton High School
       </a>
       <a href="conduct" rel="nofollow" style="display: block; margin: 8px;">Conduct</a>

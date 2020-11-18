@@ -1,189 +1,401 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-		gtag('config', 'UA-81281305-2');
-	</script>
-	<meta name="keywords" content="HackBI, Hack BI, Hackathon, Hack BI III, Hack BI 3, Hack BI 2, Hack BI II, Hack BI 4, Hack BI IV, Bishop Ireton">
-	<meta name="description" content="Code of Conduct at HackBI">
-	<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
-	<meta name="theme-color" content="#FC4D45"/>
-	<link rel="icon" href="img/icon.png">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	<title>Conduct | HackBI</title>
-</head>
+    gtag('config', 'UA-81281305-2');
+  </script>
+  <title>Conduct - HackBI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 
-<style>
+  <style>
+    html {
+      font-size: 16px;
+    }
+
     .jumbotron {
       color: white;
       text-align: center;
-      font-size: 2rem;
-      font-family: Jaapokki, "Trebuchet MS", Arial, sans-serif;
-      background-color: var(--main-color);
-      position: relative;
-      z-index: 1;
-      color: #fff;
       background: var(--main-color);
+      background-image: url('img/room.jpg');
       background-position: center;
       background-position-y: 47%;
       background-size: cover;
+      height: 20rem;
+      margin: 0;
       border-radius: 0;
-      padding-bottom: 70px;
+    }
+
+    .center {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
       margin-bottom: 0;
     }
 
-    h2 {
-      font-family: Jaapokki, Arial, Helvetica, sans-serif;
-      line-height: 1.4;
-      margin-bottom: -15px;
-      margin-top: -5px;
-      text-align: left;
-      padding-left: 100px;
-      color: var(--secondary-color);
-      text-decoration: underline;
+    .jumbotron h1 {
+      font-family: Montserrat, Helvetica, "Trebuchet MS", Arial, sans-serif;
+      font-weight: bold;
+      text-shadow: 0 0 10px black;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
+    <div class="container" style="max-width: 1200px;">
+      <a class="navbar-brand" href="../" title="Scroll to top">
+        <svg id="brand" style="margin-top: 5px;" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
+          <title>HackBI</title>
+          <g id="Icon">
+            <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:#fff2a6"></path>
+            <path d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z" transform="translate(-5.23 -5.58)" style="fill:#b45859"></path>
+            <path d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+            <path d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+            <path d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73" transform="translate(-5.23 -5.58)" style="fill:#353535"></path>
+            <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+            <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+            <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z" transform="translate(-5.23 -5.58)" style="fill:#e07380;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2.5px"></path>
+          </g>
+          <g id="Text" style="fill: white">
+            <path d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z" transform="translate(-5.23 -5.58)"></path>
+            <polygon points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"></polygon>
+            <path d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z" transform="translate(-5.23 -5.58)"></path>
+          </g>
+        </svg>
+      </a>
+      
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
+        Register
+        <span class="cta-arrow" data-stuff="➝">❯</span>
+      </a>
+      
+      <button class="hamburger hamburger--squeeze navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <!--
+          <li class="nav-item">
+            <a class="nav-link" href="../">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../register">Register</a>
+          </li>
+          -->
+          <li class="nav-item">
+            <a class="nav-link" href="../#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="">COVID-19<span class="sr-only">(current page)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://hackbi-iii.devpost.com/">Last Year</a>
+          </li>
+        </ul>
+      </div>
+      
+      <a href="register" class="btn btn-light btn-md text-nowrap cta d-none d-md-block a-colored" id="cta-uncollapsed">
+        Register
+        <span class="cta-arrow" data-stuff="➝">❯</span>
+      </a>
+
+    </div>
+  </nav>
+
+  <div class="jumbotron center">
+    <div class="container container-fluid">
+      <h1>COVID Safety & Conduct</h1>
+    </div>
+  </div>
+
+  <style>
+    body {
+      background: white;
     }
 
-    p {
-      color: white;
-      font-family: Jaapokki, "Trebuchet MS", Arial, sans-serif;
-      font-size: 2rem;
-      text-align: left;
-      margin-right: 0;
-      background-size: cover;
-      padding-left: 100px;
-      padding-right: 100px;
+    .row-cell {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      padding: 20px 30px;
+      max-width: calc(100% - 10px);
+      margin: 0 auto;
+      transition: all 0.3s ease-in-out;
     }
-</style>
-<body>
-    <div class="nav">
-      <br/>
-      <ul class="pull-left">
-            <li>
-              <a class='navbar-brand' href="/">
-                <img src="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png" style='height: 20px; width: 20px; margin-top: -16px'>
-              </a>
-            </li>
-        <li><a id="faqLink" href="/#faq">FAQ</a></li>
-        <li><a id="contactLink" href="/#contact">Contact</a></li>
-        <li><a id="workshopLink" href="#workshop">Workshops</a> </li>
-        <li><a id="meetTeamLink" href="team">Meet the Team</a></li>
-        <li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
-        <!-- UNCOMMENT WHEN HACKATHON BEGINS
-        <li><a id="registerLink" href="register">Register</a></li>
-        -->
-      </ul>
-    </div>
-  
-    <div class="jumbotron">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12">
-            <br/><br/>
-            <h1 style="text-shadow: -4px 6px 0px black">Conduct</h1>
+    .row-cell h4 {
+      margin: 0;
+    }
+    .row-cell > img, .row-cell > svg {
+      align-self: flex-start;
+      margin-inline-end: 15px;
+      width: 70px;
+      min-width: 70px;
+      background: white;
+      border-radius: 100px;
+    }
+
+    .row-container {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .row-cell-inset {
+      box-shadow: none !important;
+    }
+
+    h5 {
+      color: #252525;
+    }
+
+    @media screen and (max-width: 768.98px) {
+      .panel-container .panel:not(:last-child) {
+        border-bottom: 1px solid rgb(224, 224, 224);
+      }
+      .panel {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+      }
+      .row-cell {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .more-info .row-cell {
+        padding: 10px 0;
+      }
+
+      .jumbotron h1 {
+        font-size: 3.5rem;
+      }
+    }
+
+    @media screen and (min-width: 768.99px) {
+      .row-container {
+        max-width: 800px;
+      }
+      .row-cell {
+        background-color: rgb(245,245,247);
+        border-radius: 4px;
+        box-shadow: 0.5px 1.5px 4px #dbdbdb;
+      }
+
+      .row-cell-hover:hover {
+        transform: translateX(-1px) translateY(-1px);
+        transition: all 0.2s ease-in-out;
+        box-shadow: 1px 3px 8px #cccccc !important;
+      }
+    }
+  </style>
+
+  <div class="row-container" style="padding: 40px 0; margin-bottom: 15px;">
+    <div class="panel-container covid-safety">
+      <h3 style="font-size: 30px; padding: 10px 20px 10px 20px; margin: 0 auto; font-weight: bold; line-height: 1.3;" id="intro">
+        Coronavirus Safety</h3>
+      <h6 style="font-size: 20px; padding: 0px 25px 20px 25px; line-height: 1.3;">Due to COVID-19, HackBI will be following additional guidelines that have not beed used at previous HackBI events. All participants will be expected to follow these guidelines to ensure the health and safety of everyone who attends.</h6>
+      <div class="row" style="padding: 8px 8px; margin: 0 auto">
+        <div class="col-12 col-md-6 panel hideme">
+          <div class="row row-cell">
+            <img src="img/social-distancing.png">
+            <h5>Maintain a distance of 6 feet from others</h5>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 panel hideme">
+          <div class="row row-cell">
+            <img src="img/mask.png">
+            <h5>Wear a mask at all times</h5>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 panel hideme">
+          <div class="row row-cell">
+            <img src="img/food.png">
+            <h5>Food is pre-packaged</h5>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 panel hideme">
+          <div class="row row-cell">
+            <img src="img/handwashing.png">
+            <h5>Hand sanitizer and wipes will be provided</h5>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 panel hideme">
+          <div class="row row-cell">
+            <img src="img/bathroom.png">
+            <h5>Bathrooms are single-occupancy</h5>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 panel hideme">
+          <div class="row row-cell">
+            <img src="img/sanitizer.png">
+            <h5>All rooms will be sanitized after use</h5>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 panel hideme">
+          <div class="row row-cell">
+            <img src="img/seating.png">
+            <h5>Seatings charts will be recorded for each room</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-container more-info">
+        <h4 style="font-size: 22px; padding: 20px 20px 15px 30px; margin: 0 auto; font-weight: bold; line-height: 1.3;"
+          id="intro">More info</h4>
+        <div class="row" style="padding: 8px 8px; margin: 0 auto">
+          <div class="col-12 col-md-6 panel hideme">
+            <a href="https://www.bishopireton.org/covid-19--distance-learning-updates" target="_blank" rel="nofollow noopener" style="text-decoration: none !important;">
+            <div class="row row-cell row-cell-inset row-cell-hover">
+              <span style="align-self: center; margin-inline-end: 15px; width: 50px"><img src="img/bi.png" style="width: 50px;"></span>
+              <h5>School guidelines</h5>
+              <span style="align-self: center; margin-inline-start: auto; font-weight: bold;"><img src="img/link.svg" style="width: 20px;"></span>
+            </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 panel hideme">
+            <a href="https://www.alexandriava.gov/Coronavirus" target="_blank" rel="nofollow noopener" style="text-decoration: none !important;">
+            <div class="row row-cell row-cell-inset row-cell-hover">
+              <span style="align-self: center; margin-inline-end: 15px; width: 50px"><img src="img/alexandria.png" style="width: 50px;"></span>
+              <h5>Local guidelines</h5>
+              <span style="align-self: center; margin-inline-start: auto; font-weight: bold;"><img src="img/link.svg" style="width: 20px;"></span>
+            </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 panel hideme">
+            <a href="https://www.vdh.virginia.gov/coronavirus/schools-workplaces-community-locations" target="_blank" rel="nofollow noopener" style="text-decoration: none !important;">
+            <div class="row row-cell row-cell-inset row-cell-hover">
+              <span style="align-self: center; margin-inline-end: 15px; width: 50px"><img src="img/va.png" style="width: 50px;"></span>
+              <h5>State guidelines</h5>
+              <span style="align-self: center; margin-inline-start: auto; font-weight: bold;"><img src="img/link.svg" style="width: 20px;"></span>
+            </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
 
-          <h2>COVID-19 Guidelines</h2>
-          <br>
-          <p>Click on the COVID-19 Guidelines page or click <a href="COVID_Guidelines">here.</a></p>
-          <br>
-          <br>
-          <p>
-            All hackers must read carefully and abide by all the rules and guidelines. 
-          </p>
+    <hr style="margin: 50px auto; max-width: 94%;">
 
-          <br>
-          <br>
-
-          <h2>Code of Conduct:</h2>
-          <br>
-          <p>
-            Be respectful. Harassment and abuse are never tolerated. If you are in a situation that 
-            makes you uncomfortable at an MLH Member Event, if the event itself is creating an unsafe or
-            inappropriate environment, or if interacting with a MLH representative or event organizer makes
-            you uncomfortable, please report it using the procedures included in this document.
-            Major League Hacking (MLH) stands for inclusivity. We believe that every single person has
-            the right to hack in a safe and welcoming environment.
-            Harassment includes but is not limited to offensive verbal or written comments related to
-            gender, age, sexual orientation, disability, physical appearance, body size, race, religion,
-            social class, economic status, veteran status, sexual images, deliberate intimidation,
-            stalking, following, harassing photography or recording, sustained disruption of talks or
-            other events, inappropriate physical contact, and unwelcome sexual attention. If what
-            you’re doing is making someone feel uncomfortable, that counts as harassment and is
-            enough reason to stop doing it.
-            Participants asked to stop any harassing behavior are expected to comply immediately.
-            Sponsors, judges, mentors, volunteers, organizers, MLH staff, and anyone else at the event
-            are also subject to the anti-harassment policy. In particular, attendees should not use
-            sexualised images, activities, or other material both in their hacks and during the event.
-            Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes,
-            or otherwise create a sexualised environment.
-            If a participant engages in harassing behavior, MLH may take any action it deems
-            appropriate, including warning the offender or expulsion from the event with no eligibility
-            for reimbursement or refund of any type.
-            If you are being harassed, notice that someone else is being harassed, or have any other
-            concerns, please contact MLH using the reporting procedures defined below.
-            MLH representatives will be happy to help participants contact campus security or local law
-            enforcement, provide escorts, or otherwise assist those experiencing harassment to feel
-            safe for the duration of the event. We value your attendance.
-            We expect participants to follow these rules at all hackathon venues, online interactions in
-            relation to the event, hackathon-related social events, and on hackathon supplied
-            transportation.
-            Reporting Procedures
-            If you feel uncomfortable or think there may be a potential violation of the code of conduct,
-            please report it immediately to a HackBI team member. All reporters have the
-            right to remain anonymous.
-            
-          </p>
-          <br>
-          <p>Modified from MLH Code of Conduct at:<a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"> here.</a></p>
-          <br>
-          <br>
-          <p>
-            By attending Bishop Ireton's Hack BI IV event, you must follow and abide by the stated rules and regulations. 
-            Failure to do so will result in potential removal from the event.
-          </p>
-          <br>
-          <br>
-
+    <div style="font-size: 18px;">
+      <h3 style="font-size: 30px; padding: 20px 20px 10px 20px; margin: 0 auto; font-weight: bold; line-height: 1.3;" id="intro">
+        Code of Conduct</h3>
+      <p style="font-size: 20px; padding: 0px 25px 20px 25px; line-height: 1.3">
+        <strong>TL;DR.</strong> Be respectful. Harassment and abuse are never tolerated. If you are in a situation that makes you uncomfortable at HackBI, please report it using the <a href="#procedures">procedures</a> listed below.
+      </p>
+      <p style="padding: 0px 25px 20px 25px; line-height: 1.3; font-weight: bold">
+        By attending Bishop Ireton's Hack BI IV event, you must follow and abide by the stated rules and regulations. Failure to do so will result in potential removal from the event.
+      </p>
+      <p style="padding: 0px 25px 20px 25px; line-height: 1.3">
+        Be respectful. Harassment and abuse are never tolerated. If you are in a situation that 
+        makes you uncomfortable at HackBI, if the event itself is creating an unsafe or
+        inappropriate environment, or if interacting with anyone at HackBI (including a team member or adult volunteer) makes
+        you uncomfortable, please report it using the procedures included in this document.
+        We believe that every single person has the right to hack in a safe and welcoming environment.<br></br>
+        Harassment includes but is not limited to offensive, verbal, or written comments related to
+        gender, age, disability, physical appearance, body size, race, religion,
+        social class, economic status, veteran status, sexual images, deliberate intimidation,
+        stalking, following, harassing photography or recording, sustained disruption of talks or
+        other events, inappropriate physical contact, and unwelcome sexual attention. If what
+        you’re doing is making someone feel uncomfortable, that counts as harassment and is
+        enough reason to stop doing it.<br></br>
+        Participants asked to stop any harassing behavior are expected to comply immediately.
+        Sponsors, judges, mentors, volunteers, organizers, HackBI staff, and anyone else at the event
+        are also subject to the anti-harassment policy. In particular, attendees should not use
+        sexualized images, activities, or other material at all during the event.
+        Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes,
+        or otherwise create a sexualized environment.<br></br>
+        If a participant engages in harassing behavior, Bishop Ireton High School will take any action it deems
+        appropriate, including, but not limited to, warning the offender or expulsion from the event with no eligibility
+        for prizes/awards.<br></br>
+        If you are being harassed, notice that someone else is being harassed, or have any other
+        concerns, please contact a HackBI team member using the reporting procedures defined below.
+        HackBI team members will be happy to provide escorts or otherwise assist those experiencing harassment to feel
+        safe for the duration of the event. We value your attendance.</p>
+        <span id="procedures">
+          <h4 style="font-size: 22px; padding: 0px 0px 12px 22px; margin: 0 auto; font-weight: bold; line-height: 1.3;">Reporting Procedures:</h4>
+        </span>
+        <p style="padding: 0px 25px 20px 25px; line-height: 1.3">
+          If you feel uncomfortable or think there may be a potential violation of the code of conduct, please report it immediately to <a href= "mailto:hackbi@bishopireton.org">hackbi@bishopireton.org</a> or a HackBI team member. All reporters have the right to remain anonymous.
+        </p>
+        <span style="padding: 0px 25px 20px 22px; line-height: 1.3">
+          Modified from MLH Code of Conduct found <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" style="color: #007bff">here</a>.
+        </span>
+      </p>
     </div>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-      $(window).scroll(function () {
-        var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
-        var threshold = $(window).height() / 6;
-      
-        if (bottom_of_nav > threshold && ($(window).width() >= 992)) {
-          $('.nav').css({
-            'background-color': '#f4f4f4',
-            'height': '50px',
-            'top': '-7px'
-          });
-          $('.nav li a').css({
-            'color': 'black'
-          });
-        } else if (bottom_of_nav < threshold) {
-          $('.nav').css({
-            'background-color': 'transparent',
-            'height': '60px',
-            'top': '5px'
-          });
-          $('.nav li a').css({
-            'color': 'white'
-          });
-        }
-      });
-    </script>
+  <!--
+  <div class="container text-center" style="padding: 40px 0; margin-bottom: 15px;">
+    <embed
+      src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+      style="width: 90%; height: 100vh">
+  </div>
+  -->
+
+  <div class="footer">
+    <div class="container text-center">
+      <a href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314"
+        target="_blank" rel="nofollow" style="display: block;">
+        Bishop Ireton High School
+      </a>
+      <a href="conduct" rel="nofollow" style="display: block; margin: 8px;">Conduct</a>
+      <a class="social" href="https://www.facebook.com/officialhackbi/" target="_blank" rel="noopener">
+        <img src="img/facebook.svg" title="Facebook">
+      </a>
+      <a class="social" href="https://www.instagram.com/hackbiofficial/" target="_blank" rel="noopener">
+        <img src="img/instagram.svg" title="Instagram">
+      </a>
+      <a class="social" href="https://www.twitter.com/HackBIOfficial" target="_blank" rel="noopener">
+        <img src="img/twitter.svg" title="Twitter">
+      </a>
+      <a class="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" target="_blank" rel="noopener">
+        <img src="img/snapchat.svg" title="Snapchat">
+      </a>
+      <a class="social" href="https://youtu.be/EZ1UAPTvYns" target="_blank" rel="noopener">
+        <img src="img/youtube.svg" title="YouTube">
+      </a>
+      <p style="padding-top: 18px; font-size: 13px;">
+        © 2020 HackBI
+      </p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script defer src="jquery.lazyloadxt.js"></script>
+
 </body>
+
 </html>

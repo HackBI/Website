@@ -176,7 +176,15 @@ Copyright (c) 2016 Jonathan Suh <hello@jonsuh.com> (jonsuh.com)
 	/* background-image: radial-gradient(black 45%, white 70%); */
 }
 
+.jumbotron h1 {
+	font-size: 4.2rem;
+}
+
 video {
+	display: none;
+}
+
+.main-bg {
 	width: 100%;
 	object-fit: cover;
 	height: 100%;
@@ -576,6 +584,121 @@ a.social :hover {
 	margin: 0 2px;
 }
 
+.row h5 {
+	padding-top: 8px;
+	color: rgb(63, 66, 70)
+}
+.row > .panel {
+	margin-bottom: 20px;
+}
+.container > .row > .col-12 {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.row .row-panel {
+	width: 100%;
+	background-color: rgb(245,245,247);
+	margin: 0;
+	border-radius: 4px;
+	box-shadow: 0.5px 3px 8px #d6d6d6;
+}
+.row .row-panel .col-4, .row .row-panel .col-8 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
+.round-img {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.card {
+	border: none !important;
+	-webkit-transform: translateZ(1px);
+	transform: translateZ(1px);
+	margin-bottom: 2rem !important;
+	background: none;
+}
+
+.flip-card {
+	perspective: 1000px;
+	height: 240px;
+}
+
+.flip-card-inner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.9s ease;
+	transform-style: preserve-3d;
+
+	width: 100%;
+	max-width: 14rem;
+	margin: 0 auto;
+	box-shadow: 0 5px 8px -2px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0,0,0,.24);
+	color: #202124;
+	font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
+	font-size: 28px;
+	border-radius: 10px;
+	border-bottom: 5px solid white;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+
+	border-radius: 30px;
+	border-bottom-left-radius: 28px;
+	border-bottom-right-radius: 28px;
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+	transition: transform .45s ease;
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	font-size: 28px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.flip-card-front img {
+	margin: 0 auto 0 auto;
+}
+
+.flip-card-back {
+	font-size: 15pt;
+	padding: 12px;
+	display: flex;
+	align-items: center;
+	transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 991px) {
+	.img-sm-left {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.img-sm-right {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
 @media screen and (max-width: 370px) {
 	.navbar-brand {
 		width: 30vw;
@@ -593,9 +716,9 @@ a.social :hover {
 		height: 5.5rem;
 	}
 	.mainbtn {
-		width: 36%;
-		margin-left: 15px;
-		margin-right: 15px;
+		width: 39%;
+		margin-left: 12px;
+		margin-right: 12px;
 	}
 	.card {
 		font-size: 22px;
@@ -612,6 +735,12 @@ a.social :hover {
 	#brand {
 		height: 30px;
 	}
+	h4 {
+		font-size: 1rem;
+	}
+	.jumbotron h1 {
+		font-size: 3.3rem;
+	}
 }
 
 @media screen and (min-width: 576px) {
@@ -626,6 +755,7 @@ a.social :hover {
 	}
 	.card-columns {
 		column-count: 2;
+		widows: 2;
 	}
 	#map {
 		height: 100%;
@@ -685,6 +815,15 @@ a.social :hover {
 	}
 	.contact-container {
 		max-width: 992px;
+	}
+
+	.img-md-left {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.img-md-right {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 }
 
