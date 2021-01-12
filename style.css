@@ -619,7 +619,7 @@ a.social :hover {
 
 .card {
 	border: none !important;
-	margin-bottom: 2rem !important;
+	margin-bottom: 2rem;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
 	background: none;
@@ -628,6 +628,19 @@ a.social :hover {
 .flip-card {
 	perspective: 1000px;
 	height: 240px;
+}
+
+.masonry { 
+	display: flex;
+	flex-flow: row wrap;
+  }
+
+.masonry-brick {
+	flex: auto;
+	height: 240px;
+	min-width: 250px;
+	width: 250px;
+	margin: 0 4px 45px 4px;
 }
 
 .flip-card-inner {
@@ -646,14 +659,16 @@ a.social :hover {
 	color: #202124;
 	font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
 	font-size: 28px;
-	border-radius: 10px;
+	border-radius: 12px;
 	border-bottom: 5px solid white;
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 
+	/*
 	border-radius: 30px;
 	border-bottom-left-radius: 28px;
 	border-bottom-right-radius: 28px;
+	*/
 }
 
 .flip-card:hover .flip-card-inner {
@@ -668,6 +683,8 @@ a.social :hover {
 	height: 100%;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	background-color: white;
+	border-radius: inherit;
 }
 
 .flip-card-front {
@@ -927,4 +944,4 @@ a.social :hover {
 	  opacity: 1;
 	  transform: none;
 	}
-  }
+}
