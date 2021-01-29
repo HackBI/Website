@@ -39,7 +39,7 @@ function preregisterSubmit() {
 	
 	$.ajax({
 		'type': 'POST',
-		'url': `http://script.google.com/1MnhaM_2JacQ_UR0HSmDCktk8T9_eFh6eSLj2ApF-VLJx2tAPIE1HXKMM/exec?function=logInfo&name=${name}&email=${email}`,
+		'url': `https://script.google.com/1MnhaM_2JacQ_UR0HSmDCktk8T9_eFh6eSLj2ApF-VLJx2tAPIE1HXKMM/exec?function=logInfo&name=${name}&email=${email}`,
 		crossDomain: true,
 		contentType: false,
 		dataType: 'text/javascript',
