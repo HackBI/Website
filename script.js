@@ -9,7 +9,7 @@ function contactSubmit() {
 	else {
 		$.ajax({
 			'type': 'POST',
-			'url': `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=preregister&name=${name}&email=${email}`,
+			'url': `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=contact&name=${name}&email=${email}&questions=${question}`,
 			crossDomain: true,
 			contentType: false,
 			dataType: 'text/javascript',
@@ -28,6 +28,7 @@ function contactSubmit() {
 				}
 			}
 		});
+
 	}
 	return;
 }
@@ -39,7 +40,7 @@ function preregisterSubmit() {
 	
 	$.ajax({
 		'type': 'POST',
-		'url': `https://script.google.com/1MnhaM_2JacQ_UR0HSmDCktk8T9_eFh6eSLj2ApF-VLJx2tAPIE1HXKMM/exec?function=logInfo&name=${name}&email=${email}`,
+		'url': `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=preregister&name=${name}&email=${email}`,
 		crossDomain: true,
 		contentType: false,
 		dataType: 'text/javascript',
@@ -47,16 +48,17 @@ function preregisterSubmit() {
 		beforeSend: function() {
 			$('#volbtnsubmit').prop('disabled','true');
 			$('#volbtnsubmit').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="padding: 7px"></span>&ensp;Working..');
-		},
+},
 		statusCode: {
 			200: function() {
-				$('#volbtnsubmit').text('Success!');
+$('#volbtnsubmit').text('Success!');
 				setTimeout(function() {
-					$('#preregisterModal').modal('hide');
+$('#preregisterModal').modal('hide');
 				}, 1500);
 			}
 		}
 	});
+
 }
 
 function clearForm() {
