@@ -9,7 +9,7 @@ function contactSubmit() {
 	else {
 		$.ajax({
 			'type': 'POST',
-			'url': `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=contact&name=${name}&email=${email}&questions=${question}`,
+			'url': `https://script.google.com/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=contact&name=${name}&email=${email}&questions=${question}`,
 			crossDomain: true,
 			contentType: false,
 			dataType: 'text/javascript',
