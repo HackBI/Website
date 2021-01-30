@@ -9,7 +9,7 @@ function contactSubmit() {
 	else {
 		$.ajax({
 			'type': 'POST',
-			'url': `https://script.google.com/AKfycbyWmBdqNOtAiWIsw2iRL7Vl00TxHjHNmx5ZLKKyO4m8K7h2nc4/exec?function=contact&name=' + name + '&email=' + email + '&question=' + question};
+			'url': `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=preregister&name=${name}&email=${email}`,
 			crossDomain: true,
 			contentType: false,
 			dataType: 'text/javascript',
