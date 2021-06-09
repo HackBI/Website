@@ -12,7 +12,7 @@ function contactSubmit() {
         			'Content-Type': 'application/x-www-form-urlencoded'
     			},
 			'type': 'POST',
-			'url': `https://script.google.com/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=contact&name=${name}&email=${email}&questions=${question}`,
+			'url': `https://script.google.com/1izRE4qY1hz5ETbcmfjRRQ59bXPG6q73Ce5ZK1zitoUnZMrAl4q8INkCu/exec?function=contact&name=${name}&email=${email}&questions=${question}`,
 			crossDomain: true,
 			contentType: false,
 			dataType: 'text/javascript',
