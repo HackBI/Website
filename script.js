@@ -1,7 +1,7 @@
 function contactSubmit() {
-	var name = escape($('#namef').val().replace(/\s/g, "+"));
-	var email = escape($('#emailf').val().replace(/\s/g, "+"));
-	var question = escape($('#contactq').val().replace(/\s/g, "+"));
+	var name = escape($('#namef1').val().replace(/\s/g, "+"));
+	var email = escape($('#emailf1').val().replace(/\s/g, "+"));
+	var question = escape($('#contactq1').val().replace(/\s/g, "+"));
 
 	if (question == "" || name == "" || email == "") {
 		alert("Please enter a value for all fields");
