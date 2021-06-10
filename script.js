@@ -1,4 +1,5 @@
 function contactSubmit() {
+	
 	var name = escape($('#namef1').val().replace(/\s/g, "+"));
 	var email = escape($('#emailf1').val().replace(/\s/g, "+"));
 	var question = escape($('#contactq1').val().replace(/\s/g, "+"));
@@ -7,6 +8,13 @@ function contactSubmit() {
 		alert("Please enter a value for all fields");
 	}
 	else {
+		emailjs.init("user_mWOtaoxzxeJyW8OxdfwGS");
+	let contactParams = {
+		from_name: name,
+		from_email: email,
+		message: question
+	};
+	/*emailjs.send("service_9403v3m", "template_v3e8pel", contactParams).then(function (res){})
 		$.ajax({
 			headers: {
         			'Content-Type': 'application/x-www-form-urlencoded'
@@ -31,7 +39,8 @@ function contactSubmit() {
 				}
 			}
 		});
-
+			*/
+		console.log("sent message");
 	}
 	return;
 }
