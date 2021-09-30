@@ -1,706 +1,1096 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-	
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'UA-81281305-2');
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-81281305-2");
     </script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Register - HackBI</title>
-    <link rel="icon" href="img/icon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-    <meta name="keywords" content="register, registration, sign up, HackBI, Hack BI, Hack BI IV, Hack BI 4, hackathon, Bishop Ireton">
-    <meta name="description" content="Register for HackBI! Open to all students in grades 8-12. Volunteers are also needed.">
-    <meta name="theme-color" content="#FC4D45">
-    <meta property="og:title" content="Register for HackBI">
-    <meta property="og:description" content="Register for HackBI! Open to all students in grades 8-12. Volunteers are also needed.">
-    <meta property="og:site_name" content="HackBI">
-    <meta property="og:image" content="img/team.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@hackbiofficial">
-    <meta name="twitter:title" content="Register for HackBI">
-    <meta name="twitter:description" content="Register for HackBI! Open to all students in grades 8-12. Volunteers are also needed.">
-    <meta name="twitter:image" content="img/team.jpg">
-</head>
-<style>
+    <meta
+      name="keywords"
+      content="register, registration, sign up, HackBI, Hack BI, Hack BI IV, Hack BI 4, hackathon, Bishop Ireton"
+    />
+    <meta
+      name="description"
+      content="Register for HackBI! Open to all students in grades 8-12. Volunteers are also needed."
+    />
+    <meta name="theme-color" content="#FC4D45" />
+    <meta property="og:title" content="Register for HackBI" />
+    <meta
+      property="og:description"
+      content="Register for HackBI! Open to all students in grades 8-12. Volunteers are also needed."
+    />
+    <meta property="og:site_name" content="HackBI" />
+    <meta property="og:image" content="img/team.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@hackbiofficial" />
+    <meta name="twitter:title" content="Register for HackBI" />
+    <meta
+      name="twitter:description"
+      content="Register for HackBI! Open to all students in grades 8-12. Volunteers are also needed."
+    />
+    <meta name="twitter:image" content="img/team.jpg" />
+  </head>
+  <style>
     body {
-        background-color: #fdfeff;
+      background-color: #fdfeff;
     }
 
     .jumbotron {
-        color: white;
-        text-align: center;
-        background: var(--main-color);
-        background-image: url('img/register.jpg');
-        background-position: center;
-        background-position-y: 47%;
-        background-size: cover;
-        height: 20rem;
-        margin: 0;
-        border-radius: 0;
+      color: white;
+      text-align: center;
+      background: var(--main-color);
+      background-image: url("img/register.jpg");
+      background-position: center;
+      background-position-y: 47%;
+      background-size: cover;
+      height: 20rem;
+      margin: 0;
+      border-radius: 0;
     }
     .jumbotron h1 {
-        font-family: Montserrat, Helvetica, "Trebuchet MS", Arial, sans-serif;
-        font-size: 4.2rem;
-        font-weight: bold;
-        text-shadow: -4px 6px 0px black;
-        text-shadow: 0 0 10px black;
-        padding-left: 30px;
-        padding-right: 30px;
+      font-family: Montserrat, Helvetica, "Trebuchet MS", Arial, sans-serif;
+      font-size: 4.2rem;
+      font-weight: bold;
+      text-shadow: -4px 6px 0px black;
+      text-shadow: 0 0 10px black;
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
     .card {
-        width: 20rem;
-        max-width: 20rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
-        background: #fff;
-        border-radius: 10px;
-        margin-top: 30px;
-        transition: all .3s;
+      width: 20rem;
+      max-width: 20rem;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13),
+        0 6px 20px 0 rgba(0, 0, 0, 0.12);
+      background: #fff;
+      border-radius: 10px;
+      margin-top: 30px;
+      transition: all 0.3s;
     }
     .card:hover {
-        transform: none;
-        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+      transform: none;
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15),
+        0 6px 20px 0 rgba(0, 0, 0, 0.14);
     }
     .card .card-img-top {
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        margin-top: 0;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-top: 0;
     }
 
     .sig-btn {
-        width: 250px;
-        height: 45px;
+      width: 250px;
+      height: 45px;
     }
     .sig-btn:hover {
-        opacity: .85;
+      opacity: 0.85;
     }
 
     h3 {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
 
     .close {
-        box-shadow: none !important;
-	    outline: none !important;
+      box-shadow: none !important;
+      outline: none !important;
     }
 
     .eventbrite_embed iframe {
-        width: 95%;
-        display: block;
-        margin: auto;
-        border-top: 1px solid silver
+      width: 95%;
+      display: block;
+      margin: auto;
+      border-top: 1px solid silver;
     }
 
     #container {
-        margin-top: 50px;
-        border: 1px solid lightgray;
-        width: 400px;
-        margin-right: auto;
-        margin-left: auto;
-        border-radius: 5px;
+      margin-top: 50px;
+      border: 1px solid lightgray;
+      width: 400px;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 5px;
     }
 
     .file {
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        text-align: left;
-        padding: 0;
-        max-width: 750px;
-        color: #4f4f4f;
-        background-color: #fcfcfc;
-        border: 1px solid rgb(195, 203, 204);
-        border-radius: 9px;
-        width: fit-content;
-        margin-left: 5%;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      text-align: left;
+      padding: 0;
+      max-width: 750px;
+      color: #4f4f4f;
+      background-color: #fcfcfc;
+      border: 1px solid rgb(195, 203, 204);
+      border-radius: 9px;
+      width: fit-content;
+      margin-left: 5%;
     }
     .file ~ .file {
-        margin-top: 3px;
+      margin-top: 3px;
     }
     .name {
-        max-width: 360px;
-        padding: 0;
-        margin-right: 15px;
-        display: inline-block;
-        padding: 10px;
-        vertical-align: middle;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+      max-width: 360px;
+      padding: 0;
+      margin-right: 15px;
+      display: inline-block;
+      padding: 10px;
+      vertical-align: middle;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
     .mdl-close {
-        stroke: rgb(78, 82, 82);
-        fill: transparent;
-        stroke-linecap: round;
-        stroke-width: 5;
-        width: 30px;
-        margin-top: 10px;
+      stroke: rgb(78, 82, 82);
+      fill: transparent;
+      stroke-linecap: round;
+      stroke-width: 5;
+      width: 30px;
+      margin-top: 10px;
     }
     .mdl-close:hover {
-        stroke: rgb(68, 71, 71);
+      stroke: rgb(68, 71, 71);
     }
     .x {
-        width: 27px;
-        padding-right: 10px;
-        stroke: rgb(155, 163, 164);
-        fill: transparent;
-        stroke-linecap: round;
-        stroke-width: 5;
-        display: inline-block;
-        margin: 0;
-        cursor: pointer;
+      width: 27px;
+      padding-right: 10px;
+      stroke: rgb(155, 163, 164);
+      fill: transparent;
+      stroke-linecap: round;
+      stroke-width: 5;
+      display: inline-block;
+      margin: 0;
+      cursor: pointer;
     }
     .x:hover {
-        stroke: rgb(126, 132, 133);
+      stroke: rgb(126, 132, 133);
     }
     .inputfile {
-        width: 0.1px;
-        height: 0.1px;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        z-index: -1;
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
     }
     .inputfile + label {
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
     }
 
     svg {
-        margin-top: -5px;
-        margin-right: 2px;
-        fill: white;
+      margin-top: -5px;
+      margin-right: 2px;
+      fill: white;
     }
 
     .box {
-        background-color: rgba(240, 220, 222, .4);
-        height: 244px;
-        border: 2px dashed #df888c;
-        border-radius: 10px;
-        cursor: pointer;
-        width: 100%;
-        margin: 0 auto 5px auto;
+      background-color: rgba(240, 220, 222, 0.4);
+      height: 244px;
+      border: 2px dashed #df888c;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+      margin: 0 auto 5px auto;
     }
 
     hr {
-        margin-top: 10px;
-        margin-bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
-	.btn-group-vertical>.btn, .btn-group>.btn {
-        border: 1px solid #e1e3e6;
-        border-radius: 6px;
+    .btn-group-vertical > .btn,
+    .btn-group > .btn {
+      border: 1px solid #e1e3e6;
+      border-radius: 6px;
     }
-</style>
-<body>
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
-        <div class="container" style="max-width: 1200px;">
-          <a class="navbar-brand" href="../" title="Scroll to top">
-            <svg id="brand" style="margin-top: 5px;" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
-              <title>HackBI</title>
-              <g id="Icon">
-                <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:#fff2a6"></path>
-                <path d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z" transform="translate(-5.23 -5.58)" style="fill:#b45859"></path>
-                <path d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
-                <path d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
-                <path d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
-                <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73" transform="translate(-5.23 -5.58)" style="fill:#353535"></path>
-                <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
-                <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
-                <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
-                <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
-                <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
-                <path d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
-                <path d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z" transform="translate(-5.23 -5.58)" style="fill:#e07380;stroke:#000;stroke-miterlimit:10"></path>
-                <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2.5px"></path>
-              </g>
-              <g id="Text" style="fill: white">
-                <path d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z" transform="translate(-5.23 -5.58)"></path>
-                <polygon points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"></polygon>
-                <path d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z" transform="translate(-5.23 -5.58)"></path>
-                <path d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z" transform="translate(-5.23 -5.58)"></path>
-                <path d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z" transform="translate(-5.23 -5.58)"></path>
-                <path d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z" transform="translate(-5.23 -5.58)"></path>
-              </g>
-            </svg>
-          </a>
-          <button class="hamburger hamburger--squeeze navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-		<!--
-              <li class="nav-item">
-                <a class="nav-link" href="../">Home</a>
-              </li>
-		<li class="nav-item">
-                <a class="nav-link active" href="">Register<span class="sr-only">(current page)</span></a>
-              </li>
-		-->
-              <li class="nav-item">
-                <a class="nav-link" href="../#faq">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../#contact">Contact</a>
-              </li>
-		    <li class="nav-item">
-            <a class="nav-link" href="../conduct">COVID & Conduct</a>
-          </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../team">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://hackbi-iii.devpost.com/">Last Year</a>
-              </li>
-            </ul>
-          </div>
+  </style>
+  <body>
+    <nav
+      class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent"
+      id="navbar-1"
+    >
+      <div class="container" style="max-width: 1200px">
+        <a class="navbar-brand" href="../" title="Scroll to top">
+          <svg
+            id="brand"
+            style="margin-top: 5px"
+            viewBox="0 0 450.56 104.82"
+            height="33"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>HackBI</title>
+            <g id="Icon">
+              <path
+                d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #fff2a6"
+              ></path>
+              <path
+                d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #b45859"
+              ></path>
+              <path
+                d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e4cf38"
+              ></path>
+              <path
+                d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e4cf38"
+              ></path>
+              <path
+                d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #353535"
+              ></path>
+              <path
+                d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e5e5e5"
+              ></path>
+              <path
+                d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e5e5e5"
+              ></path>
+              <path
+                d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e07380; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z"
+                transform="translate(-5.23 -5.58)"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-miterlimit: 10;
+                  stroke-width: 2.5px;
+                "
+              ></path>
+            </g>
+            <g id="Text" style="fill: white">
+              <path
+                d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+              <polygon
+                points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"
+              ></polygon>
+              <path
+                d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+              <path
+                d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+              <path
+                d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+              <path
+                d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+            </g>
+          </svg>
+        </a>
+        <button
+          class="hamburger hamburger--squeeze navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="../register"
+                >Register<span class="sr-only">(current page)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../#workshops">Workshops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Conduct</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://hack-bi-iv-online.devpost.com/"
+                target="_blank"
+                >Last Year</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
     <div class="jumbotron jumbotron-fluid text-center">
-        <div class="text-wrapper">
-            <h1>Register for HackBI</h1>
-        </div>
+      <div class="text-wrapper">
+        <h1>Register for HackBI</h1>
+      </div>
     </div>
 
-    <div class="container container-fluid" style="margin-bottom: 150px;">
-        <div class="row text-center">
-            <div class="col-xs-12 col-md-6">
-                <div class="card text-center mx-auto">
-                    <img src="img/students.jpg" class="card-img-top" width="100%">
-                    <div class="card-body" id="evb">
-                        <h2 class="card-title"><strong>Students</strong></h2>
-                        <button type="button" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#registrationModal" style="margin-top: 12px; margin-bottom: 21px; border-radius: 100px; padding: 12px 50px;">
-                            Register
-                        </button>
-                    </div>
-                </div>
-            </div>
+    <div class="container container-fluid" style="margin-bottom: 150px">
+      <div class="row text-center">
+        <div class="col-xs-12 col-md-6">
+          <div class="card text-center mx-auto">
+            <img src="img/students.jpg" class="card-img-top" width="100%" />
+            <div class="card-body" id="evb">
+              <!-- <div style="display: flex; justify-content: space-between;"> -->
+              <div style="padding: 5px 0 18px 0">
+                <h3
+                  style="
+                    font-weight: bold;
+                    line-height: 1.2;
+                    padding-bottom: 12px;
+                    font-size: 30px;
+                  "
+                >
+                  Student Registration
+                </h3>
+                <span
+                  style="
+                    background-color: #343b3f;
+                    width: 105px;
+                    height: 4px;
+                    margin-left: 3px;
+                    border-radius: 3px;
+                    display: block;
+                  "
+                ></span>
+              </div>
+              <!-- </div> -->
 
-            <div class="col-xs-12 col-md-6">
-                <div class="card text-center mx-auto">
-                    <img src="img/volunteers.jpg" class="card-img-top" width="100%">
-                    <div class="card-body">
-                        <h2 class="card-title"><strong>Adult Volunteers</strong></h2>
-                        
-                        <!--
-                        <h2 class="card-title"><strong>Adult Volunteers</strong></h2>-->
-                        <!--<h5 style="margin-bottom: 12px; cursor: help; padding-top: 5px;" title="Chaperones supervise students in various locations at the event">Chaperones</h5>
-                        <a href="https://www.signupgenius.com/go/60B054DAAAA2CA6FF2-hack1" target="_blank">
-				<img src="https://www.signupgenius.com/images/sign-up-now2.gif" width="250" height="45" border="0" alt="Sign Up!"></a>
-                        </a>-->
-                        <hr>
-                        <h5 style="margin-bottom: 0; cursor: help;" title="Judges attend student presentations on the final day and choose the best projects to receive prizes">Judges</h5>
-                        <a href="https://www.signupgenius.com/go/60B054DAAAA2CA6FF2-mentors" target="_blank">
-				<img src="https://www.signupgenius.com/images/sign-up-now2.gif" width="250" height="45" border="0" alt="Sign Up!">
-			    </a>
-                        <hr>
-                        <h5 style="margin-bottom: 0; cursor: help;" title="Mentors are available to students to offer technical guidance and advice">Mentors</h5>
-                        <a href="https://www.signupgenius.com/go/60B054DAAAA2CA6FF2-hack2" target="_blank">
-				<img src="https://www.signupgenius.com/images/sign-up-now2.gif" width="250" height="45" border="0" alt="Sign Up!">
-			    </a>
-			<!--<h5 style="margin-bottom: 0; cursor: help; padding-top: 5px;" title="Mentors and Judges">Mentors & Judges</h5>
-			<button type="button" class="btn btn-lg btn-dark" data-toggle="modal" data-target="#volunteerModal" style="margin-top: 12px; margin-bottom: 15px; border-radius: 100px; line-height: 1.3; width: 80%; font-size: 13pt;">
-                            Be notified when signups&nbsp;open
-                        </button>-->
-                        
-                    </div>
-                </div>
+              <div>
+                <form
+                  action="https://www.eventbrite.com/e/hackbi-v-tickets-170551708752"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style="
+                    border-radius: 3px;
+                    padding-top: 15px;
+                    font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial,
+                      sans-serif;
+                  "
+                >
+                  <input type="submit" value="Eventbrite Registration" />
+                </form>
+              </div>
+
+              <!-- Noscript content for added SEO -->
+              <!-- <noscript><a href="https://www.eventbrite.com/e/hackbi-v-tickets-170551708752" rel="noopener noreferrer" target="_blank"></noscript> -->
+              <!-- You can customize this button any way you like -->
+
+              <!-- <button id="eventbrite-widget-modal-trigger-124010377377" class="btn btn-danger" style="margin-top: 4px; width: 150px; padding-top: 12px;" type="button"><strong>Eventbrite Registration</strong></button>
+                            <noscript></a>Buy Tickets on Eventbrite</noscript>
+
+                            <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+                            <script type="text/javascript">
+                                var exampleCallback = function() {
+                                    console.log('Order complete!');
+                            };
+
+                            window.EBWidgets.createWidget({
+                                    widgetType: 'checkout',
+                                    eventId: '124010377377',
+                                    modal: true,
+                                    modalTriggerElementId: 'eventbrite-widget-modal-trigger-124010377377',
+                                    onOrderComplete: exampleCallback
+                                });
+                            </script> -->
+
+              <br /><br /><br />
+
+              <div style="padding: 5px 0 18px 0">
+                <h3
+                  style="
+                    font-weight: bold;
+                    line-height: 1.2;
+                    padding-bottom: 12px;
+                    display: flex;
+                    font-size: 26px;
+                  "
+                >
+                  Forms
+                </h3>
+                <span
+                  style="
+                    background-color: #343b3f;
+                    width: 105px;
+                    height: 4px;
+                    margin-left: 3px;
+                    border-radius: 3px;
+                    display: block;
+                  "
+                ></span>
+              </div>
+
+              <br />
+              <h3>Print, fill out, and bring form(s) to the hackathon</h3>
+              <br />
+              <div>
+                <a
+                  href="registration_forms/iretonForm.pdf"
+                  target="_blank"
+                  rel="nofollow"
+                  style="color: #007bff; display: block"
+                  download="HackBI_ParentPermissionsForm"
+                  >Parent Permissions Form</a
+                >
+              </div>
+              <hr style="width: 220px" />
+
+              <br />
+              <h3>
+                Non-Ireton students have to fill out the following forms as
+                well:
+              </h3>
+              <br />
+              <div>
+                <a
+                  href="registration_forms/guestForm.pdf"
+                  target="_blank"
+                  rel="nofollow"
+                  style="color: #007bff; display: block"
+                  download="HackBI_GuestForm"
+                  >Guest Form</a
+                >
+              </div>
+              <hr style="width: 220px" />
+              <br />
+              <div>
+                <a
+                  href="registration_forms/covidForm.pdf"
+                  target="_blank"
+                  rel="nofollow"
+                  style="color: #007bff; display: block"
+                  download="HackBI_CovidForm"
+                  >Covid Form</a
+                >
+              </div>
+              <hr style="width: 220px" />
+              <br />
+              <div>
+                <a
+                  href="registration_forms/emergencyForm.pdf"
+                  target="_blank"
+                  rel="nofollow"
+                  style="color: #007bff; display: block"
+                  download="HackBI_EmergencyCareForm"
+                  >Emergency Care Form</a
+                >
+              </div>
+              <hr style="width: 220px" />
             </div>
+          </div>
         </div>
 
-        <div class="modal fade" id="registrationModal" tabindex="-1" role="dialog"
-    aria-labelledby="Pre-registration Dialog" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div style="display: flex; justify-content: space-between;">
-                            <div style="padding: 5px 0 18px 0;">
-                                <h3 style="font-weight: bold; line-height: 1.2; padding-bottom: 12px;" class="modal-title">Student Registration</h3>
-                                <span style="background-color: #343b3f; width: 105px; height: 4px; margin-left: 3px; border-radius: 3px; display: block;"></span>
-                            </div>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="modal-close" style="align-self: flex-start; outline: none !important;">
-                                <svg viewBox="0 0 40 40" class="close-btn">
-                                    <path d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="modal-body-main">
-                            <h3 style="padding-top: 12px">1. Click to register for a spot.</h3>
-                            <!-- Noscript content for added SEO -->
-				<noscript><a href="https://www.eventbrite.com/e/hack-bi-iv-tickets-124010377377" rel="noopener noreferrer" target="_blank"></noscript>
-					<!-- You can customize this button any way you like -->
-				<button id="eventbrite-widget-modal-trigger-124010377377" class="btn btn-danger" style="margin-top: 4px; width: 150px" type="button"><strong>Register</strong></button>
-				<noscript></a>Buy Tickets on Eventbrite</noscript>
+        <div class="col-xs-12 col-md-6">
+          <div class="card text-center mx-auto">
+            <img src="img/volunteers.jpg" class="card-img-top" width="100%" />
+            <div class="card-body">
+              <div style="padding: 5px 0 18px 0">
+                <h3
+                  style="
+                    font-weight: bold;
+                    line-height: 1.2;
+                    padding-bottom: 12px;
+                    font-size: 30px;
+                  "
+                >
+                  Adult Registration
+                </h3>
+                <span
+                  style="
+                    background-color: #343b3f;
+                    width: 105px;
+                    height: 4px;
+                    margin-left: 3px;
+                    border-radius: 3px;
+                    display: block;
+                  "
+                ></span>
+              </div>
+              <h3>Sign-up to be a judge, mentor, or adult volunteer!</h3>
+              <br />
+              <div style="padding: 5px 0 18px 0">
+                <h3
+                  style="
+                    font-weight: bold;
+                    line-height: 1.2;
+                    padding-bottom: 12px;
+                    display: flex;
+                    font-size: 26px;
+                  "
+                >
+                  Judges
+                </h3>
+                <span
+                  style="
+                    background-color: #343b3f;
+                    width: 105px;
+                    height: 4px;
+                    margin-left: 3px;
+                    border-radius: 3px;
+                    display: block;
+                  "
+                ></span>
+              </div>
+              <h6>
+                Attend student presentations on the final day and choose the
+                best projects to receive prizes
+              </h6>
+              <br />
+              <a
+                href="https://www.signupgenius.com/go/10C0C4DA9A72DABF9CF8-hack3"
+                target="_blank"
+              >
+                <img
+                  src="https://www.signupgenius.com/images/sign-up-now2.gif"
+                  width="250"
+                  height="45"
+                  border="0"
+                  alt="Sign Up!"
+                />
+              </a>
+              <br />
+              <br />
+              <div style="padding: 5px 0 18px 0">
+                <h3
+                  style="
+                    font-weight: bold;
+                    line-height: 1.2;
+                    padding-bottom: 12px;
+                    display: flex;
+                    font-size: 26px;
+                  "
+                >
+                  Mentors
+                </h3>
+                <span
+                  style="
+                    background-color: #343b3f;
+                    width: 105px;
+                    height: 4px;
+                    margin-left: 3px;
+                    border-radius: 3px;
+                    display: block;
+                  "
+                ></span>
+              </div>
+              <h6>
+                Be available to students and offer technical guidance and advice
+              </h6>
+              <br />
+              <a
+                href="https://www.signupgenius.com/go/10C0C4DA9A72DABF9CF8-hack1"
+                target="_blank"
+              >
+                <img
+                  src="https://www.signupgenius.com/images/sign-up-now2.gif"
+                  width="250"
+                  height="45"
+                  border="0"
+                  alt="Sign Up!"
+                />
+              </a>
 
-				<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-
-				<script type="text/javascript">
-    				var exampleCallback = function() {
-        				console.log('Order complete!');
-   				 };
-
-   				 window.EBWidgets.createWidget({
-        				widgetType: 'checkout',
-        				eventId: '124010377377',
-       					 modal: true,
-        				modalTriggerElementId: 'eventbrite-widget-modal-trigger-124010377377',
-        				onOrderComplete: exampleCallback
-    				});
-				</script>
-				
-                            <hr style="width: 180px;">
-
-                             <h3>2. Please fill out this agreement form</h3>
-                            <div id="forms-prompt">
-                                <!--<h6>Are you a Bishop Ireton student?</h6>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-light" id="forms-yes">Yes</button>
-                                    <button type="button" class="btn btn-light" id="forms-no">No</button>
-                                </div>-->
-                            </div>
-
-                            <!--<div id="bi-student" style="display: none">
-                                <a href="BI Student Forms.pdf" target="_blank" rel="nofollow" style="color: #007bff; display: block;">Permission & Emergency Care form</a>
-                            </div>-->
-
-                            <div>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScu37E2Qoq0DOp1lKieQtjDfqZc9RD6s6TUj7Pqt0zEnoeSxw/viewform?usp=sf_link" target="_blank" rel="nofollow" style="color: #007bff; display: block;">Parent Acknowledgement Form</a>
-                            </div>
-				
-                            <hr style="width: 220px;">
-
-                        <!--    <h3>3. Forms</h3>
-			   <h6>As we have switched to a fully online format, the only form that is needed to submitted is the form above. If you had previously had recorded the previous forms, they are no longer needed.</h6>
-				<!--<h6 class="text-muted">Please upload a single PDF file with the name: "LastName_FirstName"</h6>
-                            <div class="content">
-                                <label for="file-1" style="width: 90%">
-                                    <div class="box" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragenter="dragEnterHandler(event);" ondragleave="dragLeaveHandler(event);">
-                                        <input type="file" id="file-1" class="inputfile" accept="application/pdf">
-                                        <label style="margin-top: 100px;" for="file-1">
-                                            <div class="btn btn-danger" id="filebutton" for="file-1">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="4 -1 18 24" height="22px"> <!-- This svg under Apache 2.0 license -->
-                                                    <!--<path d="m5 20c0 .55.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1h-12c-.55 0-1 .45-1 1zm2.41-10h1.59v5c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-5h1.59c.89 0 1.34-1.08.71-1.71l-4.59-4.59c-.39-.39-1.02-.39-1.41 0l-4.59 4.59c-.63.63-.19 1.71.7 1.71z"/>
-                                                </svg>
-                                                <b>Choose or drop a file…</b>
-                                            </div>
-                                        </label>
-                                    </div>
-				
-                                </label>-->
-
-                                <!--<template id="file-template" style="display: none">
-                                    <div class="file" data-file-size="" data-file-name="">
-                                        <div class="name"></div>
-                                        <svg viewBox="0 0 40 40" class="x" title="Remove file">
-                                            <path d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
-                                        </svg>
-                                        <script>
-                                            xBind();
-                                        </script>
-                                    </div>
-                                </template>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer text-left">
-                        <!--<p style="font-size: 14.5px; margin-top: 0; color: rgb(113, 113, 113); position: absolute; left: 30px; max-width: 65%;">
-                            You may register and return here when your forms are completed
-                        </p>-->
-			<!--
-                        <button type="button" class="btn btn-danger" id="submitbtn" onclick="doSubmit();">Submit</button>
-
-			-->
-                    </div>
-                    </div>
-                </div>
+              <br />
+              <br />
+              <div style="padding: 5px 0 18px 0">
+                <h3
+                  style="
+                    font-weight: bold;
+                    line-height: 1.2;
+                    padding-bottom: 12px;
+                    display: flex;
+                    font-size: 26px;
+                  "
+                >
+                  Adult Volunteers
+                </h3>
+                <span
+                  style="
+                    background-color: #343b3f;
+                    width: 105px;
+                    height: 4px;
+                    margin-left: 3px;
+                    border-radius: 3px;
+                    display: block;
+                  "
+                ></span>
+              </div>
+              <h6>Supervise and monitor students</h6>
+              <br />
+              <a
+                href="https://www.signupgenius.com/go/10C0C4DA9A72DABF9CF8-hack2"
+                target="_blank"
+              >
+                <img
+                  src="https://www.signupgenius.com/images/sign-up-now2.gif"
+                  width="250"
+                  height="45"
+                  border="0"
+                  alt="Sign Up!"
+                />
+              </a>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="modal fade" id="volunteerModal" tabindex="-1" role="dialog"
-    aria-labelledby="Pre-registration Dialog for Volunteers" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document" style="max-wdith: 650px;">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div style="display: flex; justify-content: space-between;">
-                            <div style="padding: 5px 0 18px 0;">
-                                <h3 style="font-weight: bold; line-height: 1.2; padding-bottom: 12px;" class="modal-title">We'll let you know when volunteer registration&nbsp;opens</h3>
-                                <span style="background-color: #343b3f; width: 105px; height: 4px; margin-left: 3px; border-radius: 3px; display: block;"></span>
-                            </div>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="modal-close" style="align-self: flex-start; outline: none !important;">
-                                <svg viewBox="0 0 40 40" class="close-btn">
-                                    <path d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <form>
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input id="namef" class="form-control field" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <label>Email Address</label>
-                                <input id="emailf" class="form-control field" placeholder="Email">
-                            </div>
-                        </form>
-                        <button id="volbtnsubmit" class="btn btn-dark" type="submit" onclick="if(validateField({field:$('#namef'),type:'name'}) && validateField({field:$('#emailf'),type:'email'})) { volNotifSubmit() }; return false;" style="border-radius: 50px; margin: 24px auto 0 auto; padding: 8px 40px; display: block;">Submit</button>
-                    </div>
+      <div
+        class="modal fade"
+        id="volunteerModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="Pre-registration Dialog for Volunteers"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-lg modal-dialog-centered"
+          role="document"
+          style="max-width: 650px"
+        >
+          <div class="modal-content">
+            <div class="modal-body">
+              <div style="display: flex; justify-content: space-between">
+                <div style="padding: 5px 0 18px 0">
+                  <h3
+                    style="
+                      font-weight: bold;
+                      line-height: 1.2;
+                      padding-bottom: 12px;
+                    "
+                    class="modal-title"
+                  >
+                    We'll let you know when volunteer registration&nbsp;opens
+                  </h3>
+                  <span
+                    style="
+                      background-color: #343b3f;
+                      width: 105px;
+                      height: 4px;
+                      margin-left: 3px;
+                      border-radius: 3px;
+                      display: block;
+                    "
+                  ></span>
                 </div>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  id="modal-close"
+                  style="align-self: flex-start; outline: none !important"
+                >
+                  <svg viewBox="0 0 40 40" class="close-btn">
+                    <path d="M 10,10 L 30,30 M 30,10 L 10,30"></path>
+                  </svg>
+                </button>
+              </div>
+              <form>
+                <div class="form-group">
+                  <label>Name</label>
+                  <input
+                    id="namef"
+                    class="form-control field"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input
+                    id="emailf"
+                    class="form-control field"
+                    placeholder="Email"
+                  />
+                </div>
+              </form>
+              <button
+                id="volbtnsubmit"
+                class="btn btn-dark"
+                type="submit"
+                onclick="if(validateField({field:$('#namef'),type:'name'}) && validateField({field:$('#emailf'),type:'email'})) { volNotifSubmit() }; return false;"
+                style="
+                  border-radius: 50px;
+                  margin: 24px auto 0 auto;
+                  padding: 8px 40px;
+                  display: block;
+                "
+              >
+                Submit
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="footer">
-        <div class="container text-center">
-            <a href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314" target="_blank" rel="nofollow" style="display: block;">
-                Bishop Ireton High School
-            </a>
-            <a href="conduct" rel="nofollow" style="display: block; margin: 8px;">Conduct</a>
-            <a class="social" href="https://www.facebook.com/officialhackbi/" target="_blank" rel="noopener">
-                <img src="img/facebook.svg" title="Facebook">
-            </a>
-            <a class="social" href="https://www.instagram.com/hackbiofficial/" target="_blank" rel="noopener">
-                <img src="img/instagram.svg" title="Instagram">
-            </a>
-            <a class="social" href="https://www.twitter.com/HackBIOfficial" target="_blank" rel="noopener">
-                <img src="img/twitter.svg" title="Twitter">
-            </a>
-            <a class="social" href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" target="_blank" rel="noopener">
-                <img src="img/snapchat.svg" title="Snapchat">
-            </a>
-            <a class="social" href="https://youtu.be/EZ1UAPTvYns" target="_blank" rel="noopener">
-                <img src="img/youtube.svg" title="YouTube">
-            </a>
-            <p style="padding-top: 18px; font-size: 13px;">
-                © 2021 HackBI
-            </p>
-        </div>
+      <div class="container text-center">
+        <a
+          href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314"
+          target="_blank"
+          rel="nofollow"
+          style="display: block"
+        >
+          Bishop Ireton High School
+        </a>
+        <a href="conduct" rel="nofollow" style="display: block; margin: 8px"
+          >Conduct</a
+        >
+        <a
+          class="social"
+          href="https://www.facebook.com/officialhackbi/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/facebook.svg" title="Facebook" />
+        </a>
+        <a
+          class="social"
+          href="https://www.instagram.com/hackbiofficial/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/instagram.svg" title="Instagram" />
+        </a>
+        <a
+          class="social"
+          href="https://www.twitter.com/HackBIOfficial"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/twitter.svg" title="Twitter" />
+        </a>
+        <a
+          class="social"
+          href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/snapchat.svg" title="Snapchat" />
+        </a>
+        <a
+          class="social"
+          href="https://youtu.be/EZ1UAPTvYns"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/youtube.svg" title="YouTube" />
+        </a>
+        <p style="padding-top: 18px; font-size: 13px">© 2021 HackBI</p>
+      </div>
     </div>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
     <script type="text/javascript" src="common.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script defer>
-        $('#forms-yes').click(() => {
-            $('#forms-prompt').hide();
-            $('#bi-student').show();
+      $("#forms-yes").click(() => {
+        $("#forms-prompt").hide();
+        $("#bi-student").show();
+      });
+      $("#forms-no").click(() => {
+        $("#forms-prompt").hide();
+        $("#non-bi-student").show();
+      });
+      function xBind() {
+        $(".x").unbind("click");
+        $(".x").one("click", function () {
+          var fileName = $(this).parent().attr("data-file-name");
+          var fileSize = $(this).parent().attr("data-file-size");
+          for (var i = 0; i < uploaded_files.length; i++) {
+            if (
+              uploaded_files[i].file.name == fileName &&
+              uploaded_files[i].file.size == fileSize
+            ) {
+              uploaded_files.splice(i, 1);
+              break;
+            }
+          }
+          $(this).parent().remove();
         });
-        $('#forms-no').click(() => {
-            $('#forms-prompt').hide();
-            $('#non-bi-student').show();
-        });
-        function xBind() {
-            $('.x').unbind("click");
-            $('.x').one("click", function () {
-                var fileName = $(this).parent().attr('data-file-name');
-                var fileSize = $(this).parent().attr('data-file-size');
-                for (var i=0; i<uploaded_files.length; i++) {
-                    if ((uploaded_files[i].file.name == fileName) && (uploaded_files[i].file.size == fileSize)) {
-                        uploaded_files.splice(i, 1);
-                        break;
-                    }
-                }
-                $(this).parent().remove();
+      }
+
+      function renamePrompt() {
+        var ih = $("#registrationModal .modal-body").height();
+        $("#registrationModal .modal-title").text("One last thing");
+        $("#modal-close").prop("disabled", "true");
+        $("#registrationModal .modal-footer p").remove();
+        $("#registrationModal .modal-body").css("text-align", "left");
+        $("#registrationModal .modal-body-main").css("text-align", "left");
+        $("#registrationModal .modal-body-main").html(
+          '<p>In order to identify your files, we need to rename them using your name</p><form><div class="form-group"><label>Enter your name</label><input class="form-control" placeholder="First and last name" id="rename-field"><div class="invalid-feedback">Please provide a valid full name (only letters, spaces and hyphens are allowed)</div><small class="form-text text-muted">Use the same name you used to register</small></div></form>'
+        );
+        $("#registrationModal").data("bs.modal")._config.backdrop = "static";
+        var fh = $("#registrationModal .modal-body").outerHeight();
+        $("#registrationModal .modal-body").outerHeight(ih);
+        $("#registrationModal .modal-body").animate({ height: fh });
+      }
+
+      pattern = new RegExp("[a-zA-Z-]{2,}\_[a-zA-Z-]{2,}.+");
+      var prompted = false;
+      function doSubmit() {
+        if (prompted) {
+          if (validateField({ field: $("#rename-field"), type: "name" })) {
+            var fileName = $("#rename-field").val().replace(/\s/g, "_");
+            for (var i = 0; i < uploaded_files.length; i++) {
+              uploaded_files[i].name = `${fileName} (${i + 1})`;
+            }
+            doPost();
+          }
+        } else {
+          for (var file of uploaded_files) {
+            if (!pattern.test(file.name)) {
+              renamePrompt();
+              prompted = true;
+              return;
+            }
+          }
+          doPost();
+        }
+      }
+
+      uploaded_files = [];
+      ajax_responses = 0;
+      ajax_response = null;
+      $("#file-1").change(function () {
+        if (uploaded_files.length > 0) {
+          return;
+        }
+        for (var i = 0; i < this.files.length; i++) {
+          var temp = $($("#file-template").html());
+          temp.attr("data-file-size", this.files[i].size);
+          temp.attr("data-file-name", this.files[i].name);
+          temp.find(".name").text(this.files[i].name);
+          temp.appendTo($(".content"));
+          uploaded_files.push({
+            name: this.files[i].name,
+            file: this.files[i],
+          });
+        }
+      });
+      function dropHandler(ev) {
+        ev.preventDefault();
+        $("#filebutton").css("display", "block");
+        $(".box").css("border-color", "#df888c");
+        $(".box").css("background-color", "rgba(240, 220, 222, .4)");
+        if (ev.dataTransfer.items) {
+          for (var i = 0; i < ev.dataTransfer.items.length; i++) {
+            if (ev.dataTransfer.items[i].kind === "file") {
+              var file = ev.dataTransfer.items[i].getAsFile();
+              var temp = $($("#file-template").html());
+              temp.attr("data-file-size", file.size);
+              temp.attr("data-file-name", file.name);
+              temp.find(".name").text(file.name);
+              temp.appendTo($(".content"));
+              uploaded_files.push({ name: file.name, file: file });
+            }
+          }
+        } else {
+          for (var i = 0; i < ev.dataTransfer.files.length; i++) {
+            var temp = $($("#file-template").html());
+            temp.attr("data-file-size", ev.dataTransfer.files[i].size);
+            temp.attr("data-file-name", ev.dataTransfer.files[i].name);
+            temp.find(".name").text(ev.dataTransfer.files[i].name);
+            temp.appendTo($(".content"));
+            uploaded_files.push({
+              name: ev.dataTransfer.files[i].name,
+              file: ev.dataTransfer.files[i],
             });
+          }
         }
+      }
+      function dragOverHandler(ev) {
+        ev.preventDefault();
+      }
+      function dragEnterHandler(ev) {
+        $("#filebutton").css("display", "none");
+        $(".box").css("border-color", "#df888ca1");
+        $(".box").css("background-color", "rgba(240, 220, 222, .2)");
+      }
+      function dragLeaveHandler(ev) {
+        $("#filebutton").css("display", "block");
+        $(".box").css("border-color", "#df888c");
+        $(".box").css("background-color", "rgba(240, 220, 222, .4)");
+      }
 
-        function renamePrompt() {
-            var ih = $("#registrationModal .modal-body").height();
-            $("#registrationModal .modal-title").text("One last thing");
-            $('#modal-close').prop('disabled','true');
-            $("#registrationModal .modal-footer p").remove();
-            $("#registrationModal .modal-body").css('text-align','left');
-            $("#registrationModal .modal-body-main").css('text-align','left');
-            $("#registrationModal .modal-body-main").html('<p>In order to identify your files, we need to rename them using your name</p><form><div class="form-group"><label>Enter your name</label><input class="form-control" placeholder="First and last name" id="rename-field"><div class="invalid-feedback">Please provide a valid full name (only letters, spaces and hyphens are allowed)</div><small class="form-text text-muted">Use the same name you used to register</small></div></form>');
-            $('#registrationModal').data('bs.modal')._config.backdrop = 'static';
-            var fh = $("#registrationModal .modal-body").outerHeight();
-            $("#registrationModal .modal-body").outerHeight(ih);
-            $("#registrationModal .modal-body").animate({height: fh});
-        }
+      function doPost() {
+        $("#submitbtn").prop("disabled", "true");
+        try {
+          for (var i = 0; i < uploaded_files.length; i++) {
+            var fr = new FileReader();
+            var file = uploaded_files[i].file;
+            fr.fileName = uploaded_files[i].name;
 
-        pattern = new RegExp('[a-zA-Z-]{2,}\_[a-zA-Z-]{2,}.+');
-        var prompted = false;
-        function doSubmit() {
-            if (prompted) {
-                if (validateField({field:$('#rename-field'),type:'name'})) {
-                    var fileName = $('#rename-field').val().replace(/\s/g,"_");
-                    for (var i=0; i<uploaded_files.length; i++) {
-                        uploaded_files[i].name = `${fileName} (${i+1})`;
-                    }
-                    doPost();
-                }
-            } else {
-                for (var file of uploaded_files) {
-                    if (!(pattern.test(file.name))) {
-                        renamePrompt();
-                        prompted = true;
-                        return;
-                    }
-                }
-                doPost();
-            }
-        }
+            var data;
+            var mimetype;
+            var filename;
 
-        uploaded_files = [];
-        ajax_responses = 0;
-        ajax_response = null;
-        $("#file-1").change(function() {
-		if (uploaded_files.length > 0) {
-                return;
-            }
-            for (var i=0; i<this.files.length; i++) {
-                var temp = $($('#file-template').html());
-                temp.attr('data-file-size', this.files[i].size);
-                temp.attr('data-file-name', this.files[i].name);
-                temp.find('.name').text(this.files[i].name);
-                temp.appendTo($('.content'));
-                uploaded_files.push({"name":this.files[i].name, "file":this.files[i]});
-            }
-        });
-        function dropHandler(ev) {
-            ev.preventDefault();
-            $('#filebutton').css('display','block');
-            $('.box').css('border-color','#df888c');
-            $('.box').css('background-color','rgba(240, 220, 222, .4)');
-            if (ev.dataTransfer.items) {
-                for (var i=0; i<ev.dataTransfer.items.length; i++) {
-                    if (ev.dataTransfer.items[i].kind === 'file') {
-                        var file = ev.dataTransfer.items[i].getAsFile();
-                        var temp = $($('#file-template').html());
-                        temp.attr('data-file-size', file.size);
-                        temp.attr('data-file-name', file.name);
-                        temp.find('.name').text(file.name);
-                        temp.appendTo($('.content'));
-                        uploaded_files.push({"name":file.name, "file":file});
-                    }
-                }
-            } else {
-                for (var i=0; i<ev.dataTransfer.files.length; i++) {
-                    var temp = $($('#file-template').html());
-                    temp.attr('data-file-size', ev.dataTransfer.files[i].size);
-                    temp.attr('data-file-name', ev.dataTransfer.files[i].name);
-                    temp.find('.name').text(ev.dataTransfer.files[i].name);
-                    temp.appendTo($('.content'));
-                    uploaded_files.push({"name":ev.dataTransfer.files[i].name, "file":ev.dataTransfer.files[i]});
-                }
-            }
-        }
-        function dragOverHandler(ev) {
-            ev.preventDefault();
-        }
-        function dragEnterHandler(ev) {
-            $('#filebutton').css('display','none');
-            $('.box').css('border-color','#df888ca1');
-            $('.box').css('background-color','rgba(240, 220, 222, .2)');
-        }
-        function dragLeaveHandler(ev) {
-            $('#filebutton').css('display','block');
-            $('.box').css('border-color','#df888c');
-            $('.box').css('background-color','rgba(240, 220, 222, .4)');
-        }
-        
-        function doPost() { 
-            $('#submitbtn').prop('disabled','true');
-            try {
-                for (var i=0; i<uploaded_files.length; i++) {
-                    var fr = new FileReader();
-                    var file = uploaded_files[i].file;
-                    fr.fileName = uploaded_files[i].name;
-                
-                    var data;
-                    var mimetype;
-                    var filename;
-            
-                    fr.onloadend = function(e) {
-                        data = e.target.result.replace(/^.*,/, '');
-                        mimetype = e.target.result.match(/^.*(?=;)/)[0];
-                        filename = e.target.fileName;
-            
-                        var fd = new FormData();
-                        fd.append('data', data);
-                        fd.append('mimetype', mimetype);
-                        fd.append('filename', filename);
-                    
-                        ajax_response = $.ajax({
-                            type: 'POST',
-                            url: 'https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=forms',
-                            data: fd,
-                            crossDomain: true,
-                            contentType: false,
-                            dataType: 'text/javascript',
-                            processData: false,
-                            beforeSend: function() {
-                                $('#submitbtn').prop('disabled','true');
-                                $('#submitbtn').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="padding: 7px"></span>&ensp;Working..');
-                            },
-                            statusCode: {
-                                200: function() {
-                                    ajax_responses++;
-                                    if (ajax_responses == uploaded_files.length) {
-                                        $('#submitbtn').html('<span class="check"></span>&ensp;Success');
-                                        $('.file').remove();
-                                        uploaded_files.length = 0;
-                                        ajax_responses = 0;
-                                        setTimeout(function() {
-                                            $('#registrationModal').modal('hide');
-                                        }, 1000);
-                                        setTimeout(function() {
-                                            location.reload();
-                                        }, 5000);
-                                    }
-                                }
-                            }
-                        });
-                    }
-                    fr.readAsDataURL(file);
-                }
-            } catch(e) {
-                alert("Something didn't work quite right. Check your connection and try again.");
-                console.log(e);
-            }
-        }
+            fr.onloadend = function (e) {
+              data = e.target.result.replace(/^.*,/, "");
+              mimetype = e.target.result.match(/^.*(?=;)/)[0];
+              filename = e.target.fileName;
 
-        function volNotifSubmit() {
-            $('#volbtnsubmit').prop('disabled', 'true');
-            var name = escape($('#namef').val().replace(/\s/g, "+"));
-            var email = escape($('#emailf').val().replace(/\s/g, "+"));
-            
-            $.ajax({
-                'type': 'POST',
-                'url': `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=volunteerPreregister&name=${name}&email=${email}`,
+              var fd = new FormData();
+              fd.append("data", data);
+              fd.append("mimetype", mimetype);
+              fd.append("filename", filename);
+
+              ajax_response = $.ajax({
+                type: "POST",
+                url: "https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=forms",
+                data: fd,
                 crossDomain: true,
                 contentType: false,
-                dataType: 'text/javascript',
+                dataType: "text/javascript",
                 processData: false,
-                beforeSend: function() {
-                    $('#volbtnsubmit').prop('disabled','true');
-                    $('#volbtnsubmit').html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="padding: 7px"></span>&ensp;Working..');
+                beforeSend: function () {
+                  $("#submitbtn").prop("disabled", "true");
+                  $("#submitbtn").html(
+                    '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="padding: 7px"></span>&ensp;Working..'
+                  );
                 },
                 statusCode: {
-                    200: function() {
-                        $('#volbtnsubmit').text('Thank you!');
-                        setTimeout(function() {
-                            $('#volunteerModal').modal('hide');
-                        }, 1500);
-                        setTimeout(function() {
-                            location.reload();
-                        }, 5000);
+                  200: function () {
+                    ajax_responses++;
+                    if (ajax_responses == uploaded_files.length) {
+                      $("#submitbtn").html(
+                        '<span class="check"></span>&ensp;Success'
+                      );
+                      $(".file").remove();
+                      uploaded_files.length = 0;
+                      ajax_responses = 0;
+                      setTimeout(function () {
+                        $("#registrationModal").modal("hide");
+                      }, 1000);
+                      setTimeout(function () {
+                        location.reload();
+                      }, 5000);
                     }
-                }
-            });
+                  },
+                },
+              });
+            };
+            fr.readAsDataURL(file);
+          }
+        } catch (e) {
+          alert(
+            "Something didn't work quite right. Check your connection and try again."
+          );
+          console.log(e);
         }
+      }
+
+      function volNotifSubmit() {
+        $("#volbtnsubmit").prop("disabled", "true");
+        var name = escape($("#namef").val().replace(/\s/g, "+"));
+        var email = escape($("#emailf").val().replace(/\s/g, "+"));
+
+        $.ajax({
+          type: "POST",
+          url: `https://script.google.com/macros/s/AKfycbxK5zr2m51a5ARZdjipIFJ4P3XKkyjM-Yi64VhcalGLLraeetc/exec?function=volunteerPreregister&name=${name}&email=${email}`,
+          crossDomain: true,
+          contentType: false,
+          dataType: "text/javascript",
+          processData: false,
+          beforeSend: function () {
+            $("#volbtnsubmit").prop("disabled", "true");
+            $("#volbtnsubmit").html(
+              '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="padding: 7px"></span>&ensp;Working..'
+            );
+          },
+          statusCode: {
+            200: function () {
+              $("#volbtnsubmit").text("Thank you!");
+              setTimeout(function () {
+                $("#volunteerModal").modal("hide");
+              }, 1500);
+              setTimeout(function () {
+                location.reload();
+              }, 5000);
+            },
+          },
+        });
+      }
     </script>
-</body>
+  </body>
 </html>
