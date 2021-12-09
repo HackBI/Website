@@ -1,160 +1,399 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-81281305-2');
-  </script>
-  <meta name="keywords" content="HackBI, Hack BI, Hack BI III, HackBI III, Hack BI 3, HackBI 3, HackBI 2, Hack BI 2, HackBI II, Hack BI II, Hack, BI, workshops, classes, learn">
-  <meta name="description" content="Workshops at HackBI">
-  <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=0.7, minimum-scale=0.7">
-  <meta name="robots" content="noindex">
-  <link rel="icon" href="img/icon.png">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="workshops.css">
-  <title>Workshops | HackBI</title>
-  <style>
-  .jumbotron {
-    color: white;
-    text-align: center;
-    font: 2rem Jaapokki;
-    background-color: var(--main-color);
-    background-image: url('workshop.jpg');
-    background-position: center;
-	  background-position-y: 40%;
-	  background-size: cover;
-    position: relative;
-    z-index: 1;
-    margin-bottom: 0;
-  }
-
-  .people {
-    color: white;
-    font-family: Montserrat, Metrophobic;
-  	text-align: center;
-  	margin-right: 0;
-    background-color: white;
-  	background-size: cover;
-  }
-
-  .people a {
-    color: white;
-  	font-weight: bold;
-  }
-
-  .people .person {
-    color: black;
-  	text-align: left;
-  	background-color: transparent;
-  	padding: 40px;
-  	margin: 40px 0 40px 0;
-    position: relative;
-    z-index: 2;
-  }
-
-  .people .person h3:first-child {
-  	font-size: 2em;
-  	font-weight: bold;
-  	padding-bottom: 15px;
-  	margin-top: 0;
-  }
-
-  .people .person h3:last-child {
-  	margin-bottom: 0;
-  }
-
-  .people .person .col:last-child {
-    margin-top: 6rem;
-  }
-
-  img {
-    width: 250px;
-    height: 250px;
-  }
-  </style>
-</head>
-<body>
-  <div class="nav">
-    <br/>
-    <ul class="pull-left">
-        <li>
-            <a class='navbar-brand' href="/">
-              <img src="https://raw.githubusercontent.com/maxdodson/-/master/Icon100x100.png" style='height: 20px; width: 20px; margin-top: -16px'>
-            </a>
-          </li>
-      <li><a id="faqLink" href="/#faq">FAQ</a></li>
-			<!--
-			<li><a id="registerLink" href="register">Register</a></li>
-			-->
-      <li><a id="contactLink" href="/#contact">Contact</a></li>
-      <li><a id="meetTeamLink" href="team">Meet the Team</a></li>
-			<li><a id="devpostLink" href="https://hackbi.devpost.com/" target="_blank">Last Year</a></li>
-    </ul>
-  </div>
-
-  <div class="jumbotron">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-12">
-          <br/><br/>
-					<h1>Workshops</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-  <style>
-  
-  </style>
-  
-  <div class="container text-center" style="margin-top: 25px">
-    <img src="https://drive.google.com/uc?export=download&id=1m5sMyI7gib_kixcvlbbjJpUmOrbQMuR_" style="width: 75%; height: 75%"></img>
-    <img src="https://drive.google.com/uc?export=download&id=1OrsSo1R-Tx6HwMq0GqxYnSYp-147qTY4" style="width: 75%; height: 75%"></img>
-  </div>
-
-  <div class="learn-more" id="bottom-bar">
-    <br/><br/><p><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a></p>
-    <p><a href="https://github.com/MLH/mlh-policies/blob/master/data-sharing.md">MLH Data Sharing Provision</a></p>
-    <a href="https://www.facebook.com/HackBI2017/" class="fa fa-facebook make-translucent"></a>
-    <a href="https://www.twitter.com/HackBIOfficial" class="fa fa-twitter make-translucent"></a>
-    <a href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg" class="fa fa-snapchat make-translucent"></a>
-    <a href="https://youtu.be/Nt3Xq3ZB1bc" class="fa fa-youtube make-translucent"></a>
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
-    $(window).scroll(function () {
-      var bottom_of_nav = $(window).scrollTop() + $('.nav').height();
-      var threshold = $(window).height() / 6;
-    
-      if (bottom_of_nav > threshold && ($(window).width() >= 992)) {
-        $('.nav').css({
-          'background-color': '#f4f4f4',
-          'height': '50px',
-          'top': '-7px'
-        });
-        $('.nav li a').css({
-          'color': 'black'
-        });
-      } else if (bottom_of_nav < threshold) {
-        $('.nav').css({
-          'background-color': 'transparent',
-          'height': '60px',
-          'top': '5px'
-        });
-        $('.nav li a').css({
-          'color': 'white'
-        });
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    });
-  </script>
-  
-</body>
+      gtag("js", new Date());
+      gtag("config", "UA-81281305-2");
+    </script>
+    <title>Workshop Schedule - HackBI</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="img/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      html {
+        font-size: 16px;
+      }
+
+      .jumbotron {
+        color: white;
+        text-align: center;
+        background: var(--main-color);
+        background-image: url("img/workshop.jpg");
+        background-position: center;
+        background-position-y: 47%;
+        background-size: cover;
+        height: 20rem;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .center {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+
+      .jumbotron h1 {
+        font-family: Montserrat, Helvetica, "Trebuchet MS", Arial, sans-serif;
+        font-size: 4.2rem;
+        font-weight: bold;
+        text-shadow: 0 0 10px black;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      a:active {
+        color: blue;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+        <style>
+      body {
+        background: white;
+      }
+
+      .row-cell {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 20px 30px;
+        max-width: calc(100% - 10px);
+        margin: 0 auto;
+        transition: all 0.3s ease-in-out;
+      }
+      .row-cell h4 {
+        margin: 0;
+        height: 70px;
+        align-items: center;
+      }
+      .row-cell > img {
+        align-self: flex-start;
+        margin-inline-end: 15px;
+        width: 70px;
+        min-width: 70px;
+        background: white;
+        filter: invert();
+        border-radius: 100px;
+      }
+
+      .row-container {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .row-cell-inset {
+        box-shadow: none !important;
+      }
+
+      @media screen and (max-width: 768.98px) {
+        .panel-container .panel:not(:last-child) {
+          border-bottom: 1px solid rgb(224, 224, 224);
+        }
+        .panel {
+          margin-bottom: 0 !important;
+          margin-top: 0 !important;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .row-container {
+          max-width: 800px;
+        }
+        .row-cell {
+          background-color: rgb(245, 245, 247);
+          border-radius: 4px;
+          box-shadow: 0.5px 3px 8px #e2e2e2;
+        }
+
+        .row-cell-hover:hover {
+          transform: translateX(-1px) translateY(-1px);
+          transition: all 0.2s ease-in-out;
+          box-shadow: 1px 3px 8px #cccccc !important;
+        }
+      }
+    </style>
+
+    <nav
+      class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent"
+      id="navbar-1"
+    >
+      <div class="container" style="max-width: 1200px">
+        <a class="navbar-brand" href="../" title="Scroll to top">
+          <svg
+            id="brand"
+            style="margin-top: 5px"
+            viewBox="0 0 450.56 104.82"
+            height="33"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>HackBI</title>
+            <g id="Icon">
+              <path
+                d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #fff2a6"
+              ></path>
+              <path
+                d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #b45859"
+              ></path>
+              <path
+                d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e4cf38"
+              ></path>
+              <path
+                d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e4cf38"
+              ></path>
+              <path
+                d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #353535"
+              ></path>
+              <path
+                d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e5e5e5"
+              ></path>
+              <path
+                d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e5e5e5"
+              ></path>
+              <path
+                d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44"
+                transform="translate(-5.23 -5.58)"
+                style="fill: none; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z"
+                transform="translate(-5.23 -5.58)"
+                style="fill: #e07380; stroke: #000; stroke-miterlimit: 10"
+              ></path>
+              <path
+                d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z"
+                transform="translate(-5.23 -5.58)"
+                style="
+                  fill: none;
+                  stroke: #000;
+                  stroke-miterlimit: 10;
+                  stroke-width: 2.5px;
+                "
+              ></path>
+            </g>
+            <g id="Text" style="fill: white">
+              <path
+                d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+              <polygon
+                points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"
+              ></polygon>
+              <path
+                d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+              <path
+                d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+              <path
+                d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+              <path
+                d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z"
+                transform="translate(-5.23 -5.58)"
+              ></path>
+            </g>
+          </svg>
+        </a>
+        <button
+          class="hamburger hamburger--squeeze navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../register">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../#workshops">Workshops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../conduct">Conduct</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://hack-bi-iv-online.devpost.com/"
+                target="_blank"
+                >Last Year</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron center">
+      <div class="container container-fluid">
+        <h1>Workshop Schedule</h1>
+      </div>
+    </div>
+
+    <hr style="margin: 50px auto; max-width: 94%" />
+
+    <h3
+      style="
+        font-size: 30px;
+        padding: 20px 20px 10px 20px;
+        margin: 0 auto;
+        font-weight: bold;
+        line-height: 1.3;
+      "
+      id="intro"
+    >
+      Workshop Schedule
+    </h3>
+
+    <div class="schedule">
+      <p>Hello</p>
+    </div>
+    
+    
+    <div class="footer">
+      <div class="container text-center">
+        <a
+          href="https://maps.google.com/?q=Bishop+Ireton+High+School,+201+Cambridge+Rd,+Alexandria,+VA+22314"
+          target="_blank"
+          rel="nofollow"
+          style="display: block"
+        >
+          Bishop Ireton High School
+        </a>
+        <a
+          class="social"
+          href="https://www.facebook.com/officialhackbi/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/facebook.svg" title="Facebook" />
+        </a>
+        <a
+          class="social"
+          href="https://www.instagram.com/hackbiofficial/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/instagram.svg" title="Instagram" />
+        </a>
+        <a
+          class="social"
+          href="https://www.twitter.com/HackBIOfficial"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/twitter.svg" title="Twitter" />
+        </a>
+        <a
+          class="social"
+          href="https://pbs.twimg.com/media/DYX2hoVWsAIMxvN.jpg"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/snapchat.svg" title="Snapchat" />
+        </a>
+        <a
+          class="social"
+          href="https://youtu.be/EZ1UAPTvYns"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="img/youtube.svg" title="YouTube" />
+        </a>
+        <p style="padding-top: 18px; font-size: 13px">© 2021 HackBI</p>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="common.js"></script>
+    <script
+      defer
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    ></script>
+    <script defer src="jquery.lazyloadxt.js"></script>
+  </body>
+
 </html>
