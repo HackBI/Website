@@ -69,73 +69,6 @@
   </head>
 
   <body>
-        <style>
-      body {
-        background: white;
-      }
-
-      .row-cell {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        padding: 20px 30px;
-        max-width: calc(100% - 10px);
-        margin: 0 auto;
-        transition: all 0.3s ease-in-out;
-      }
-      .row-cell h4 {
-        margin: 0;
-        height: 70px;
-        align-items: center;
-      }
-      .row-cell > img {
-        align-self: flex-start;
-        margin-inline-end: 15px;
-        width: 70px;
-        min-width: 70px;
-        background: white;
-        filter: invert();
-        border-radius: 100px;
-      }
-
-      .row-container {
-        max-width: 100%;
-        margin: 0 auto;
-      }
-
-      .row-cell-inset {
-        box-shadow: none !important;
-      }
-
-      @media screen and (max-width: 768.98px) {
-        .panel-container .panel:not(:last-child) {
-          border-bottom: 1px solid rgb(224, 224, 224);
-        }
-        .panel {
-          margin-bottom: 0 !important;
-          margin-top: 0 !important;
-        }
-      }
-
-      @media screen and (min-width: 768px) {
-        .row-container {
-          max-width: 800px;
-        }
-        .row-cell {
-          background-color: rgb(245, 245, 247);
-          border-radius: 4px;
-          box-shadow: 0.5px 3px 8px #e2e2e2;
-        }
-
-        .row-cell-hover:hover {
-          transform: translateX(-1px) translateY(-1px);
-          transition: all 0.2s ease-in-out;
-          box-shadow: 1px 3px 8px #cccccc !important;
-        }
-      }
-    </style>
-
     <nav
       class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent"
       id="navbar-1"
@@ -322,13 +255,44 @@
       "
       id="intro"
     >
-      Workshop Schedule
+      Workshop Dates & Times
     </h3>
-
-    <div class="schedule">
-      <p>Hello</p>
+    <br><br>
+      <div class="selected22">
+      <table border="5" cellspacing="0" align="center">
+        <caption>Hack BI V | January 22-23, 2022</caption>
+        <tr>
+          <td class="jan22" align="center" height="50" width="100" onclick="openDate()">
+            Jan. 22
+          </td>
+          <td class="workshop1"colspan="4" align="center"
+            height="50" width="300">J22 WS1
+          </td>
+        </tr>
+        <tr>
+          <td class="jan23" align="center" height="50" width="100">
+            Jan. 23
+          </td>          
+          <td class="workshop1"colspan="4" align="center"
+            height="50" width="300">J23 WS1
+          </td>
+        </tr>  
+        <br><br><br>
+      </table>
     </div>
     
+
+    <script>
+      function openDate(id) {
+        if (document.querySelector(".jan22").innerHTML) {
+          console.log(document.querySelector(".jan22").innerHTML)
+        }
+        else if (document.querySelector(".jan23").innerHTML) {
+          console.log(document.querySelector(".jan23").innerHTML)
+        }
+        console.log("outside ifs")
+      }
+    </script>
     
     <div class="footer">
       <div class="container text-center">
@@ -384,7 +348,74 @@
       </div>
     </div>
 
-    <script
+    <style>
+      body {
+        background: white;
+      }
+
+      .row-cell {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 20px 30px;
+        max-width: calc(100% - 10px);
+        margin: 0 auto;
+        transition: all 0.3s ease-in-out;
+      }
+      .row-cell h4 {
+        margin: 0;
+        height: 70px;
+        align-items: center;
+      }
+      .row-cell > img {
+        align-self: flex-start;
+        margin-inline-end: 15px;
+        width: 70px;
+        min-width: 70px;
+        background: white;
+        filter: invert();
+        border-radius: 100px;
+      }
+
+      .row-container {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .row-cell-inset {
+        box-shadow: none !important;
+      }
+
+      @media screen and (max-width: 768.98px) {
+        .panel-container .panel:not(:last-child) {
+          border-bottom: 1px solid rgb(224, 224, 224);
+        }
+        .panel {
+          margin-bottom: 0 !important;
+          margin-top: 0 !important;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .row-container {
+          max-width: 800px;
+        }
+        .row-cell {
+          background-color: rgb(245,245,247);
+          border-radius: 4px;
+          box-shadow: 0.5px 3px 8px #e2e2e2;
+        }
+
+        .row-cell-hover:hover {
+          transform: translateX(-1px) translateY(-1px);
+          transition: all 0.2s ease-in-out;
+          box-shadow: 1px 3px 8px #cccccc !important;
+        }
+      }
+    </style>
+
+    <!-- <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
     ></script>
@@ -393,7 +424,7 @@
       defer
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     ></script>
-    <script defer src="jquery.lazyloadxt.js"></script>
+    <script defer src="jquery.lazyloadxt.js"></script> -->
+  
   </body>
-
 </html>
