@@ -220,7 +220,6 @@
             <li class="nav-item">
               <a class="nav-link" href="../conduct">Conduct</a>
             </li>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="../team">Team</a>
             </li>
@@ -252,48 +251,73 @@
         margin: 0 auto;
         font-weight: bold;
         line-height: 1.3;
+        text-align: center;
       "
       id="intro"
     >
       Workshop Dates & Times
     </h3>
-    <br><br>
-      <div class="selected22 table-responsive">
-      <table class="table table-bordered table-striped"  cellspacing="0" align="center">
-        <caption>Hack BI V | January 22-23, 2022</caption>
+    <br /><br />
+    <div
+      style="max-width: 700px; margin: auto"
+      class="selected22 table-responsive"
+      align="center"
+    >
+      <table
+        class="table table-bordered table-striped"
+        cellspacing="0"
+        align="center"
+      >
+        <caption>
+          Hack BI V | January 22-23, 2022
+        </caption>
         <tr>
-          <td class="jan22" align="center" height="50" width="100" onclick="openDate()">
+          <td
+            class="jan22"
+            align="center"
+            height="50"
+            width="100"
+            onclick="openDate()"
+          >
             Jan. 22
           </td>
-          <td class="workshop1"colspan="4" align="center"
-            height="50" width="300">J22 WS1
+          <td
+            class="workshop1"
+            colspan="4"
+            align="center"
+            height="50"
+            width="300"
+          >
+            J22 WS1
           </td>
         </tr>
         <tr>
-          <td class="jan23" align="center" height="50" width="100">
-            Jan. 23
-          </td>          
-          <td class="workshop1"colspan="4" align="center"
-            height="50" width="300">J23 WS1
+          <td class="jan23" align="center" height="50" width="100">Jan. 23</td>
+          <td
+            class="workshop1"
+            colspan="4"
+            align="center"
+            height="50"
+            width="300"
+          >
+            J23 WS1
           </td>
-        </tr>  
-        <br><br><br>
+        </tr>
+        <br /><br /><br />
       </table>
     </div>
-    
 
     <script>
       function openDate(id) {
         if (document.querySelector(".jan22").innerHTML) {
-          console.log(document.querySelector(".jan22").innerHTML)
+          console.log(document.querySelector(".jan22").innerHTML);
+        } else if (document.querySelector(".jan23").innerHTML) {
+          console.log(document.querySelector(".jan23").innerHTML);
         }
-        else if (document.querySelector(".jan23").innerHTML) {
-          console.log(document.querySelector(".jan23").innerHTML)
-        }
-        console.log("outside ifs")
+        console.log("outside ifs");
       }
     </script>
-    
+
     <div class="footer">
       <div class="container text-center">
         <a
@@ -402,7 +426,7 @@
           max-width: 800px;
         }
         .row-cell {
-          background-color: rgb(245,245,247);
+          background-color: rgb(245, 245, 247);
           border-radius: 4px;
           box-shadow: 0.5px 3px 8px #e2e2e2;
         }
@@ -425,6 +449,5 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     ></script>
     <script defer src="jquery.lazyloadxt.js"></script> -->
-  
   </body>
 </html>
