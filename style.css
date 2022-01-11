@@ -41,6 +41,7 @@ body {
   color: black;
   font-family: Lato, Geneva, Helvetica, Verdana, Tahoma, Arial, sans-serif;
   overflow-x: hidden;
+  margin: 0;
 }
 
 a:not(.a-colored),
@@ -808,4 +809,69 @@ a.social :hover {
     opacity: 1;
     transform: none;
   }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup__title {
+  font-size: 36px;
+  margin: 0 0 18px;
+  color: black;
+  font-family: "Montserrat";
+}
+
+.popup__container {
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  padding: 15px;
+}
+
+.popup__image {
+  max-width: 60vw;
+  max-height: 60vh;
+}
+
+.close-button {
+  color: black;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  background: url("./button-close.svg") center center / 100% 100% no-repeat;
+  width: 40px;
+  height: 40px;
+  fill: #000;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.popup-button {
+  margin: 30px;
+  padding: 10px;
+  font-family: inherit;
+}
+
+.popup {
+  transition: visibility 300ms, opacity 300ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
 }

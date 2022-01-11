@@ -17,6 +17,12 @@
   <title>HackBI</title>
   <link rel="icon" href="img/icon.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+  />
   <link rel="stylesheet" href="style.css">
 
   <meta name="keywords" content="HackBI, Hack BI, Hackathon, Hack BI IV, Hack BI 4, Hack BI 2, Hack BI II, Hack BI V,  Hack BI 5, Bishop Ireton">
@@ -143,6 +149,28 @@
       <br>
 
       <h2 id="lead2" class="lead-text">January 22-23, 2022</h2>
+
+      <div class="popup">
+        <div class="popup__container">
+          <button type="button" class="close-button"><i class="fas fa-times-circle"></i></button>
+          <h2 class="popup__title">HackBI V - COVID Update</h2>
+          <img class="popup__image"
+          src="img/popupUpdate.png"
+          alt="HackBI Update">
+        </div>
+      </div>
+
+      <button class="popup-button btn btn-outline-light btn-lg text-nowrap mainbtn" role="button" style="
+        text-shadow: none;
+        background: rgb(148, 0, 0);
+        opacity: 0.87;
+        border-color: #6d0000;
+        color: #ffffff;
+        font-family: 'Lato'
+      ">See Update</button>
+      <br>
+      
+
 	    <!--
       <button onclick="location.href='register'"type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn">Register</button>
       <button onclick="location.href='register'"type="button" class="btn btn-outline-light btn-lg text-nowrap mainbtn">Volunteer</button>
@@ -461,7 +489,7 @@
           </div>
           <div class="qa hideme">
             <h3>What should I bring?</h3>
-            <h4>A computer, charger, and sleeping bag.      
+            <h4>A computer and charger.      
             </h4>
           </div>
           <!--<div class="qa hideme">
@@ -953,7 +981,23 @@
 				map: map
 			});
 		}
-	</script>
+
+    const callButton = document.querySelector('.popup-button');
+    const popup = document.querySelector('.popup');
+    const closeButton = popup.querySelector('.close-button');
+
+    popupToggle = () => {
+      popup.classList.toggle('popup_opened');
+    }
+
+    callButton.addEventListener('click', popupToggle);
+    closeButton.addEventListener('click', popupToggle);
+
+    closeOnBlack = (event) => {
+      if (event.target === event.currentTarget) popupToggle();
+    }
+    popup.addEventListener('click', closeOnBlack);
+  </script>
 	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
 </body>
 
