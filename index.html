@@ -1,177 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"
-    ></script>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81281305-2"></script>
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  <script>
+	  
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag("config", "UA-81281305-2");
-    </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HackBI</title>
-    <link rel="icon" href="img/icon.png" />
-    <link
+    gtag('config', 'UA-81281305-2');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HackBI</title>
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css">
 
-    <meta
-      name="keywords"
-      content="HackBI, Hack BI, Hackathon, Hack BI IV, Hack BI 4, Hack BI 2, Hack BI II, Hack BI V,  Hack BI 5, Bishop Ireton"
-    />
-    <meta
-      name="description"
-      content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!"
-    />
-    <meta name="theme-color" content="#FC4D45" />
-    <meta property="og:title" content="HackBI" />
-    <meta
-      property="og:description"
-      content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!"
-    />
-    <meta property="og:site_name" content="HackBI" />
-    <meta property="og:image" content="img/Icon100.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@hackbiofficial" />
-    <meta name="twitter:title" content="HackBI" />
-    <meta
-      name="twitter:description"
-      content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!"
-    />
-    <meta name="twitter:image" content="img/Icon100.png" />
-  </head>
+  <meta name="keywords" content="HackBI, Hack BI, Hackathon, Hack BI IV, Hack BI 4, Hack BI 2, Hack BI II, Hack BI V,  Hack BI 5, Bishop Ireton">
+  <meta name="description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta name="theme-color" content="#FC4D45">
+  <meta property="og:title" content="HackBI">
+  <meta property="og:description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta property="og:site_name" content="HackBI">
+  <meta property="og:image" content="img/Icon100.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@hackbiofficial">
+  <meta name="twitter:title" content="HackBI">
+  <meta name="twitter:description" content="HackBI is a 24-hour student hackathon at Bishop Ireton HS. Learn something new and collaborate with others to bring your idea to life!">
+  <meta name="twitter:image" content="img/Icon100.png">
+</head>
 
-  <body id="top" data-spy="scroll" data-target="#navbarNav" data-offset="108">
-    <nav
-      class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent"
-      id="navbar-1"
-    >
-      <div class="container" style="max-width: 1200px">
-        <a class="navbar-brand" href="#home" title="Scroll to top">
-          <svg
-            id="brand"
-            style="margin-top: 5px"
-            viewBox="0 0 450.56 104.82"
-            height="33"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>HackBI</title>
-            <g id="Icon">
-              <path
-                d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z"
-                transform="translate(-5.23 -5.58)"
-                style="fill: #fff2a6"
-              ></path>
-              <path
-                d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z"
-                transform="translate(-5.23 -5.58)"
-                style="fill: #b45859"
-              ></path>
-              <path
-                d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5"
-                transform="translate(-5.23 -5.58)"
-                style="fill: #e4cf38"
-              ></path>
-              <path
-                d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26"
-                transform="translate(-5.23 -5.58)"
-                style="fill: #e4cf38"
-              ></path>
-              <path
-                d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26"
-                transform="translate(-5.23 -5.58)"
-                style="fill: none; stroke: #000; stroke-miterlimit: 10"
-              ></path>
-              <path
-                d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73"
-                transform="translate(-5.23 -5.58)"
-                style="fill: #353535"
-              ></path>
-              <path
-                d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z"
-                transform="translate(-5.23 -5.58)"
-                style="fill: none; stroke: #000; stroke-miterlimit: 10"
-              ></path>
-              <path
-                d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16"
-                transform="translate(-5.23 -5.58)"
-                style="fill: #e5e5e5"
-              ></path>
-              <path
-                d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z"
-                transform="translate(-5.23 -5.58)"
-                style="fill: none; stroke: #000; stroke-miterlimit: 10"
-              ></path>
-              <path
-                d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93"
-                transform="translate(-5.23 -5.58)"
-                style="fill: #e5e5e5"
-              ></path>
-              <path
-                d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z"
-                transform="translate(-5.23 -5.58)"
-                style="fill: none; stroke: #000; stroke-miterlimit: 10"
-              ></path>
-              <path
-                d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44"
-                transform="translate(-5.23 -5.58)"
-                style="fill: none; stroke: #000; stroke-miterlimit: 10"
-              ></path>
-              <path
-                d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z"
-                transform="translate(-5.23 -5.58)"
-                style="fill: #e07380; stroke: #000; stroke-miterlimit: 10"
-              ></path>
-              <path
-                d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z"
-                transform="translate(-5.23 -5.58)"
-                style="
-                  fill: none;
-                  stroke: #000;
-                  stroke-miterlimit: 10;
-                  stroke-width: 2.5px;
-                "
-              ></path>
-            </g>
-            <g id="Text" style="fill: white">
-              <path
-                d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z"
-                transform="translate(-5.23 -5.58)"
-              ></path>
-              <polygon
-                points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"
-              ></polygon>
-              <path
-                d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z"
-                transform="translate(-5.23 -5.58)"
-              ></path>
-              <path
-                d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z"
-                transform="translate(-5.23 -5.58)"
-              ></path>
-              <path
-                d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z"
-                transform="translate(-5.23 -5.58)"
-              ></path>
-              <path
-                d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z"
-                transform="translate(-5.23 -5.58)"
-              ></path>
-            </g>
-          </svg>
-        </a>
-        <!--
+<body id="top" data-spy="scroll" data-target="#navbarNav" data-offset="108">
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="navbar-1">
+    <div class="container" style="max-width: 1200px;">
+      <a class="navbar-brand" href="#home" title="Scroll to top">
+        <svg id="brand" style="margin-top: 5px;" viewBox="0 0 450.56 104.82" height="33" xmlns="http://www.w3.org/2000/svg">
+          <title>HackBI</title>
+          <g id="Icon">
+            <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:#fff2a6"></path>
+            <path d="M6.48,85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44-8.65-10.21-21.12-15.8-21.12-15.8C21.31,16.88,6.48,40.31,6.48,40.31Z" transform="translate(-5.23 -5.58)" style="fill:#b45859"></path>
+            <path d="M30.68,50.5s2.9-4.28,7.7-3.56,9.77,6.82,9.59,9.31-.38,4.51-.38,4.51S33.48,64.33,30.68,50.5" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+            <path d="M30.68,50.5s-2.72,10,3.49,12,10.35,2.89,13.42-1.75c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:#e4cf38"></path>
+            <path d="M30.68,50.5s-2.31,9,3.49,12C37,64,44.06,65.33,47.59,60.76c0,0-13.68,3.56-16.91-10.26" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33,18.53,44,20.43,47.77s7,4.15,10.25,2.73" transform="translate(-5.23 -5.58)" style="fill:#353535"></path>
+            <path d="M30.68,50.5s5.12-6.88,12.21-1.64,4.72,8.63,4.7,11.9c0,0,6.85,9.83,15.14,8.41s10.9-7.86,10.35-15.29S64.14,41.44,55.53,43.51,46.7,43.56,45,37.92,36.21,23,24.33,27.33s-6.46,17.21-3.9,20.44A8.89,8.89,0,0,0,30.68,50.5Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95s-1.45-4.51.36-5.16" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+            <path d="M27.26,35.22S38.47,33.33,35,41.33c-1.4,3.26-7,.36-8.14-.95S25.45,35.87,27.26,35.22Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74,2.4.48,3.37-.93,3.18-2.93" transform="translate(-5.23 -5.58)" style="fill:#e5e5e5"></path>
+            <path d="M64.8,56.91s-4.61-11.76-9-2.81c-1.57,3.17,4.14,5.39,5.86,5.74C64,60.32,65,58.91,64.8,56.91Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M48.05,22.12C21.31,16.88,6.48,40.31,6.48,40.31V85.65c1.2,4.37,5.32,8.42,9.58,8.46s38.38,0,38.38,0c.44,0,14.25-4.35,21.51-27.79,3.59-11.58-.62-21.18-6.78-28.44" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M69.17,37.92C73,36.44,71,22.12,67.91,19.53c0,0-11.59-2.25-19.86,2.59C48.05,22.12,60.52,27.71,69.17,37.92Z" transform="translate(-5.23 -5.58)" style="fill:#e07380;stroke:#000;stroke-miterlimit:10"></path>
+            <path d="M93.67,83.67A10.47,10.47,0,0,1,83.21,94.15H17A10.48,10.48,0,0,1,6.48,83.67V17.31A10.48,10.48,0,0,1,17,6.83H83.21A10.47,10.47,0,0,1,93.67,17.31Z" transform="translate(-5.23 -5.58)" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2.5px"></path>
+          </g>
+          <g id="Text" style="fill: white">
+            <path d="M154,14.63h14.61V87.37H154V57H127V87.37H112.41V14.63H127V42.48h27Z" transform="translate(-5.23 -5.58)"></path>
+            <polygon points="206.62 9.16 197.58 9.16 167.03 82.04 182.7 82.04 201.6 39.8 219.01 82.04 234.77 82.04 206.62 9.16"></polygon>
+            <path d="M286.39,32.07C272.2,23,250.8,31.45,250.8,50.86c0,20.34,22.65,28.5,36.42,18.17l9.39,10.64a38.22,38.22,0,0,1-24.21,8.67,37.75,37.75,0,0,1-37.88-37.48c0-20.65,17-37.47,37.88-37.47a38.4,38.4,0,0,1,23.38,8Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M321.39,54l-5.63,5.71V87.27H301.15V14.53h14.61V38l21.39-23.48h19.72L331.3,43l26.2,44.27H340.07Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M388.67,14.63a21.38,21.38,0,0,1,21.4,21.31,20.61,20.61,0,0,1-3.76,12,22,22,0,0,1-13.46,39.48H368.74V14.63Zm-.62,28.79A8.53,8.53,0,0,0,396.5,35a8.34,8.34,0,0,0-8.45-8.21h-6.37V43.42ZM392.64,75a8.78,8.78,0,1,0,0-17.56H382V75Z" transform="translate(-5.23 -5.58)"></path>
+            <path d="M441,29.08V72.82h7.72V87.37H418.52V72.82h7.83V29.08h-7.83V14.53h30.16V29.08Z" transform="translate(-5.23 -5.58)"></path>
+          </g>
+        </svg>
+      </a>
+      <!--
       <a href="register" class="btn btn-light btn-md text-nowrap cta d-md-none a-colored" id="cta-collapsed">
         Register
         <span class="cta-arrow" data-stuff="➝">❯</span>
@@ -668,6 +568,13 @@
               Don't see your question here?
               <a href="#contact" style="color: #f8f8ff">Contact us</a>!
             </h4>
+        <div class="col-12">
+          <div class="qa hideme" style="margin-bottom: 0;">
+            <h3>How is HackBI responding to COVID-19?</h3>
+            <h4>We are going to be a fully in-person event for Hack BI V, all hackers will be required to wear a mask. 
+              We will not be doing an overnight event due to the increase in cases. Instead, hackers will come in on Saturday, go home during the night, and come back Sunday.
+              Hackers are encouraged to continue hacking when they go home.
+              See the update for more information.</h4>
           </div>
 
           <div class="col-12">
@@ -721,39 +628,32 @@
               <h3>When does registration end?</h3>
               <h4>Registration ends October 14, but make sure to sign up plenty before then!</h3>
             </div>
-          --></div>
-          <div class="col-sm-6 col-12" style="display: block">
-            <!-- REMOVE DISPLAY: NONE -->
-            <div class="qa hideme">
-              <h3>Who can attend HackBI?</h3>
-              <h4>
-                HackBI is open to all high schoolers, who will do a full 24
-                hours of hacking, and middle schoolers, who hack for a day.
-                <br /><br />
-                If you're an adult and would like to come, consider
-                <a href="volunteer">volunteering</a>!
-              </h4>
-            </div>
-            <div class="qa hideme">
-              <h3>How much does HackBI cost?</h3>
-              <h4>HackBI is completely free!</h4>
-            </div>
-            <div class="qa hideme">
-              <h3>Are there prizes?</h3>
-              <h4>
-                Of course! There will be prizes for each category given to each
-                individual in a team (4 people max). The grand prize will be a
-                paid summer internship at
-                <a href="https://deciphernow.com/" target="_blank"
-                  >Decipher Technology Studios</a
-                >!
-              </h4>
-            </div>
-            <div class="qa hideme">
-              <h3>What should I bring?</h3>
-              <h4>A computer, charger, and sleeping bag.</h4>
-            </div>
-            <!--<div class="qa hideme">
+          -->
+        </div>
+        <div class="col-sm-6 col-12" style="display: block;"> <!-- REMOVE DISPLAY: NONE -->
+          <div class="qa hideme">
+            <h3>Who can attend HackBI?</h3>
+            <h4>
+              HackBI is open to all high schoolers, who will do a full 24 hours of hacking, and middle schoolers, who hack for a day.
+              <br><br>
+              If you're an adult and would like to come, consider <a href="volunteer">volunteering</a>!
+            </h4>
+          </div>
+          <div class="qa hideme">
+            <h3>How much does HackBI cost?</h3>
+            <h4>HackBI is completely free!</h4>
+          </div>
+		<div class="qa hideme">
+            <h3>Are there prizes?</h3>
+            <h4>Of course! There will be prizes for each category given to each individual in a team (4 people max). The grand prize will be
+              a paid summer internship at <a href="https://deciphernow.com/" target="_blank">Decipher Technology Studios</a>!</h4>
+          </div>
+          <div class="qa hideme">
+            <h3>What should I bring?</h3>
+            <h4>A computer and charger.      
+            </h4>
+          </div>
+          <!--<div class="qa hideme">
             <h3>What about food?</h3>
             <h4>We'll provide lots of food for the event! No need to bring any money for meals.</h4>
           </div>
@@ -1869,18 +1769,53 @@
         <p style="padding-top: 18px; font-size: 13px">© 2021 HackBI</p>
       </div>
     </div>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="common.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <script
-      defer
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    ></script>
-    <script defer src="jquery.lazyloadxt.js"></script>
+  </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script defer src="jquery.lazyloadxt.js"></script>
+
+  <script defer type="text/javascript">
+		var map;
+		function initMap() {
+			map = new google.maps.Map(
+				document.getElementById('map'), {
+					zoom: 16,
+					center: {
+						lat: 38.8092594,
+						lng: -77.0811094
+					},
+					styles: []
+			});
+			var marker = new google.maps.Marker({
+				position: {
+					lat: 38.8092500,
+					lng: -77.0809000
+				},
+				map: map
+			});
+		}
+
+    const callButton = document.querySelector('.popup-button');
+    const popup = document.querySelector('.popup');
+    const closeButton = popup.querySelector('.close-button');
+
+    popupToggle = () => {
+      popup.classList.toggle('popup_opened');
+    }
+
+    callButton.addEventListener('click', popupToggle);
+    closeButton.addEventListener('click', popupToggle);
+
+    closeOnBlack = (event) => {
+      if (event.target === event.currentTarget) popupToggle();
+    }
+    popup.addEventListener('click', closeOnBlack);
+  </script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
+</body>
 
     <script defer type="text/javascript">
       var map;
