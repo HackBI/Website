@@ -960,6 +960,7 @@
       </div>
     </div>
 
+  <!-- old javascript below
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
@@ -1195,5 +1196,52 @@
         });
       }
     </script>
+-->
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script defer src="jquery.lazyloadxt.js"></script>
+
+  <script defer type="text/javascript">
+		var map;
+		function initMap() {
+			map = new google.maps.Map(
+				document.getElementById('map'), {
+					zoom: 16,
+					center: {
+						lat: 38.8092594,
+						lng: -77.0811094
+					},
+					styles: []
+			});
+			var marker = new google.maps.Marker({
+				position: {
+					lat: 38.8092500,
+					lng: -77.0809000
+				},
+				map: map
+			});
+		}
+
+    const callButton = document.querySelector('.popup-button');
+    const popup = document.querySelector('.popup');
+    const closeButton = popup.querySelector('.close-button');
+
+    popupToggle = () => {
+      popup.classList.toggle('popup_opened');
+    }
+
+    callButton.addEventListener('click', popupToggle);
+    closeButton.addEventListener('click', popupToggle);
+
+    closeOnBlack = (event) => {
+      if (event.target === event.currentTarget) popupToggle();
+    }
+    popup.addEventListener('click', closeOnBlack);
+  </script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
   </body>
 </html>
