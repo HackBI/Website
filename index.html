@@ -971,7 +971,7 @@
   <br /><br />
 
 
-  <div class="section contact" style="padding-bottom: 70px; background-color: rgb(245,245,247); padding-top: 60px;">
+<div class="section contact" style="padding-bottom: 70px; background-color: rgb(245,245,247); padding-top: 60px;">
     <h1 id="contact">Contact Us</h1>
     <div class="container contact-container" style="box-shadow: 0 2px 15px rgba(0,10,20,.25); position: relative;">
       <div class="row">
@@ -980,20 +980,23 @@
         </div>
         <div class="col-xs-12 col-sm-6 header" style="padding: 35px; background-color: #2c2f31;">
           <h2 style="text-align: center; font-weight: bold; font-size: 2.4rem;">Send a Message</h2>
-          <form id="contactform" style="font-size: 1.2rem;" method="post" action="sendmail.php">
+          <form id="contactform" style="font-size: 1.2rem;">
             <div class="form-group">
               <label>Name</label>
-              <input id="namef1" name="name" class="form-control" placeholder="Name" required="required">
+              <input id="namef1" class="form-control" placeholder="Name">
             </div>
+	    <div class="form-group">
 	     <div class="form-group">
               <label>Email Address</label>
-              <input id="emailf1" name="email" class="form-control" type="email" placeholder="Email" required="required">
+              <textarea id="contactq1" class="form-control" rows="3" placeholder="Email Address" style="resize: vertical"></textarea>
+              <input id="emailf1" class="form-control" type="email" placeholder="Email">
             </div>
             <div class="form-group">
               <label>Message</label>
-              <textarea id="contactq1" name="message" class="form-control" rows="3" placeholder="Message" style="resize: vertical" required="required"></textarea>
+              <textarea id="contactq1" class="form-control" rows="3" placeholder="Message" style="resize: vertical"></textarea>
             </div>
-            <input id="contactsubmit" class="btn btn-light" type="submit">
+            <button id="contactsubmit" class="btn btn-light" type="submit" onclick="contactSubmit(); return false;">Submit</button>
+            <button id="contactclear" class="btn btn-dark" type="reset" onclick="clearForm(); return false;" style="float: right">Clear</button>
           </form>
           <h6 class="text-center qualifier">Or email us at
             <a style="color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a>
