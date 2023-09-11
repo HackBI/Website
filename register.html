@@ -403,15 +403,56 @@
         <h1>Register for HackBI</h1>
       </div>
     </div>
-
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 header" id="about">
+          <h1 style="color: #000000; padding-top: 50px;">Get Notified</h1>
+        </div>
+      </div>
+      <h3 style="font-size: 30px; padding: 30px 20px; margin: 0 auto; font-weight: bold; line-height: 1.3; color: #000000;" id="intro">
+        Enter your name and email address below to be added to our email list to be notified when registration is open! (Please only press the "Submit" button ONCE, the message may not disapear but it has sent).
+      </h3>
+    </div>
+    
+     <div class="section contact" style="padding-bottom: 70px; background-color: rgb(245,245,247); padding-top: 60px;">
+    <h1 id="contact"></h1>
+    <div class="container contact-container" style="box-shadow: 0 2px 15px rgba(0,10,20,.25); position: relative;">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 text-center" style="padding: 0;">
+          <div id="map" style="overflow: hidden; max-height: 600px; color: black;">MAP</div>
+        </div>
+        <div class="col-xs-12 col-sm-6 header" style="padding: 35px; background-color: #2c2f31;">
+          <h2 style="text-align: center; font-weight: bold; font-size: 2.4rem;"></h2>
+          <form id="contactform" style="font-size: 1.2rem;">
+            <div class="form-group">
+              <label>Name</label>
+              <input id="namef1" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <textarea id="contactq1" class="form-control" rows="3" placeholder="Email Address" style="resize: vertical"></textarea>
+            </div>
+            <button id="contactsubmit" class="btn btn-light" type="submit" onclick="contactSubmit(); return false;">Submit</button>
+            <button id="contactclear" class="btn btn-dark" type="reset" onclick="clearForm(); return false;" style="float: right">Clear</button>
+          </form>
+          <h6 class="text-center qualifier">Or email us at
+            <a style="color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+<!-- Start of comment
     <div class="container container-fluid" style="margin-bottom: 150px">
       <div class="row text-center">
         <div class="col-xs-12 col-md-6">
           <div class="card text-center mx-auto">
             <img src="img/students.jpg" class="card-img-top" width="100%" />
-            <div class="card-body" id="evb">
+            <div class="card-body" id="evb"> -->
               <!-- <div style="display: flex; justify-content: space-between;"> -->
-              <div style="padding: 5px 0 18px 0">
+              <!-- <div style="padding: 5px 0 18px 0">
                 <h3
                   style="
                     font-weight: bold;
@@ -454,7 +495,7 @@
                 >
                   Registration
                 </button>
-              </a>
+              </a> -->
 
               <!-- Noscript content for added SEO -->
               <!-- <noscript><a href="https://www.eventbrite.com/e/hackbi-vi-tickets-420584558737" rel="noopener noreferrer" target="_blank"></noscript> -->
@@ -479,7 +520,8 @@
                                 });
                             </script> -->
 
-              <br /><br />
+              <!-- <br /><br />
+
               <div style="padding: 5px 0 18px 0">
                 <h3
                   style="
@@ -507,7 +549,7 @@
               <br />
               <h3>Print, fill out, and bring form(s) to the hackathon</h3>
               <br />
-              <!--<div>
+              <div>
                 <a
                   href="registration_forms/iretonForm.pdf"
                   target="_blank"
@@ -515,22 +557,23 @@
                   style="color: #007bff; display: block"
                   download="HackBI_ParentPermissionsForm"
                   >Parent Permissions Form</a
-                > 
-              </div> -->
+                >
+              </div>
               <hr style="width: 220px" />
 
               <br />
               <h3>
-                Non-Ireton students have to fill out the following forms:
+                Non-Ireton students have to fill out the following forms as
+                well:
               </h3>
               <br />
               <div>
                 <a
-                  href="registration_forms/HBI-GuestPermissionForm.pdf"
+                  href="registration_forms/guestForm.pdf"
                   target="_blank"
                   rel="nofollow"
                   style="color: #007bff; display: block"
-                  download="HackBI_GuestPermissionForm"
+                  download="HackBI_GuestForm"
                   >Guest Form</a
                 >
               </div>
@@ -538,7 +581,19 @@
               <br />
               <div>
                 <a
-                  href="registration_forms/HackBI_EmergencyCareForm.pdf"
+                  href="registration_forms/covidForm.pdf"
+                  target="_blank"
+                  rel="nofollow"
+                  style="color: #007bff; display: block"
+                  download="HackBI_CovidForm"
+                  >Covid Form</a
+                >
+              </div>
+              <hr style="width: 220px" />
+              <br />
+              <div>
+                <a
+                  href="registration_forms/emergencyForm.pdf"
                   target="_blank"
                   rel="nofollow"
                   style="color: #007bff; display: block"
@@ -548,21 +603,20 @@
               </div>
               <hr style="width: 220px" />
               <br />
-              <!--<div>
+              <div>
                 <a
-                  href="registration_forms/HBI_DiocesanWaiverStandard.pdf"
+                  href="registration_forms/diocesanWaiver.pdf"
                   target="_blank"
                   rel="nofollow"
                   style="color: #007bff; display: block"
                   download="HackBI_DiocesanWaiver"
                   >Diocesan Waiver</a
                 >
-              </div>-->
+              </div>
               <hr style="width: 220px" />
             </div>
           </div>
         </div>
-
 
         <div class="col-xs-12 col-md-6">
           <div class="card text-center mx-auto">
@@ -590,7 +644,7 @@
                   "
                 ></span>
               </div>
-              <h3>Sign-up to be a adult volunteer, mentor, or judge!</h3>
+              <h3>Sign-up to be a judge, mentor, or adult volunteer!</h3>
               <br />
               <div style="padding: 5px 0 18px 0">
                 <h3
@@ -602,7 +656,7 @@
                     font-size: 26px;
                   "
                 >
-                  Adult Volunteers
+                  Judges
                 </h3>
                 <span
                   style="
@@ -616,11 +670,12 @@
                 ></span>
               </div>
               <h6>
-                Supervise and monitor students
+                Attend student presentations on the final day and choose the
+                best projects to receive prizes
               </h6>
               <br />
               <a
-                href="https://www.signupgenius.com/go/60B054DAAAA2CA6FF2-hack8"
+                href="https://www.signupgenius.com/go/60b054daaaa2ca6ff2-hack5"
                 target="_blank"
               >
                 <img
@@ -661,7 +716,7 @@
               </h6>
               <br />
               <a
-                href="https://www.signupgenius.com/go/60B054DAAAA2CA6FF2-hack9"
+                href="https://www.signupgenius.com/go/60b054daaaa2ca6ff2-hack4"
                 target="_blank"
               >
                 <img
@@ -685,7 +740,7 @@
                     font-size: 26px;
                   "
                 >
-                  Judges
+                  Adult Volunteers
                 </h3>
                 <span
                   style="
@@ -698,13 +753,10 @@
                   "
                 ></span>
               </div>
-              <h6>
-                Attend student presentations on the final day and choose the
-                best projects to receive prizes
-              </h6>
+              <h6>Supervise and monitor students</h6>
               <br />
               <a
-                href="https://www.signupgenius.com/go/60B054DAAAA2CA6FF2-hack7"
+                href="https://www.signupgenius.com/go/60b054daaaa2ca6ff2-hack3"
                 target="_blank"
               >
                 <img
@@ -723,7 +775,6 @@
       <br /><br />
       <hr />
 
-      <!-- Panelist sign up (not opening yet)
       <div>
         <br />
         <h3
@@ -757,7 +808,7 @@
           />
         </a>
       </div>
--->
+ -->
 
       <div
         class="modal fade"
@@ -897,6 +948,7 @@
       </div>
     </div>
 
+  <!-- old javascript below
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
@@ -1132,5 +1184,52 @@
         });
       }
     </script>
+-->
+  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script defer src="jquery.lazyloadxt.js"></script>
+
+  <script defer type="text/javascript">
+		var map;
+		function initMap() {
+			map = new google.maps.Map(
+				document.getElementById('map'), {
+					zoom: 16,
+					center: {
+						lat: 38.8092594,
+						lng: -77.0811094
+					},
+					styles: []
+			});
+			var marker = new google.maps.Marker({
+				position: {
+					lat: 38.8092500,
+					lng: -77.0809000
+				},
+				map: map
+			});
+		}
+
+    const callButton = document.querySelector('.popup-button');
+    const popup = document.querySelector('.popup');
+    const closeButton = popup.querySelector('.close-button');
+
+    popupToggle = () => {
+      popup.classList.toggle('popup_opened');
+    }
+
+    callButton.addEventListener('click', popupToggle);
+    closeButton.addEventListener('click', popupToggle);
+
+    closeOnBlack = (event) => {
+      if (event.target === event.currentTarget) popupToggle();
+    }
+    popup.addEventListener('click', closeOnBlack);
+  </script>
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
   </body>
 </html>
