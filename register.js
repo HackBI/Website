@@ -222,3 +222,43 @@ function notifSubmit() {
     },
   });
 }
+
+
+// EC code for new send message box
+var submitting = false
+function submitform(event){
+    event.preventDefault();
+    if(submitting === true) return;
+    submitting = true;
+    var form = document.getElementById("contactForm");
+    var formData = {};
+    for(const field of form.elements){
+        if(field.name){
+            formData[field.name] = field.value;
+        }
+    }
+    // change email later
+    fetch('https://formsubmit.co/ajax/hackbi@bishopireton.org', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        if(data.success === "true" || data.message.startsWith("This form needs Activation.")){
+            var inputs = document.getElementById("contactForm").getElementsByTagName("input")
+            for(let i = 0; i < inputs.length; i++){
+                inputs[i].value = ""
+            }
+            submitting = false;
+        } else {
+            if(data.success === "false"){
+                submitting = false;
+            }
+        }
+    });
+}
