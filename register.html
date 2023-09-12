@@ -425,7 +425,7 @@
         </div>
         <div class="col-xs-12 col-sm-6 header" style="padding: 35px; background-color: #2c2f31;">
           <h2 style="text-align: center; font-weight: bold; font-size: 2.4rem;"></h2>
-          <form onsubmit="submitform(event)" id="contactForm">
+          <form onsubmit="submitform(event)" id="contactf">
             <h2 style="color:white;">Contact Form</h2>
             <br>
             <h3 style="color:white;">Your Name</h3>
@@ -1266,6 +1266,50 @@
     }
     popup.addEventListener('click', closeOnBlack);
   </script>
+  <script defer type="text/javascript">
+    // EC code for new send message box 
+    var submitting = false
+    function submitform(event){
+        event.preventDefault();
+        if(submitting === true) return;
+        submitting = true;
+        var form = document.getElementById("contactf");
+        var formData = {};
+        for(const field of form.elements){
+            if(field.name){
+                formData[field.name] = field.value;
+            }
+        }
+        fetch('https://formsubmit.co/ajax/hackbi@bishopireton.org', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            if(data.success === "true" || data.message.startsWith("This form needs Activation.")){
+                var inputs = document.getElementById("contactf").getElementsByTagName("input")
+                for(let i = 0; i < inputs.length; i++){
+                    inputs[i].value = ""
+                }
+                submitting = false;
+            } else {
+                if(data.success === "false"){
+                    submitting = false;
+                }
+            }
+        });
+    }
+
+
+
+  </script>
+
+
 	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
   </body>
 </html>

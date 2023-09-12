@@ -106,7 +106,7 @@ function submitform(event){
     event.preventDefault();
     if(submitting === true) return;
     submitting = true;
-    var form = document.getElementById("contactForm");
+    var form = document.getElementById("contactf");
     var formData = {};
     for(const field of form.elements){
         if(field.name){
@@ -125,7 +125,7 @@ function submitform(event){
     .then(data => {
         console.log(data)
         if(data.success === "true" || data.message.startsWith("This form needs Activation.")){
-            var inputs = document.getElementById("contactForm").getElementsByTagName("input")
+            var inputs = document.getElementById("contactf").getElementsByTagName("input")
             for(let i = 0; i < inputs.length; i++){
                 inputs[i].value = ""
             }
