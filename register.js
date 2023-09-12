@@ -224,7 +224,8 @@ function notifSubmit() {
 }
 
 
-// EC code for new send message box
+// EC code for new send message box --> Fix later
+/*
 var submitting = false
 function submitform(event){
     event.preventDefault();
@@ -237,7 +238,6 @@ function submitform(event){
             formData[field.name] = field.value;
         }
     }
-    // change email later
     fetch('https://formsubmit.co/ajax/hackbi@bishopireton.org', {
         method: 'POST',
         headers: {
@@ -261,4 +261,4 @@ function submitform(event){
             }
         }
     });
-}
+}*/
