@@ -224,7 +224,7 @@ function notifSubmit() {
 }
 
 
-// EC code for new send message box --> Fix later
+// EC code for new send message box
 var submitting = false
 function submitform(event){
     event.preventDefault();
