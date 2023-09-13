@@ -1267,50 +1267,6 @@
     popup.addEventListener('click', closeOnBlack);
   </script>
 
-  <!-- EC code for new send message box -->
-  <script defer type="text/javascript">
-    var submitting = false
-    function submitform(event){
-        event.preventDefault();
-        if(submitting === true) return;
-        submitting = true;
-        var form = document.getElementById("contactf");
-        var formData = {};
-        for(const field of form.elements){
-            if(field.name){
-                formData[field.name] = field.value;
-            }
-        }
-        fetch('https://formsubmit.co/ajax/hackbi@bishopireton.org', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            if(data.success === "true" || data.message.startsWith("This form needs Activation.")){
-                var inputs = document.getElementById("contactf").getElementsByTagName("input")
-                for(let i = 0; i < inputs.length; i++){
-                    inputs[i].value = ""
-                }
-                submitting = false;
-            } else {
-                if(data.success === "false"){
-                    submitting = false;
-                }
-            }
-        });
-    }
-
-
-
-  </script>
-
-
 	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Ud3Tw2RKOM_PT8HmAWNN3Dm_7vqjvjk&callback=initMap"></script>
   </body>
 </html>
