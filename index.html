@@ -914,32 +914,43 @@
     <h1 id="contact">Contact Us</h1>
     <div class="container contact-container" style="box-shadow: 0 2px 15px rgba(0,10,20,.25); position: relative;">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 text-center" style="padding: 0;">
+        <!--<div class="col-xs-12 col-sm-6 text-center" style="padding: 0;">
           <div id="map" style="overflow: hidden; max-height: 600px; color: black;">MAP</div>
-        </div>
+        </div> -->
         <div class="col-xs-12 col-sm-6 header" style="padding: 35px; background-color: #2c2f31;">
-          <h2 style="text-align: center; font-weight: bold; font-size: 2.4rem;">Send a Message</h2>
-	  <h4 style="color: #f8f8ff;">Send an e-mail to <a style="color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a> with any questions!</h4>								       
-          <!--<form id="contactform" style="font-size: 1.2rem;">
-            <div class="form-group">
-              <label>Name</label>
-              <input id="namef1" class="form-control" placeholder="Name">
+
+        <!--EC CODE FOR MESSAGE BOX-->
+          <h1 id="contact"></h1>
+          <div class="container contact-container" style="box-shadow: 0 2px 15px rgba(0,10,20,.25); position: relative;">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 text-center" style="padding: 0;">
+                <div id="map" style="overflow: hidden; max-height: 600px; color: black;">MAP</div>
+              </div>
+              <div class="col-xs-12 col-sm-6 header" style="padding: 35px; background-color: #2c2f31;">
+                <h2 style="text-align: center; font-weight: bold; font-size: 2.4rem;"></h2>
+                <form onsubmit="submitform(event)" id="contactf">
+                  <h2 style="color:white;">Contact Form</h2>
+                  <br>
+                  <h3 style="color:white;">Your Name</h3>
+                  <input name="name" id="name" required>
+                  <br><br>
+                  <h3 style="color:white;">Your Email</h3>
+                  <input name="email" id="email" required>
+                  <br><br>
+                  <h3 style="color:white;">Subject Line</h3>
+                  <input name="subject_line" id="subject_line" required>
+                  <br><br>
+                  <h3 style="color:white;">Text</h3>
+                  <input name="text" id="text" required>
+                  <br><br>
+                  <button type="submit">Submit</button>
+                </form>
+                <h6 class="text-center qualifier" style="color:white;">Or email us at
+                  <a style="color: white" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a>
+                </h6>
+              </div>
             </div>
-	    <div class="form-group">
-	     <div class="form-group">
-              <label>Email Address</label>
-              <textarea id="contactq1" class="form-control" rows="3" placeholder="Email Address" style="resize: vertical"></textarea>
-            </div>
-            <div class="form-group">
-              <label>Message</label>
-              <textarea id="contactq1" class="form-control" rows="3" placeholder="Message" style="resize: vertical"></textarea>
-            </div>
-            <button id="contactsubmit" class="btn btn-light" type="submit" onclick="contactSubmit(); return false;">Submit</button>
-            <button id="contactclear" class="btn btn-dark" type="reset" onclick="clearForm(); return false;" style="float: right">Clear</button>
-          </form>
-          <h6 class="text-center qualifier">Or email us at
-            <a style="color: inherit" href="mailto:HackBI@bishopireton.org">HackBI@bishopireton.org</a>
-          </h6> -->
+          </div>
         </div>
       </div>
     </div>
